@@ -15,10 +15,5 @@ class SweeshController extends AppController{
             return true;
         }
     }
-
-	public function overview(){
-		
-	}
 }
-	
 ?>
