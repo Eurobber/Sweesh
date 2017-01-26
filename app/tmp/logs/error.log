@@ -1,0 +1,1924 @@
+2016-03-26 16:17:56 Error: [MissingControllerException] Controller class SweeshController could not be found.
+Exception Attributes: array (
+  'class' => 'SweeshController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/sweesh/
+Stack Trace:
+#0 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-03-26 16:35:42 Error: [MissingActionException] Action UsersController::login() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'login',
+)
+Request URL: /Sweesh/users/login
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-03-26 16:37:55 Error: [MissingActionException] Action UsersController::login() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'login',
+)
+Request URL: /Sweesh/users/login
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-03-26 16:37:59 Error: [MissingActionException] Action UsersController::login() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'login',
+)
+Request URL: /Sweesh/users/login
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-03-26 16:38:19 Error: [MissingViewException] View file "Users\login.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Users\\login.ctp',
+)
+Request URL: /Sweesh/users/login
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 C:\wamp\www\Sweesh\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#2 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-03-26 16:39:20 Error: [MissingTableException] Table users for model User was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'users',
+  'class' => 'User',
+  'ds' => 'default',
+)
+Request URL: /Sweesh/users/login
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\Model\Model.php(3648): Model->setSource('users')
+#1 C:\wamp\www\Sweesh\lib\Cake\Model\Model.php(1387): Model->getDataSource()
+#2 C:\wamp\www\Sweesh\lib\Cake\View\Helper\FormHelper.php(215): Model->schema()
+#3 C:\wamp\www\Sweesh\lib\Cake\View\Helper\FormHelper.php(468): FormHelper->_introspectModel('User', 'fields')
+#4 C:\wamp\www\Sweesh\app\View\Users\login.ctp(3): FormHelper->create('User')
+#5 C:\wamp\www\Sweesh\lib\Cake\View\View.php(971): include('C:\\wamp\\www\\Swe...')
+#6 C:\wamp\www\Sweesh\lib\Cake\View\View.php(933): View->_evaluate('C:\\wamp\\www\\Swe...', Array)
+#7 C:\wamp\www\Sweesh\lib\Cake\View\View.php(473): View->_render('C:\\wamp\\www\\Swe...')
+#8 C:\wamp\www\Sweesh\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#9 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#10 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#11 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2016-03-26 16:46:30 Error: [MissingTableException] Table users for model User was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'users',
+  'class' => 'User',
+  'ds' => 'default',
+)
+Request URL: /Sweesh/users/login
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\Model\Model.php(3648): Model->setSource('users')
+#1 C:\wamp\www\Sweesh\lib\Cake\Model\Model.php(1387): Model->getDataSource()
+#2 C:\wamp\www\Sweesh\lib\Cake\View\Helper\FormHelper.php(215): Model->schema()
+#3 C:\wamp\www\Sweesh\lib\Cake\View\Helper\FormHelper.php(468): FormHelper->_introspectModel('User', 'fields')
+#4 C:\wamp\www\Sweesh\app\View\Users\login.ctp(3): FormHelper->create('User')
+#5 C:\wamp\www\Sweesh\lib\Cake\View\View.php(971): include('C:\\wamp\\www\\Swe...')
+#6 C:\wamp\www\Sweesh\lib\Cake\View\View.php(933): View->_evaluate('C:\\wamp\\www\\Swe...', Array)
+#7 C:\wamp\www\Sweesh\lib\Cake\View\View.php(473): View->_render('C:\\wamp\\www\\Swe...')
+#8 C:\wamp\www\Sweesh\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#9 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#10 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#11 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2016-03-26 16:47:07 Error: [MissingTableException] Table users for model User was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'users',
+  'class' => 'User',
+  'ds' => 'default',
+)
+Request URL: /Sweesh/users/login
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\Model\Model.php(3648): Model->setSource('users')
+#1 C:\wamp\www\Sweesh\lib\Cake\Model\Model.php(1387): Model->getDataSource()
+#2 C:\wamp\www\Sweesh\lib\Cake\View\Helper\FormHelper.php(215): Model->schema()
+#3 C:\wamp\www\Sweesh\lib\Cake\View\Helper\FormHelper.php(468): FormHelper->_introspectModel('User', 'fields')
+#4 C:\wamp\www\Sweesh\app\View\Users\login.ctp(3): FormHelper->create('User')
+#5 C:\wamp\www\Sweesh\lib\Cake\View\View.php(971): include('C:\\wamp\\www\\Swe...')
+#6 C:\wamp\www\Sweesh\lib\Cake\View\View.php(933): View->_evaluate('C:\\wamp\\www\\Swe...', Array)
+#7 C:\wamp\www\Sweesh\lib\Cake\View\View.php(473): View->_render('C:\\wamp\\www\\Swe...')
+#8 C:\wamp\www\Sweesh\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#9 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#10 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#11 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2016-03-26 16:47:10 Error: [MissingTableException] Table users for model User was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'users',
+  'class' => 'User',
+  'ds' => 'default',
+)
+Request URL: /Sweesh/users/login
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\Model\Model.php(3648): Model->setSource('users')
+#1 C:\wamp\www\Sweesh\lib\Cake\Model\Model.php(1387): Model->getDataSource()
+#2 C:\wamp\www\Sweesh\lib\Cake\View\Helper\FormHelper.php(215): Model->schema()
+#3 C:\wamp\www\Sweesh\lib\Cake\View\Helper\FormHelper.php(468): FormHelper->_introspectModel('User', 'fields')
+#4 C:\wamp\www\Sweesh\app\View\Users\login.ctp(3): FormHelper->create('User')
+#5 C:\wamp\www\Sweesh\lib\Cake\View\View.php(971): include('C:\\wamp\\www\\Swe...')
+#6 C:\wamp\www\Sweesh\lib\Cake\View\View.php(933): View->_evaluate('C:\\wamp\\www\\Swe...', Array)
+#7 C:\wamp\www\Sweesh\lib\Cake\View\View.php(473): View->_render('C:\\wamp\\www\\Swe...')
+#8 C:\wamp\www\Sweesh\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#9 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#10 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#11 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2016-03-26 16:47:57 Error: [MissingTableException] Table users for model User was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'users',
+  'class' => 'User',
+  'ds' => 'default',
+)
+Request URL: /Sweesh/users/login
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\Model\Model.php(3648): Model->setSource('users')
+#1 C:\wamp\www\Sweesh\lib\Cake\Model\Model.php(1387): Model->getDataSource()
+#2 C:\wamp\www\Sweesh\lib\Cake\View\Helper\FormHelper.php(215): Model->schema()
+#3 C:\wamp\www\Sweesh\lib\Cake\View\Helper\FormHelper.php(468): FormHelper->_introspectModel('User', 'fields')
+#4 C:\wamp\www\Sweesh\app\View\Users\login.ctp(3): FormHelper->create('User')
+#5 C:\wamp\www\Sweesh\lib\Cake\View\View.php(971): include('C:\\wamp\\www\\Swe...')
+#6 C:\wamp\www\Sweesh\lib\Cake\View\View.php(933): View->_evaluate('C:\\wamp\\www\\Swe...', Array)
+#7 C:\wamp\www\Sweesh\lib\Cake\View\View.php(473): View->_render('C:\\wamp\\www\\Swe...')
+#8 C:\wamp\www\Sweesh\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#9 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#10 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#11 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2016-03-26 16:53:21 Error: Fatal Error (4): syntax error, unexpected '->' (T_OBJECT_OPERATOR) in [C:\wamp\www\Sweesh\app\Controller\UsersController.php, line 7]
+2016-03-26 16:53:21 Error: [FatalErrorException] syntax error, unexpected '->' (T_OBJECT_OPERATOR)
+Request URL: /Sweesh/users/login
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\Swe...', 7)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\wamp\\www\\Swe...', 7, Array)
+#2 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\wamp\\www\\Swe...', 7, Array)
+#3 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-03-26 16:53:54 Error: Fatal Error (4): syntax error, unexpected '->' (T_OBJECT_OPERATOR) in [C:\wamp\www\Sweesh\app\Controller\UsersController.php, line 7]
+2016-03-26 16:53:54 Error: [FatalErrorException] syntax error, unexpected '->' (T_OBJECT_OPERATOR)
+Request URL: /Sweesh/users/login
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\Swe...', 7)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\wamp\\www\\Swe...', 7, Array)
+#2 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\wamp\\www\\Swe...', 7, Array)
+#3 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-03-26 16:54:23 Error: [MissingControllerException] Controller class SweeshController could not be found.
+Exception Attributes: array (
+  'class' => 'SweeshController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/sweesh
+Stack Trace:
+#0 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-03-26 16:54:57 Error: [MissingControllerException] Controller class SweeshController could not be found.
+Exception Attributes: array (
+  'class' => 'SweeshController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/Sweesh
+Stack Trace:
+#0 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-03-26 16:56:41 Error: Fatal Error (4): syntax error, unexpected '->' (T_OBJECT_OPERATOR) in [C:\wamp\www\Sweesh\app\Controller\SweeshController.php, line 7]
+2016-03-26 16:56:41 Error: [FatalErrorException] syntax error, unexpected '->' (T_OBJECT_OPERATOR)
+Request URL: /Sweesh/Sweesh
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\Swe...', 7)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\wamp\\www\\Swe...', 7, Array)
+#2 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\wamp\\www\\Swe...', 7, Array)
+#3 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-03-26 17:10:47 Error: Fatal Error (4): syntax error, unexpected 'public' (T_PUBLIC) in [C:\wamp\www\Sweesh\app\Controller\SweeshController.php, line 7]
+2016-03-26 17:10:47 Error: [FatalErrorException] syntax error, unexpected 'public' (T_PUBLIC)
+Request URL: /Sweesh/
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\Swe...', 7)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\wamp\\www\\Swe...', 7, Array)
+#2 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\wamp\\www\\Swe...', 7, Array)
+#3 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-03-26 17:12:03 Error: [MissingViewException] View file "Sweesh\index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Sweesh\\index.ctp',
+)
+Request URL: /Sweesh/
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 C:\wamp\www\Sweesh\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#2 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SweeshController), Object(CakeRequest))
+#4 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-03-26 17:12:50 Error: [MissingViewException] View file "Users\index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Users\\index.ctp',
+)
+Request URL: /Sweesh/users/
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 C:\wamp\www\Sweesh\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#2 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-03-26 17:13:32 Error: [MissingViewException] View file "Users\index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Users\\index.ctp',
+)
+Request URL: /Sweesh/users/
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 C:\wamp\www\Sweesh\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#2 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-03-26 17:13:35 Error: [MissingViewException] View file "Users\index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Users\\index.ctp',
+)
+Request URL: /Sweesh/users/
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 C:\wamp\www\Sweesh\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#2 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-03-26 17:13:43 Error: [MissingViewException] View file "Users\index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Users\\index.ctp',
+)
+Request URL: /Sweesh/users/
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 C:\wamp\www\Sweesh\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#2 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-03-26 17:13:46 Error: [MissingViewException] View file "Users\index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Users\\index.ctp',
+)
+Request URL: /Sweesh/users/
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 C:\wamp\www\Sweesh\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#2 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-03-26 17:15:43 Error: Fatal Error (4): syntax error, unexpected ':' in [C:\wamp\www\Sweesh\app\View\Users\index.ctp, line 3]
+2016-03-26 17:15:43 Error: [FatalErrorException] syntax error, unexpected ':'
+Request URL: /Sweesh/users/
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\Swe...', 3)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\wamp\\www\\Swe...', 3, Array)
+#2 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\wamp\\www\\Swe...', 3, Array)
+#3 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-03-26 17:15:54 Error: Fatal Error (1): Call to undefined method View::echo() in [C:\wamp\www\Sweesh\app\View\Users\index.ctp, line 3]
+2016-03-26 17:15:54 Error: [FatalErrorException] Call to undefined method View::echo()
+Request URL: /Sweesh/users/
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\\wamp\\www\\Swe...', 3)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\\wamp\\www\\Swe...', 3, Array)
+#2 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\\wamp\\www\\Swe...', 3, Array)
+#3 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-03-26 17:18:57 Error: Fatal Error (4): syntax error, unexpected ''id'' (T_CONSTANT_ENCAPSED_STRING), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in [C:\wamp\www\Sweesh\app\View\Users\index.ctp, line 3]
+2016-03-26 17:18:57 Error: [FatalErrorException] syntax error, unexpected ''id'' (T_CONSTANT_ENCAPSED_STRING), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$'
+Request URL: /Sweesh/users/
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\Swe...', 3)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\wamp\\www\\Swe...', 3, Array)
+#2 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\wamp\\www\\Swe...', 3, Array)
+#3 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-03-26 17:19:32 Error: Fatal Error (1): Call to a member function findAll() on a non-object in [C:\wamp\www\Sweesh\app\View\Users\index.ctp, line 3]
+2016-03-26 17:19:32 Error: [FatalErrorException] Call to a member function findAll() on a non-object
+Request URL: /Sweesh/users/
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\wamp\\www\\Swe...', 3)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\wamp\\www\\Swe...', 3, Array)
+#2 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\wamp\\www\\Swe...', 3, Array)
+#3 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-03-26 17:21:16 Error: Fatal Error (1): Call to a member function error() on a non-object in [C:\wamp\www\Sweesh\app\Controller\UsersController.php, line 77]
+2016-03-26 17:21:16 Error: [FatalErrorException] Call to a member function error() on a non-object
+Request URL: /Sweesh/users/login
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\wamp\\www\\Swe...', 77)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\wamp\\www\\Swe...', 77, Array)
+#2 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\wamp\\www\\Swe...', 77, Array)
+#3 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-03-26 17:22:05 Error: Fatal Error (1): Call to a member function error() on a non-object in [C:\wamp\www\Sweesh\app\Controller\UsersController.php, line 77]
+2016-03-26 17:22:05 Error: [FatalErrorException] Call to a member function error() on a non-object
+Request URL: /Sweesh/users/login
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\wamp\\www\\Swe...', 77)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\wamp\\www\\Swe...', 77, Array)
+#2 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\wamp\\www\\Swe...', 77, Array)
+#3 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-03-26 17:38:38 Error: Fatal Error (1): Class 'SimplePasswordHasher' not found in [C:\wamp\www\Sweesh\app\Model\User.php, line 10]
+2016-03-26 17:38:38 Error: [FatalErrorException] Class 'SimplePasswordHasher' not found
+Request URL: /Sweesh/users/add
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Class 'SimplePa...', 'C:\\wamp\\www\\Swe...', 10)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'SimplePa...', 'C:\\wamp\\www\\Swe...', 10, Array)
+#2 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Class 'SimplePa...', 'C:\\wamp\\www\\Swe...', 10, Array)
+#3 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-03-26 17:39:18 Error: Fatal Error (1): Call to a member function success() on a non-object in [C:\wamp\www\Sweesh\app\Controller\UsersController.php, line 21]
+2016-03-26 17:39:18 Error: [FatalErrorException] Call to a member function success() on a non-object
+Request URL: /Sweesh/users/add
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\wamp\\www\\Swe...', 21)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\wamp\\www\\Swe...', 21, Array)
+#2 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\wamp\\www\\Swe...', 21, Array)
+#3 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-03-26 17:40:03 Error: Fatal Error (1): Call to a member function success() on a non-object in [C:\wamp\www\Sweesh\app\Controller\UsersController.php, line 21]
+2016-03-26 17:40:04 Error: [FatalErrorException] Call to a member function success() on a non-object
+Request URL: /Sweesh/users/add
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\wamp\\www\\Swe...', 21)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\wamp\\www\\Swe...', 21, Array)
+#2 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\wamp\\www\\Swe...', 21, Array)
+#3 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-03-26 17:40:53 Error: Fatal Error (1): Call to a member function success() on a non-object in [C:\wamp\www\Sweesh\app\Controller\UsersController.php, line 22]
+2016-03-26 17:40:53 Error: [FatalErrorException] Call to a member function success() on a non-object
+Request URL: /Sweesh/users/add
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\wamp\\www\\Swe...', 22)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\wamp\\www\\Swe...', 22, Array)
+#2 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\wamp\\www\\Swe...', 22, Array)
+#3 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-03-26 17:46:01 Error: [MissingControllerException] Controller class LoginController could not be found.
+Exception Attributes: array (
+  'class' => 'LoginController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/login
+Stack Trace:
+#0 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-03-26 17:46:11 Error: [MissingActionException] Action SweeshController::users() could not be found.
+Exception Attributes: array (
+  'controller' => 'SweeshController',
+  'action' => 'users',
+)
+Request URL: /Sweesh/sweesh/users/login
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SweeshController), Object(CakeRequest))
+#2 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-03-26 17:57:29 Error: Fatal Error (4): syntax error, unexpected '=', expecting ')' in [C:\wamp\www\Sweesh\app\Controller\UsersController.php, line 16]
+2016-03-26 17:57:29 Error: [FatalErrorException] syntax error, unexpected '=', expecting ')'
+Request URL: /Sweesh/users/login
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\Swe...', 16)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\wamp\\www\\Swe...', 16, Array)
+#2 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\wamp\\www\\Swe...', 16, Array)
+#3 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-03-26 17:57:40 Error: Fatal Error (4): syntax error, unexpected ''Flash'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in [C:\wamp\www\Sweesh\app\Controller\UsersController.php, line 26]
+2016-03-26 17:57:40 Error: [FatalErrorException] syntax error, unexpected ''Flash'' (T_CONSTANT_ENCAPSED_STRING), expecting ')'
+Request URL: /Sweesh/users/login
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\Swe...', 26)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\wamp\\www\\Swe...', 26, Array)
+#2 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\wamp\\www\\Swe...', 26, Array)
+#3 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-03-26 18:00:13 Error: Fatal Error (1): Call to undefined method AuthComponent::loginError() in [C:\wamp\www\Sweesh\app\Controller\UsersController.php, line 57]
+2016-03-26 18:00:13 Error: [FatalErrorException] Call to undefined method AuthComponent::loginError()
+Request URL: /Sweesh/users/login
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\\wamp\\www\\Swe...', 57)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\\wamp\\www\\Swe...', 57, Array)
+#2 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\\wamp\\www\\Swe...', 57, Array)
+#3 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-03-26 18:02:05 Error: Fatal Error (1): Call to undefined method AuthComponent::loginError() in [C:\wamp\www\Sweesh\app\Controller\UsersController.php, line 57]
+2016-03-26 18:02:05 Error: [FatalErrorException] Call to undefined method AuthComponent::loginError()
+Request URL: /Sweesh/users/login
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\\wamp\\www\\Swe...', 57)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\\wamp\\www\\Swe...', 57, Array)
+#2 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\\wamp\\www\\Swe...', 57, Array)
+#3 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-03-26 18:02:46 Error: Fatal Error (1): Cannot use object of type AuthComponent as array in [C:\wamp\www\Sweesh\app\Controller\UsersController.php, line 57]
+2016-03-26 18:02:46 Error: [FatalErrorException] Cannot use object of type AuthComponent as array
+Request URL: /Sweesh/users/login
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Cannot use obje...', 'C:\\wamp\\www\\Swe...', 57)
+#1 [internal function]: ErrorHandler::handleError(1, 'Cannot use obje...', 'C:\\wamp\\www\\Swe...', 57, Array)
+#2 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Cannot use obje...', 'C:\\wamp\\www\\Swe...', 57, Array)
+#3 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-03-26 18:04:42 Error: Fatal Error (4): syntax error, unexpected '{', expecting '(' in [C:\wamp\www\Sweesh\app\Controller\UsersController.php, line 6]
+2016-03-26 18:04:42 Error: [FatalErrorException] syntax error, unexpected '{', expecting '('
+Request URL: /Sweesh/users/login
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\Swe...', 6)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\wamp\\www\\Swe...', 6, Array)
+#2 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\wamp\\www\\Swe...', 6, Array)
+#3 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-03-26 18:04:53 Error: Fatal Error (64): Cannot redeclare UsersController::beforeFilter() in [C:\wamp\www\Sweesh\app\Controller\UsersController.php, line 31]
+2016-03-26 18:04:53 Error: [FatalErrorException] Cannot redeclare UsersController::beforeFilter()
+Request URL: /Sweesh/users/login
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(64, 'Cannot redeclar...', 'C:\\wamp\\www\\Swe...', 31)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot redeclar...', 'C:\\wamp\\www\\Swe...', 31, Array)
+#2 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 64, 'Cannot redeclar...', 'C:\\wamp\\www\\Swe...', 31, Array)
+#3 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-03-26 18:14:02 Error: Fatal Error (64): Can't use method return value in write context in [C:\wamp\www\Sweesh\app\Controller\UsersController.php, line 9]
+2016-03-26 18:14:02 Error: [FatalErrorException] Can't use method return value in write context
+Request URL: /Sweesh/users/login
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(64, 'Can't use metho...', 'C:\\wamp\\www\\Swe...', 9)
+#1 [internal function]: ErrorHandler::handleError(64, 'Can't use metho...', 'C:\\wamp\\www\\Swe...', 9, Array)
+#2 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 64, 'Can't use metho...', 'C:\\wamp\\www\\Swe...', 9, Array)
+#3 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-03-26 18:19:53 Error: Fatal Error (4): syntax error, unexpected 'utilisateur' (T_STRING) in [C:\wamp\www\Sweesh\app\View\Users\login.ctp, line 6]
+2016-03-26 18:19:53 Error: [FatalErrorException] syntax error, unexpected 'utilisateur' (T_STRING)
+Request URL: /Sweesh/users/login
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\Swe...', 6)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\wamp\\www\\Swe...', 6, Array)
+#2 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\wamp\\www\\Swe...', 6, Array)
+#3 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-03-26 18:20:22 Error: Fatal Error (4): syntax error, unexpected 'username' (T_STRING) in [C:\wamp\www\Sweesh\app\View\Users\login.ctp, line 8]
+2016-03-26 18:20:22 Error: [FatalErrorException] syntax error, unexpected 'username' (T_STRING)
+Request URL: /Sweesh/users/login
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\Swe...', 8)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\wamp\\www\\Swe...', 8, Array)
+#2 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\wamp\\www\\Swe...', 8, Array)
+#3 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-03-26 18:31:46 Error: Fatal Error (4): syntax error, unexpected ')', expecting function (T_FUNCTION) in [C:\wamp\www\Sweesh\app\Controller\AppController.php, line 56]
+2016-03-26 18:31:46 Error: [FatalErrorException] syntax error, unexpected ')', expecting function (T_FUNCTION)
+Request URL: /Sweesh/users/login
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\Swe...', 56)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\wamp\\www\\Swe...', 56, Array)
+#2 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\wamp\\www\\Swe...', 56, Array)
+#3 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-03-26 18:34:49 Error: Fatal Error (1): Class 'BlowfishPasswordHasher' not found in [C:\wamp\www\Sweesh\app\Model\User.php, line 12]
+2016-03-26 18:34:49 Error: [FatalErrorException] Class 'BlowfishPasswordHasher' not found
+Request URL: /Sweesh/users/add
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Class 'Blowfish...', 'C:\\wamp\\www\\Swe...', 12)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'Blowfish...', 'C:\\wamp\\www\\Swe...', 12, Array)
+#2 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Class 'Blowfish...', 'C:\\wamp\\www\\Swe...', 12, Array)
+#3 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-03-26 18:37:01 Error: [CakeException] Password hasher class "SimplePasswordHasher" was not found.
+Request URL: /Sweesh/users/login
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\Controller\Component\Auth\BaseAuthenticate.php(138): BaseAuthenticate->passwordHasher()
+#1 C:\wamp\www\Sweesh\lib\Cake\Controller\Component\Auth\FormAuthenticate.php(79): BaseAuthenticate->_findUser('satallah', 'S5cD4/Bt')
+#2 C:\wamp\www\Sweesh\lib\Cake\Controller\Component\AuthComponent.php(764): FormAuthenticate->authenticate(Object(CakeRequest), Object(CakeResponse))
+#3 C:\wamp\www\Sweesh\lib\Cake\Controller\Component\AuthComponent.php(609): AuthComponent->identify(Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\Sweesh\app\Controller\UsersController.php(76): AuthComponent->login()
+#5 [internal function]: UsersController->login()
+#6 C:\wamp\www\Sweesh\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#7 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#8 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#9 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2016-03-26 18:37:15 Error: [CakeException] Password hasher class "SimplePassword" was not found.
+Request URL: /Sweesh/users/login
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\Controller\Component\Auth\BaseAuthenticate.php(138): BaseAuthenticate->passwordHasher()
+#1 C:\wamp\www\Sweesh\lib\Cake\Controller\Component\Auth\FormAuthenticate.php(79): BaseAuthenticate->_findUser('satallah', 'S5cD4/Bt')
+#2 C:\wamp\www\Sweesh\lib\Cake\Controller\Component\AuthComponent.php(764): FormAuthenticate->authenticate(Object(CakeRequest), Object(CakeResponse))
+#3 C:\wamp\www\Sweesh\lib\Cake\Controller\Component\AuthComponent.php(609): AuthComponent->identify(Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\Sweesh\app\Controller\UsersController.php(76): AuthComponent->login()
+#5 [internal function]: UsersController->login()
+#6 C:\wamp\www\Sweesh\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#7 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#8 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#9 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2016-03-26 18:44:53 Error: Fatal Error (1): Call to undefined method AuthComponent::loginError() in [C:\wamp\www\Sweesh\app\Controller\UsersController.php, line 79]
+2016-03-26 18:44:53 Error: [FatalErrorException] Call to undefined method AuthComponent::loginError()
+Request URL: /Sweesh/users/login
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\\wamp\\www\\Swe...', 79)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\\wamp\\www\\Swe...', 79, Array)
+#2 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\\wamp\\www\\Swe...', 79, Array)
+#3 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-03-26 18:45:06 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\wamp\www\Sweesh\app\Controller\UsersController.php, line 79]
+2016-03-26 18:45:06 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /Sweesh/users/login
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\Swe...', 79)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\wamp\\www\\Swe...', 79, Array)
+#2 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\wamp\\www\\Swe...', 79, Array)
+#3 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-03-28 07:35:16 Error: [MissingControllerException] Controller class LoginController could not be found.
+Exception Attributes: array (
+  'class' => 'LoginController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/login
+Stack Trace:
+#0 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-03-28 07:41:11 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/css/bootstrap.css
+Stack Trace:
+#0 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-03-28 07:46:57 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/css/bootstrap.css.map
+Stack Trace:
+#0 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-03-28 07:48:31 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/css/bootstrap.css.map
+Stack Trace:
+#0 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-03-28 07:58:07 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/css/bootstrap.css.map
+Stack Trace:
+#0 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-03-28 07:58:37 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/css/bootstrap.css.map
+Stack Trace:
+#0 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-03-28 08:01:52 Error: [MissingActionException] Action SweeshController::users() could not be found.
+Exception Attributes: array (
+  'controller' => 'SweeshController',
+  'action' => 'users',
+)
+Request URL: /Sweesh/sweesh/users
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SweeshController), Object(CakeRequest))
+#2 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-03-28 08:01:58 Error: [MissingActionException] Action SweeshController::users() could not be found.
+Exception Attributes: array (
+  'controller' => 'SweeshController',
+  'action' => 'users',
+)
+Request URL: /Sweesh/sweesh/users/
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SweeshController), Object(CakeRequest))
+#2 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-03-28 08:02:05 Error: [MissingActionException] Action SweeshController::users() could not be found.
+Exception Attributes: array (
+  'controller' => 'SweeshController',
+  'action' => 'users',
+)
+Request URL: /Sweesh/sweesh/users/index
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SweeshController), Object(CakeRequest))
+#2 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-03-28 08:02:14 Error: [MissingActionException] Action SweeshController::login() could not be found.
+Exception Attributes: array (
+  'controller' => 'SweeshController',
+  'action' => 'login',
+)
+Request URL: /Sweesh/sweesh/login
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SweeshController), Object(CakeRequest))
+#2 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-03-28 08:02:19 Error: [MissingActionException] Action SweeshController::users() could not be found.
+Exception Attributes: array (
+  'controller' => 'SweeshController',
+  'action' => 'users',
+)
+Request URL: /Sweesh/sweesh/users
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SweeshController), Object(CakeRequest))
+#2 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-03-28 08:02:38 Error: [MissingActionException] Action SweeshController::users() could not be found.
+Exception Attributes: array (
+  'controller' => 'SweeshController',
+  'action' => 'users',
+)
+Request URL: /Sweesh/sweesh/users
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SweeshController), Object(CakeRequest))
+#2 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-03-28 08:03:10 Error: [MissingControllerException] Controller class WeeshController could not be found.
+Exception Attributes: array (
+  'class' => 'WeeshController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/weesh/overview
+Stack Trace:
+#0 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-03-28 08:03:20 Error: [MissingViewException] View file "Sweesh\overview.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Sweesh\\overview.ctp',
+)
+Request URL: /Sweesh/sweesh/overview
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 C:\wamp\www\Sweesh\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#2 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SweeshController), Object(CakeRequest))
+#4 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-03-28 08:03:27 Error: [MissingViewException] View file "Sweesh\overview.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Sweesh\\overview.ctp',
+)
+Request URL: /Sweesh/sweesh/overview
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 C:\wamp\www\Sweesh\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#2 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SweeshController), Object(CakeRequest))
+#4 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-03-28 08:04:07 Error: [MissingControllerException] Controller class WeeshController could not be found.
+Exception Attributes: array (
+  'class' => 'WeeshController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/weesh/overview
+Stack Trace:
+#0 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-03-28 08:04:32 Error: [MissingActionException] Action SweeshController::users() could not be found.
+Exception Attributes: array (
+  'controller' => 'SweeshController',
+  'action' => 'users',
+)
+Request URL: /Sweesh/sweesh/users/login
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SweeshController), Object(CakeRequest))
+#2 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-03-28 08:04:36 Error: [MissingActionException] Action SweeshController::users() could not be found.
+Exception Attributes: array (
+  'controller' => 'SweeshController',
+  'action' => 'users',
+)
+Request URL: /Sweesh/sweesh/users/login
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SweeshController), Object(CakeRequest))
+#2 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-03-28 08:04:39 Error: [MissingActionException] Action SweeshController::users() could not be found.
+Exception Attributes: array (
+  'controller' => 'SweeshController',
+  'action' => 'users',
+)
+Request URL: /Sweesh/sweesh/users/login
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SweeshController), Object(CakeRequest))
+#2 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-03-28 08:04:57 Error: [MissingViewException] View file "Sweesh\overview.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Sweesh\\overview.ctp',
+)
+Request URL: /Sweesh/sweesh/overview
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 C:\wamp\www\Sweesh\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#2 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SweeshController), Object(CakeRequest))
+#4 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-03-28 08:06:25 Error: [MissingViewException] View file "Sweesh\overview.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Sweesh\\overview.ctp',
+)
+Request URL: /Sweesh/sweesh/overview
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 C:\wamp\www\Sweesh\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#2 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SweeshController), Object(CakeRequest))
+#4 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-03-28 08:06:34 Error: [MissingViewException] View file "Sweesh\overview.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Sweesh\\overview.ctp',
+)
+Request URL: /Sweesh/sweesh/overview
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 C:\wamp\www\Sweesh\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#2 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SweeshController), Object(CakeRequest))
+#4 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-03-28 08:07:22 Error: [MissingViewException] View file "Sweesh\overview.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Sweesh\\overview.ctp',
+)
+Request URL: /Sweesh/sweesh/overview
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 C:\wamp\www\Sweesh\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#2 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SweeshController), Object(CakeRequest))
+#4 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-03-28 08:07:58 Error: [MissingViewException] View file "Sweesh\overview.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Sweesh\\overview.ctp',
+)
+Request URL: /Sweesh/sweesh/overview
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 C:\wamp\www\Sweesh\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#2 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SweeshController), Object(CakeRequest))
+#4 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-03-28 08:08:07 Error: [MissingViewException] View file "Sweesh\overview.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Sweesh\\overview.ctp',
+)
+Request URL: /Sweesh/sweesh/overview
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 C:\wamp\www\Sweesh\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#2 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SweeshController), Object(CakeRequest))
+#4 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-03-28 08:08:37 Error: [MissingViewException] View file "Sweesh\overview.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Sweesh\\overview.ctp',
+)
+Request URL: /Sweesh/sweesh/overview
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 C:\wamp\www\Sweesh\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#2 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SweeshController), Object(CakeRequest))
+#4 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-03-28 08:08:53 Error: [MissingViewException] View file "Sweesh\overview.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Sweesh\\overview.ctp',
+)
+Request URL: /Sweesh/sweesh/overview
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 C:\wamp\www\Sweesh\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#2 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SweeshController), Object(CakeRequest))
+#4 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-03-28 08:09:21 Error: [MissingViewException] View file "Sweesh\overview.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Sweesh\\overview.ctp',
+)
+Request URL: /Sweesh/sweesh/overview
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 C:\wamp\www\Sweesh\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#2 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SweeshController), Object(CakeRequest))
+#4 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-03-28 08:09:36 Error: [MissingViewException] View file "Sweesh\overview.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Sweesh\\overview.ctp',
+)
+Request URL: /Sweesh/sweesh/overview
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 C:\wamp\www\Sweesh\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#2 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SweeshController), Object(CakeRequest))
+#4 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-03-28 08:29:04 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/css/bootstrap.css.map
+Stack Trace:
+#0 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-03-28 08:29:32 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/css/bootstrap.css.map
+Stack Trace:
+#0 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-03-28 08:29:35 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/css/bootstrap.css.map
+Stack Trace:
+#0 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-03-28 08:30:35 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/css/bootstrap.css.map
+Stack Trace:
+#0 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-03-28 08:30:54 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/css/bootstrap.css.map
+Stack Trace:
+#0 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-03-28 08:31:05 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/css/bootstrap.css.map
+Stack Trace:
+#0 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-03-28 08:31:22 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/css/bootstrap.css.map
+Stack Trace:
+#0 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-03-28 08:31:32 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/css/bootstrap.css.map
+Stack Trace:
+#0 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-03-28 08:31:40 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/css/bootstrap.css.map
+Stack Trace:
+#0 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-03-28 08:42:05 Error: [MissingViewException] View file "Sweesh\overview.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Sweesh\\overview.ctp',
+)
+Request URL: /Sweesh/sweesh/overview
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 C:\wamp\www\Sweesh\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#2 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SweeshController), Object(CakeRequest))
+#4 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-03-28 08:44:10 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/img/laptop.jpg
+Stack Trace:
+#0 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-03-28 08:45:17 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/img/laptop.jpg
+Stack Trace:
+#0 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-03-28 08:45:32 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/img/laptop.jpg
+Stack Trace:
+#0 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-03-28 08:47:11 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/img/laptop.jpg
+Stack Trace:
+#0 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-03-28 08:47:23 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/img/laptop.jpg
+Stack Trace:
+#0 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-03-28 21:59:48 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/img/laptop.jpg
+Stack Trace:
+#0 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-03-28 22:01:41 Error: [MissingActionException] Action SweeshController::users() could not be found.
+Exception Attributes: array (
+  'controller' => 'SweeshController',
+  'action' => 'users',
+)
+Request URL: /Sweesh/sweesh/users
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SweeshController), Object(CakeRequest))
+#2 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-03-28 22:23:33 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/css/bootstrap.css.map
+Stack Trace:
+#0 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-03-28 22:24:14 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/css/bootstrap.css.map
+Stack Trace:
+#0 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-03-28 22:29:25 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/css/bootstrap.css.map
+Stack Trace:
+#0 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-03-28 22:29:51 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/css/bootstrap.css.map
+Stack Trace:
+#0 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-03-28 22:30:51 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/css/bootstrap.css.map
+Stack Trace:
+#0 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-03-28 22:31:18 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/css/bootstrap.css.map
+Stack Trace:
+#0 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-03-28 22:32:30 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/css/bootstrap.css.map
+Stack Trace:
+#0 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-03-28 22:33:46 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/css/bootstrap.css.map
+Stack Trace:
+#0 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-03-28 22:34:45 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/css/bootstrap.css.map
+Stack Trace:
+#0 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-03-28 22:35:28 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/css/bootstrap.css.map
+Stack Trace:
+#0 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-03-28 23:00:53 Error: Fatal Error (4): syntax error, unexpected ',' in [C:\wamp\www\Sweesh\app\Controller\UsersController.php, line 83]
+2016-03-28 23:00:53 Error: [FatalErrorException] syntax error, unexpected ','
+Request URL: /Sweesh/users/login
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\Swe...', 83)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\wamp\\www\\Swe...', 83, Array)
+#2 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\wamp\\www\\Swe...', 83, Array)
+#3 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-03-28 23:06:46 Error: [MissingComponentException] Component class FormComponent could not be found.
+Exception Attributes: array (
+  'class' => 'FormComponent',
+  'plugin' => false,
+)
+Request URL: /Sweesh/users/login
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\Controller\ComponentCollection.php(53): ComponentCollection->load('Form', Array)
+#1 C:\wamp\www\Sweesh\lib\Cake\Controller\Controller.php(643): ComponentCollection->init(Object(UsersController))
+#2 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(188): Controller->constructClasses()
+#3 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-03-28 23:17:17 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/img/laptop.jpg
+Stack Trace:
+#0 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-03-28 23:17:23 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/img/laptop.jpg
+Stack Trace:
+#0 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-03-28 23:25:19 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/css/bootstrap.css.map
+Stack Trace:
+#0 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-03-28 23:26:24 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/css/bootstrap.css.map
+Stack Trace:
+#0 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-03-28 23:28:57 Error: [MissingActionException] Action SweeshController::users() could not be found.
+Exception Attributes: array (
+  'controller' => 'SweeshController',
+  'action' => 'users',
+)
+Request URL: /Sweesh/sweesh/users
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SweeshController), Object(CakeRequest))
+#2 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-03-28 23:32:36 Error: [MissingActionException] Action SweeshController::users() could not be found.
+Exception Attributes: array (
+  'controller' => 'SweeshController',
+  'action' => 'users',
+)
+Request URL: /Sweesh/sweesh/users
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SweeshController), Object(CakeRequest))
+#2 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-03-29 03:35:03 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\wamp\www\Sweesh\app\View\Users\login.ctp, line 20]
+2016-03-29 03:35:03 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /Sweesh/users/login
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\Swe...', 20)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\wamp\\www\\Swe...', 20, Array)
+#2 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\wamp\\www\\Swe...', 20, Array)
+#3 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-03-29 03:44:21 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/css/bootstrap.css.map
+Stack Trace:
+#0 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-03-29 03:45:05 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/css/bootstrap.css.map
+Stack Trace:
+#0 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-03-29 03:51:46 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/css/bootstrap.css.map
+Stack Trace:
+#0 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-03-29 03:52:25 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/css/bootstrap.css.map
+Stack Trace:
+#0 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-03-29 03:59:48 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/css/bootstrap.css.map
+Stack Trace:
+#0 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-03-29 04:27:59 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/css/bootstrap.css.map
+Stack Trace:
+#0 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-03-29 04:42:59 Error: Fatal Error (64): Cannot redeclare AppController::isAuthorized() in [C:\wamp\www\Sweesh\app\Controller\AppController.php, line 71]
+2016-03-29 04:42:59 Error: [FatalErrorException] Cannot redeclare AppController::isAuthorized()
+Request URL: /Sweesh/users/login
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(64, 'Cannot redeclar...', 'C:\\wamp\\www\\Swe...', 71)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot redeclar...', 'C:\\wamp\\www\\Swe...', 71, Array)
+#2 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 64, 'Cannot redeclar...', 'C:\\wamp\\www\\Swe...', 71, Array)
+#3 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-03-29 04:53:01 Error: Fatal Error (4): syntax error, unexpected '?>', expecting ')' in [C:\wamp\www\Sweesh\app\View\Users\add.ctp, line 50]
+2016-03-29 04:53:01 Error: [FatalErrorException] syntax error, unexpected '?>', expecting ')'
+Request URL: /Sweesh/users/add
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\Swe...', 50)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\wamp\\www\\Swe...', 50, Array)
+#2 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\wamp\\www\\Swe...', 50, Array)
+#3 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-03-29 04:53:11 Error: Fatal Error (4): syntax error, unexpected '?>' in [C:\wamp\www\Sweesh\app\View\Users\add.ctp, line 50]
+2016-03-29 04:53:11 Error: [FatalErrorException] syntax error, unexpected '?>'
+Request URL: /Sweesh/users/add
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\Swe...', 50)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\wamp\\www\\Swe...', 50, Array)
+#2 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\wamp\\www\\Swe...', 50, Array)
+#3 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-03-29 04:54:26 Error: Fatal Error (4): syntax error, unexpected 'form' (T_STRING), expecting ')' in [C:\wamp\www\Sweesh\app\View\Users\add.ctp, line 35]
+2016-03-29 04:54:26 Error: [FatalErrorException] syntax error, unexpected 'form' (T_STRING), expecting ')'
+Request URL: /Sweesh/users/add
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\Swe...', 35)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\wamp\\www\\Swe...', 35, Array)
+#2 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\wamp\\www\\Swe...', 35, Array)
+#3 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-03-29 04:55:32 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/css/bootstrap.css.map
+Stack Trace:
+#0 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-03-29 04:56:25 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/css/bootstrap.css.map
+Stack Trace:
+#0 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-03-29 05:27:58 Error: [MissingControllerException] Controller class WeeshController could not be found.
+Exception Attributes: array (
+  'class' => 'WeeshController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/weesh/workshop/home
+Stack Trace:
+#0 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-03-29 05:29:12 Error: [MissingControllerException] Controller class WeeshController could not be found.
+Exception Attributes: array (
+  'class' => 'WeeshController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/weesh/workshop/home
+Stack Trace:
+#0 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-03-29 05:29:39 Error: [MissingControllerException] Controller class WeeshController could not be found.
+Exception Attributes: array (
+  'class' => 'WeeshController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/weesh/workshop/home
+Stack Trace:
+#0 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-03-29 05:29:47 Error: [MissingControllerException] Controller class WeeshController could not be found.
+Exception Attributes: array (
+  'class' => 'WeeshController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/weesh/index/home
+Stack Trace:
+#0 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-03-29 05:30:04 Error: [MissingControllerException] Controller class WeeshController could not be found.
+Exception Attributes: array (
+  'class' => 'WeeshController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/weesh
+Stack Trace:
+#0 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-03-29 05:30:48 Error: [MissingControllerException] Controller class WeeshController could not be found.
+Exception Attributes: array (
+  'class' => 'WeeshController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/weesh
+Stack Trace:
+#0 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-03-29 05:40:21 Error: Fatal Error (4): syntax error, unexpected '$user' (T_VARIABLE), expecting function (T_FUNCTION) in [C:\wamp\www\Sweesh\app\Model\User.php, line 40]
+2016-03-29 05:40:21 Error: [FatalErrorException] syntax error, unexpected '$user' (T_VARIABLE), expecting function (T_FUNCTION)
+Request URL: /Sweesh/users/login
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\Swe...', 40)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\wamp\\www\\Swe...', 40, Array)
+#2 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\wamp\\www\\Swe...', 40, Array)
+#3 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-03-29 05:41:00 Error: Fatal Error (4): syntax error, unexpected '$this' (T_VARIABLE) in [C:\wamp\www\Sweesh\app\Model\User.php, line 8]
+2016-03-29 05:41:00 Error: [FatalErrorException] syntax error, unexpected '$this' (T_VARIABLE)
+Request URL: /Sweesh/users/login
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\Swe...', 8)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\wamp\\www\\Swe...', 8, Array)
+#2 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\wamp\\www\\Swe...', 8, Array)
+#3 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-03-29 05:41:28 Error: Fatal Error (4): syntax error, unexpected '$this' (T_VARIABLE) in [C:\wamp\www\Sweesh\app\Controller\UsersController.php, line 13]
+2016-03-29 05:41:28 Error: [FatalErrorException] syntax error, unexpected '$this' (T_VARIABLE)
+Request URL: /Sweesh/users/login
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\Swe...', 13)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\wamp\\www\\Swe...', 13, Array)
+#2 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\wamp\\www\\Swe...', 13, Array)
+#3 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-03-29 05:41:51 Error: Fatal Error (4): syntax error, unexpected '$user' (T_VARIABLE), expecting function (T_FUNCTION) in [C:\wamp\www\Sweesh\app\Controller\UsersController.php, line 13]
+2016-03-29 05:41:51 Error: [FatalErrorException] syntax error, unexpected '$user' (T_VARIABLE), expecting function (T_FUNCTION)
+Request URL: /Sweesh/users/login
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\Swe...', 13)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\wamp\\www\\Swe...', 13, Array)
+#2 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\wamp\\www\\Swe...', 13, Array)
+#3 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-03-29 05:46:04 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\wamp\www\Sweesh\app\View\Layouts\default.ctp, line 53]
+2016-03-29 05:46:04 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /Sweesh/sweesh/overview
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\Swe...', 53)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\wamp\\www\\Swe...', 53, Array)
+#2 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\wamp\\www\\Swe...', 53, Array)
+#3 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-03-29 05:46:26 Error: Fatal Error (4): syntax error, unexpected '=' in [C:\wamp\www\Sweesh\app\View\Layouts\default.ctp, line 53]
+2016-03-29 05:46:26 Error: [FatalErrorException] syntax error, unexpected '='
+Request URL: /Sweesh/sweesh/overview
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\wamp\\www\\Swe...', 53)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\wamp\\www\\Swe...', 53, Array)
+#2 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\wamp\\www\\Swe...', 53, Array)
+#3 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-03-29 05:53:46 Error: [MissingActionException] Action SweeshController::account() could not be found.
+Exception Attributes: array (
+  'controller' => 'SweeshController',
+  'action' => 'account',
+)
+Request URL: /Sweesh/sweesh/account
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SweeshController), Object(CakeRequest))
+#2 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-03-29 06:07:50 Error: Fatal Error (1): Call to a member function input() on a non-object in [C:\wamp\www\Sweesh\app\View\Users\signup.ctp, line 54]
+2016-03-29 06:07:50 Error: [FatalErrorException] Call to a member function input() on a non-object
+Request URL: /Sweesh/users/signup
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\wamp\\www\\Swe...', 54)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\wamp\\www\\Swe...', 54, Array)
+#2 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\wamp\\www\\Swe...', 54, Array)
+#3 C:\wamp\www\Sweesh\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-03-29 06:08:33 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/css/bootstrap.css.map
+Stack Trace:
+#0 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-03-29 06:20:22 Error: [MissingActionException] Action SweeshController::signup() could not be found.
+Exception Attributes: array (
+  'controller' => 'SweeshController',
+  'action' => 'signup',
+)
+Request URL: /Sweesh/sweesh/signup
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SweeshController), Object(CakeRequest))
+#2 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-03-29 06:20:37 Error: [MissingActionException] Action SweeshController::signup() could not be found.
+Exception Attributes: array (
+  'controller' => 'SweeshController',
+  'action' => 'signup',
+)
+Request URL: /Sweesh/sweesh/signup
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SweeshController), Object(CakeRequest))
+#2 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-03-29 06:20:39 Error: [MissingActionException] Action SweeshController::signup() could not be found.
+Exception Attributes: array (
+  'controller' => 'SweeshController',
+  'action' => 'signup',
+)
+Request URL: /Sweesh/sweesh/signup
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SweeshController), Object(CakeRequest))
+#2 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-03-29 06:32:41 Error: [NotFoundException] Invalid user
+Request URL: /Sweesh/users/view
+Stack Trace:
+#0 [internal function]: UsersController->view()
+#1 C:\wamp\www\Sweesh\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-03-29 08:02:54 Error: [MissingActionException] Action SweeshController::account() could not be found.
+Exception Attributes: array (
+  'controller' => 'SweeshController',
+  'action' => 'account',
+)
+Request URL: /Sweesh/sweesh/account
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SweeshController), Object(CakeRequest))
+#2 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-03-29 08:02:59 Error: [MissingActionException] Action SweeshController::parameters() could not be found.
+Exception Attributes: array (
+  'controller' => 'SweeshController',
+  'action' => 'parameters',
+)
+Request URL: /Sweesh/sweesh/parameters
+Stack Trace:
+#0 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SweeshController), Object(CakeRequest))
+#2 C:\wamp\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-01-26 18:03:47 Error: [MissingControllerException] Controller class WeeshController could not be found.
+Exception Attributes: array (
+  'class' => 'WeeshController',
+  'plugin' => NULL,
+)
+Request URL: /Weesh/weesh/
+Stack Trace:
+#0 D:\wamp64\www\Weesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-01-26 18:04:25 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [1049] Base \'sweesh\' inconnue',
+  'enabled' => true,
+)
+Request URL: /Sweesh/users/signup
+Stack Trace:
+#0 D:\wamp64\www\Sweesh\lib\Cake\Model\Datasource\DboSource.php(260): Mysql->connect()
+#1 D:\wamp64\www\Sweesh\lib\Cake\Model\ConnectionManager.php(105): DboSource->__construct(Array)
+#2 D:\wamp64\www\Sweesh\lib\Cake\Model\Model.php(3621): ConnectionManager::getDataSource('default')
+#3 D:\wamp64\www\Sweesh\lib\Cake\Model\Model.php(1155): Model->setDataSource('default')
+#4 D:\wamp64\www\Sweesh\lib\Cake\Model\Model.php(3648): Model->setSource('users')
+#5 D:\wamp64\www\Sweesh\lib\Cake\Model\Model.php(1387): Model->getDataSource()
+#6 D:\wamp64\www\Sweesh\lib\Cake\View\Helper\FormHelper.php(215): Model->schema()
+#7 D:\wamp64\www\Sweesh\lib\Cake\View\Helper\FormHelper.php(468): FormHelper->_introspectModel('User', 'fields')
+#8 D:\wamp64\www\Sweesh\app\View\Users\signup.ctp(14): FormHelper->create('User', Array)
+#9 D:\wamp64\www\Sweesh\lib\Cake\View\View.php(971): include('D:\\wamp64\\www\\S...')
+#10 D:\wamp64\www\Sweesh\lib\Cake\View\View.php(933): View->_evaluate('D:\\wamp64\\www\\S...', Array)
+#11 D:\wamp64\www\Sweesh\lib\Cake\View\View.php(473): View->_render('D:\\wamp64\\www\\S...')
+#12 D:\wamp64\www\Sweesh\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#13 D:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#14 D:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#15 D:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2017-01-26 18:04:39 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [1049] Base \'sweesh\' inconnue',
+  'enabled' => true,
+)
+Request URL: /Sweesh/users/signup
+Stack Trace:
+#0 D:\wamp64\www\Sweesh\lib\Cake\Model\Datasource\DboSource.php(260): Mysql->connect()
+#1 D:\wamp64\www\Sweesh\lib\Cake\Model\ConnectionManager.php(105): DboSource->__construct(Array)
+#2 D:\wamp64\www\Sweesh\lib\Cake\Model\Model.php(3621): ConnectionManager::getDataSource('default')
+#3 D:\wamp64\www\Sweesh\lib\Cake\Model\Model.php(1155): Model->setDataSource('default')
+#4 D:\wamp64\www\Sweesh\lib\Cake\Model\Model.php(3648): Model->setSource('users')
+#5 D:\wamp64\www\Sweesh\lib\Cake\Model\Model.php(1387): Model->getDataSource()
+#6 D:\wamp64\www\Sweesh\lib\Cake\View\Helper\FormHelper.php(215): Model->schema()
+#7 D:\wamp64\www\Sweesh\lib\Cake\View\Helper\FormHelper.php(468): FormHelper->_introspectModel('User', 'fields')
+#8 D:\wamp64\www\Sweesh\app\View\Users\signup.ctp(14): FormHelper->create('User', Array)
+#9 D:\wamp64\www\Sweesh\lib\Cake\View\View.php(971): include('D:\\wamp64\\www\\S...')
+#10 D:\wamp64\www\Sweesh\lib\Cake\View\View.php(933): View->_evaluate('D:\\wamp64\\www\\S...', Array)
+#11 D:\wamp64\www\Sweesh\lib\Cake\View\View.php(473): View->_render('D:\\wamp64\\www\\S...')
+#12 D:\wamp64\www\Sweesh\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#13 D:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#14 D:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#15 D:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2017-01-26 18:04:40 Error: [MissingActionException] Action SweeshController::about() could not be found.
+Exception Attributes: array (
+  'controller' => 'SweeshController',
+  'action' => 'about',
+)
+Request URL: /Sweesh/sweesh/about
+Stack Trace:
+#0 D:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 D:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SweeshController), Object(CakeRequest))
+#2 D:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-01-26 18:04:41 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [1049] Base \'sweesh\' inconnue',
+  'enabled' => true,
+)
+Request URL: /Sweesh/users/login
+Stack Trace:
+#0 D:\wamp64\www\Sweesh\lib\Cake\Model\Datasource\DboSource.php(260): Mysql->connect()
+#1 D:\wamp64\www\Sweesh\lib\Cake\Model\ConnectionManager.php(105): DboSource->__construct(Array)
+#2 D:\wamp64\www\Sweesh\lib\Cake\Model\Model.php(3621): ConnectionManager::getDataSource('default')
+#3 D:\wamp64\www\Sweesh\lib\Cake\Model\Model.php(1155): Model->setDataSource('default')
+#4 D:\wamp64\www\Sweesh\lib\Cake\Model\Model.php(3648): Model->setSource('users')
+#5 D:\wamp64\www\Sweesh\lib\Cake\Model\Model.php(1387): Model->getDataSource()
+#6 D:\wamp64\www\Sweesh\lib\Cake\View\Helper\FormHelper.php(215): Model->schema()
+#7 D:\wamp64\www\Sweesh\lib\Cake\View\Helper\FormHelper.php(468): FormHelper->_introspectModel('User', 'fields')
+#8 D:\wamp64\www\Sweesh\app\View\Users\login.ctp(9): FormHelper->create('User', Array)
+#9 D:\wamp64\www\Sweesh\lib\Cake\View\View.php(971): include('D:\\wamp64\\www\\S...')
+#10 D:\wamp64\www\Sweesh\lib\Cake\View\View.php(933): View->_evaluate('D:\\wamp64\\www\\S...', Array)
+#11 D:\wamp64\www\Sweesh\lib\Cake\View\View.php(473): View->_render('D:\\wamp64\\www\\S...')
+#12 D:\wamp64\www\Sweesh\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#13 D:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#14 D:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#15 D:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2017-01-26 18:04:41 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [1049] Base \'sweesh\' inconnue',
+  'enabled' => true,
+)
+Request URL: /Sweesh/users/signup
+Stack Trace:
+#0 D:\wamp64\www\Sweesh\lib\Cake\Model\Datasource\DboSource.php(260): Mysql->connect()
+#1 D:\wamp64\www\Sweesh\lib\Cake\Model\ConnectionManager.php(105): DboSource->__construct(Array)
+#2 D:\wamp64\www\Sweesh\lib\Cake\Model\Model.php(3621): ConnectionManager::getDataSource('default')
+#3 D:\wamp64\www\Sweesh\lib\Cake\Model\Model.php(1155): Model->setDataSource('default')
+#4 D:\wamp64\www\Sweesh\lib\Cake\Model\Model.php(3648): Model->setSource('users')
+#5 D:\wamp64\www\Sweesh\lib\Cake\Model\Model.php(1387): Model->getDataSource()
+#6 D:\wamp64\www\Sweesh\lib\Cake\View\Helper\FormHelper.php(215): Model->schema()
+#7 D:\wamp64\www\Sweesh\lib\Cake\View\Helper\FormHelper.php(468): FormHelper->_introspectModel('User', 'fields')
+#8 D:\wamp64\www\Sweesh\app\View\Users\signup.ctp(14): FormHelper->create('User', Array)
+#9 D:\wamp64\www\Sweesh\lib\Cake\View\View.php(971): include('D:\\wamp64\\www\\S...')
+#10 D:\wamp64\www\Sweesh\lib\Cake\View\View.php(933): View->_evaluate('D:\\wamp64\\www\\S...', Array)
+#11 D:\wamp64\www\Sweesh\lib\Cake\View\View.php(473): View->_render('D:\\wamp64\\www\\S...')
+#12 D:\wamp64\www\Sweesh\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#13 D:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#14 D:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#15 D:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2017-01-26 18:04:42 Error: [MissingActionException] Action SweeshController::about() could not be found.
+Exception Attributes: array (
+  'controller' => 'SweeshController',
+  'action' => 'about',
+)
+Request URL: /Sweesh/sweesh/about
+Stack Trace:
+#0 D:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 D:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SweeshController), Object(CakeRequest))
+#2 D:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-01-26 18:04:43 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [1049] Base \'sweesh\' inconnue',
+  'enabled' => true,
+)
+Request URL: /Sweesh/users/signup
+Stack Trace:
+#0 D:\wamp64\www\Sweesh\lib\Cake\Model\Datasource\DboSource.php(260): Mysql->connect()
+#1 D:\wamp64\www\Sweesh\lib\Cake\Model\ConnectionManager.php(105): DboSource->__construct(Array)
+#2 D:\wamp64\www\Sweesh\lib\Cake\Model\Model.php(3621): ConnectionManager::getDataSource('default')
+#3 D:\wamp64\www\Sweesh\lib\Cake\Model\Model.php(1155): Model->setDataSource('default')
+#4 D:\wamp64\www\Sweesh\lib\Cake\Model\Model.php(3648): Model->setSource('users')
+#5 D:\wamp64\www\Sweesh\lib\Cake\Model\Model.php(1387): Model->getDataSource()
+#6 D:\wamp64\www\Sweesh\lib\Cake\View\Helper\FormHelper.php(215): Model->schema()
+#7 D:\wamp64\www\Sweesh\lib\Cake\View\Helper\FormHelper.php(468): FormHelper->_introspectModel('User', 'fields')
+#8 D:\wamp64\www\Sweesh\app\View\Users\signup.ctp(14): FormHelper->create('User', Array)
+#9 D:\wamp64\www\Sweesh\lib\Cake\View\View.php(971): include('D:\\wamp64\\www\\S...')
+#10 D:\wamp64\www\Sweesh\lib\Cake\View\View.php(933): View->_evaluate('D:\\wamp64\\www\\S...', Array)
+#11 D:\wamp64\www\Sweesh\lib\Cake\View\View.php(473): View->_render('D:\\wamp64\\www\\S...')
+#12 D:\wamp64\www\Sweesh\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#13 D:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#14 D:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#15 D:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2017-01-26 18:06:21 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [1049] Base \'sweesh\' inconnue',
+  'enabled' => true,
+)
+Request URL: /Sweesh/users/login
+Stack Trace:
+#0 D:\wamp64\www\Sweesh\lib\Cake\Model\Datasource\DboSource.php(260): Mysql->connect()
+#1 D:\wamp64\www\Sweesh\lib\Cake\Model\ConnectionManager.php(105): DboSource->__construct(Array)
+#2 D:\wamp64\www\Sweesh\lib\Cake\Model\Model.php(3621): ConnectionManager::getDataSource('default')
+#3 D:\wamp64\www\Sweesh\lib\Cake\Model\Model.php(1155): Model->setDataSource('default')
+#4 D:\wamp64\www\Sweesh\lib\Cake\Model\Model.php(3648): Model->setSource('users')
+#5 D:\wamp64\www\Sweesh\lib\Cake\Model\Model.php(1387): Model->getDataSource()
+#6 D:\wamp64\www\Sweesh\lib\Cake\View\Helper\FormHelper.php(215): Model->schema()
+#7 D:\wamp64\www\Sweesh\lib\Cake\View\Helper\FormHelper.php(468): FormHelper->_introspectModel('User', 'fields')
+#8 D:\wamp64\www\Sweesh\app\View\Users\login.ctp(9): FormHelper->create('User', Array)
+#9 D:\wamp64\www\Sweesh\lib\Cake\View\View.php(971): include('D:\\wamp64\\www\\S...')
+#10 D:\wamp64\www\Sweesh\lib\Cake\View\View.php(933): View->_evaluate('D:\\wamp64\\www\\S...', Array)
+#11 D:\wamp64\www\Sweesh\lib\Cake\View\View.php(473): View->_render('D:\\wamp64\\www\\S...')
+#12 D:\wamp64\www\Sweesh\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#13 D:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#14 D:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#15 D:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2017-01-26 18:06:22 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [1049] Base \'sweesh\' inconnue',
+  'enabled' => true,
+)
+Request URL: /Sweesh/users/signup
+Stack Trace:
+#0 D:\wamp64\www\Sweesh\lib\Cake\Model\Datasource\DboSource.php(260): Mysql->connect()
+#1 D:\wamp64\www\Sweesh\lib\Cake\Model\ConnectionManager.php(105): DboSource->__construct(Array)
+#2 D:\wamp64\www\Sweesh\lib\Cake\Model\Model.php(3621): ConnectionManager::getDataSource('default')
+#3 D:\wamp64\www\Sweesh\lib\Cake\Model\Model.php(1155): Model->setDataSource('default')
+#4 D:\wamp64\www\Sweesh\lib\Cake\Model\Model.php(3648): Model->setSource('users')
+#5 D:\wamp64\www\Sweesh\lib\Cake\Model\Model.php(1387): Model->getDataSource()
+#6 D:\wamp64\www\Sweesh\lib\Cake\View\Helper\FormHelper.php(215): Model->schema()
+#7 D:\wamp64\www\Sweesh\lib\Cake\View\Helper\FormHelper.php(468): FormHelper->_introspectModel('User', 'fields')
+#8 D:\wamp64\www\Sweesh\app\View\Users\signup.ctp(14): FormHelper->create('User', Array)
+#9 D:\wamp64\www\Sweesh\lib\Cake\View\View.php(971): include('D:\\wamp64\\www\\S...')
+#10 D:\wamp64\www\Sweesh\lib\Cake\View\View.php(933): View->_evaluate('D:\\wamp64\\www\\S...', Array)
+#11 D:\wamp64\www\Sweesh\lib\Cake\View\View.php(473): View->_render('D:\\wamp64\\www\\S...')
+#12 D:\wamp64\www\Sweesh\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#13 D:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#14 D:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#15 D:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2017-01-26 18:06:23 Error: [MissingActionException] Action SweeshController::about() could not be found.
+Exception Attributes: array (
+  'controller' => 'SweeshController',
+  'action' => 'about',
+)
+Request URL: /Sweesh/sweesh/about
+Stack Trace:
+#0 D:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 D:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SweeshController), Object(CakeRequest))
+#2 D:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-01-26 18:06:25 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [1049] Base \'sweesh\' inconnue',
+  'enabled' => true,
+)
+Request URL: /Sweesh/users/login
+Stack Trace:
+#0 D:\wamp64\www\Sweesh\lib\Cake\Model\Datasource\DboSource.php(260): Mysql->connect()
+#1 D:\wamp64\www\Sweesh\lib\Cake\Model\ConnectionManager.php(105): DboSource->__construct(Array)
+#2 D:\wamp64\www\Sweesh\lib\Cake\Model\Model.php(3621): ConnectionManager::getDataSource('default')
+#3 D:\wamp64\www\Sweesh\lib\Cake\Model\Model.php(1155): Model->setDataSource('default')
+#4 D:\wamp64\www\Sweesh\lib\Cake\Model\Model.php(3648): Model->setSource('users')
+#5 D:\wamp64\www\Sweesh\lib\Cake\Model\Model.php(1387): Model->getDataSource()
+#6 D:\wamp64\www\Sweesh\lib\Cake\View\Helper\FormHelper.php(215): Model->schema()
+#7 D:\wamp64\www\Sweesh\lib\Cake\View\Helper\FormHelper.php(468): FormHelper->_introspectModel('User', 'fields')
+#8 D:\wamp64\www\Sweesh\app\View\Users\login.ctp(9): FormHelper->create('User', Array)
+#9 D:\wamp64\www\Sweesh\lib\Cake\View\View.php(971): include('D:\\wamp64\\www\\S...')
+#10 D:\wamp64\www\Sweesh\lib\Cake\View\View.php(933): View->_evaluate('D:\\wamp64\\www\\S...', Array)
+#11 D:\wamp64\www\Sweesh\lib\Cake\View\View.php(473): View->_render('D:\\wamp64\\www\\S...')
+#12 D:\wamp64\www\Sweesh\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#13 D:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#14 D:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#15 D:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2017-01-26 18:06:25 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [1049] Base \'sweesh\' inconnue',
+  'enabled' => true,
+)
+Request URL: /Sweesh/users/signup
+Stack Trace:
+#0 D:\wamp64\www\Sweesh\lib\Cake\Model\Datasource\DboSource.php(260): Mysql->connect()
+#1 D:\wamp64\www\Sweesh\lib\Cake\Model\ConnectionManager.php(105): DboSource->__construct(Array)
+#2 D:\wamp64\www\Sweesh\lib\Cake\Model\Model.php(3621): ConnectionManager::getDataSource('default')
+#3 D:\wamp64\www\Sweesh\lib\Cake\Model\Model.php(1155): Model->setDataSource('default')
+#4 D:\wamp64\www\Sweesh\lib\Cake\Model\Model.php(3648): Model->setSource('users')
+#5 D:\wamp64\www\Sweesh\lib\Cake\Model\Model.php(1387): Model->getDataSource()
+#6 D:\wamp64\www\Sweesh\lib\Cake\View\Helper\FormHelper.php(215): Model->schema()
+#7 D:\wamp64\www\Sweesh\lib\Cake\View\Helper\FormHelper.php(468): FormHelper->_introspectModel('User', 'fields')
+#8 D:\wamp64\www\Sweesh\app\View\Users\signup.ctp(14): FormHelper->create('User', Array)
+#9 D:\wamp64\www\Sweesh\lib\Cake\View\View.php(971): include('D:\\wamp64\\www\\S...')
+#10 D:\wamp64\www\Sweesh\lib\Cake\View\View.php(933): View->_evaluate('D:\\wamp64\\www\\S...', Array)
+#11 D:\wamp64\www\Sweesh\lib\Cake\View\View.php(473): View->_render('D:\\wamp64\\www\\S...')
+#12 D:\wamp64\www\Sweesh\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#13 D:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#14 D:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#15 D:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2017-01-26 18:06:26 Error: [MissingActionException] Action SweeshController::about() could not be found.
+Exception Attributes: array (
+  'controller' => 'SweeshController',
+  'action' => 'about',
+)
+Request URL: /Sweesh/sweesh/about
+Stack Trace:
+#0 D:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 D:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SweeshController), Object(CakeRequest))
+#2 D:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-01-26 18:08:47 Error: [MissingActionException] Action SweeshController::about() could not be found.
+Exception Attributes: array (
+  'controller' => 'SweeshController',
+  'action' => 'about',
+)
+Request URL: /Sweesh/sweesh/about
+Stack Trace:
+#0 D:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 D:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SweeshController), Object(CakeRequest))
+#2 D:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-01-26 18:08:50 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [1049] Base \'sweesh\' inconnue',
+  'enabled' => true,
+)
+Request URL: /Sweesh/users/signup
+Stack Trace:
+#0 D:\wamp64\www\Sweesh\lib\Cake\Model\Datasource\DboSource.php(260): Mysql->connect()
+#1 D:\wamp64\www\Sweesh\lib\Cake\Model\ConnectionManager.php(105): DboSource->__construct(Array)
+#2 D:\wamp64\www\Sweesh\lib\Cake\Model\Model.php(3621): ConnectionManager::getDataSource('default')
+#3 D:\wamp64\www\Sweesh\lib\Cake\Model\Model.php(1155): Model->setDataSource('default')
+#4 D:\wamp64\www\Sweesh\lib\Cake\Model\Model.php(3648): Model->setSource('users')
+#5 D:\wamp64\www\Sweesh\lib\Cake\Model\Model.php(1387): Model->getDataSource()
+#6 D:\wamp64\www\Sweesh\lib\Cake\View\Helper\FormHelper.php(215): Model->schema()
+#7 D:\wamp64\www\Sweesh\lib\Cake\View\Helper\FormHelper.php(468): FormHelper->_introspectModel('User', 'fields')
+#8 D:\wamp64\www\Sweesh\app\View\Users\signup.ctp(14): FormHelper->create('User', Array)
+#9 D:\wamp64\www\Sweesh\lib\Cake\View\View.php(971): include('D:\\wamp64\\www\\S...')
+#10 D:\wamp64\www\Sweesh\lib\Cake\View\View.php(933): View->_evaluate('D:\\wamp64\\www\\S...', Array)
+#11 D:\wamp64\www\Sweesh\lib\Cake\View\View.php(473): View->_render('D:\\wamp64\\www\\S...')
+#12 D:\wamp64\www\Sweesh\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#13 D:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#14 D:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#15 D:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2017-01-26 18:15:42 Error: [PDOException] SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'password' at row 1
+Request URL: /Sweesh/users/signup
+Stack Trace:
+#0 D:\wamp64\www\Sweesh\lib\Cake\Model\Datasource\DboSource.php(461): PDOStatement->execute(Array)
+#1 D:\wamp64\www\Sweesh\lib\Cake\Model\Datasource\DboSource.php(427): DboSource->_execute('INSERT INTO `sw...', Array)
+#2 D:\wamp64\www\Sweesh\lib\Cake\Model\Datasource\DboSource.php(1020): DboSource->execute('INSERT INTO `sw...')
+#3 D:\wamp64\www\Sweesh\lib\Cake\Model\Model.php(1928): DboSource->create(Object(User), Array, Array)
+#4 D:\wamp64\www\Sweesh\lib\Cake\Model\Model.php(1751): Model->_doSave(Array, Array)
+#5 D:\wamp64\www\Sweesh\app\Controller\UsersController.php(37): Model->save(Array)
+#6 [internal function]: UsersController->signup()
+#7 D:\wamp64\www\Sweesh\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#8 D:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 D:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#10 D:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2017-01-26 18:29:22 Error: [MissingActionException] Action SweeshController::parameters() could not be found.
+Exception Attributes: array (
+  'controller' => 'SweeshController',
+  'action' => 'parameters',
+)
+Request URL: /Sweesh/sweesh/parameters
+Stack Trace:
+#0 D:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 D:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SweeshController), Object(CakeRequest))
+#2 D:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-01-26 18:29:24 Error: [MissingActionException] Action SweeshController::about() could not be found.
+Exception Attributes: array (
+  'controller' => 'SweeshController',
+  'action' => 'about',
+)
+Request URL: /Sweesh/sweesh/about
+Stack Trace:
+#0 D:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 D:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SweeshController), Object(CakeRequest))
+#2 D:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-01-26 18:29:25 Error: [MissingActionException] Action SweeshController::account() could not be found.
+Exception Attributes: array (
+  'controller' => 'SweeshController',
+  'action' => 'account',
+)
+Request URL: /Sweesh/sweesh/account
+Stack Trace:
+#0 D:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 D:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SweeshController), Object(CakeRequest))
+#2 D:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-01-26 18:29:26 Error: [MissingActionException] Action SweeshController::account() could not be found.
+Exception Attributes: array (
+  'controller' => 'SweeshController',
+  'action' => 'account',
+)
+Request URL: /Sweesh/sweesh/account
+Stack Trace:
+#0 D:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 D:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SweeshController), Object(CakeRequest))
+#2 D:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
