@@ -13,9 +13,7 @@ class UsersController extends AppController {
 
 	public function isAuthorized($user = null) {
         // Chacun des utilisateur enregistré peut accéder aux fonctions publiques
-        if (empty($this->request->params['admin'])) {
-            return true;
-        }
+        return true;
     }
 
     public function index() {
