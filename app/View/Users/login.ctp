@@ -32,7 +32,7 @@ $this->assign('title', 'Connexion à sWeesh');
             </div>
             <div class="form-group">
                 <div class="col-sm-offset-5 col-sm-2">
-                    <?php echo $this->Form->submit('Login', array('class' => 'btn btn-primary btn-orange')) ?>
+                    <?php echo $this->Form->submit('Se connecter', array('class' => 'btn btn-primary btn-orange')) ?>
                 </div>
             </div>
             <?php echo $this->Form->end(); ?>

@@ -78,15 +78,6 @@ echo $this->Html->docType();
                                 <div class="header-nav-main header-nav-main-effect-1 header-nav-main-sub-effect-1 collapse">
                                     <nav>
                                         <ul class="nav nav-pills nav-main" id="mainNav">
-                                            <li><a class="purple" href="myProducts">Mes produits</a></li>
-                                            <li><a class="purple" href="myLists">Mes listes</a></li>
-                                            <li><a class="purple" href="mySettings">Paramètres</a></li>
-                                            <li>
-                                                <?php if (AuthComponent::user()):
-                                                    // The user is logged in, show the logout link
-                                                    echo $this->Html->link('Bienvenue ' . AuthComponent::user()['firstname'] . ' ' . AuthComponent::user()['lastname'], array('controller' => 'sweesh', 'action' => 'account'));
-                                                endif; ?>
-                                            </li>
                                             <li><?php if (AuthComponent::user()):
                                                     // Logged in, show the my products link
                                                     echo $this->Html->link('Mes Produits', array('controller' => 'sweesh', 'action' => 'myProducts'), array('class' => 'purple'));

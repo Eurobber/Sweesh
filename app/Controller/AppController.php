@@ -39,7 +39,7 @@ class AppController extends Controller {
         'Auth' => array(
             'loginRedirect' => array(
                 'controller' => 'sweesh',
-                'action' => 'overview'
+                'action' => 'index'
             ),
             'authError' => 'Pensiez-vous réellement que vous étiez autorisés à voir cela ?',
             'logoutRedirect' => array(
@@ -55,7 +55,6 @@ class AppController extends Controller {
         )
     );
 
-
 	public function beforeFilter(){
 		$this->Auth->allow('login', 'index');
 	}
@@ -69,7 +68,4 @@ class AppController extends Controller {
         // Default deny
         return false;
     }
-
-
-
 }
