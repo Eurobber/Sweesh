@@ -3279,3 +3279,88 @@ Stack Trace:
 #8 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ContactController), Object(CakeRequest))
 #9 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #10 {main}
+2017-01-27 02:46:56 Error: [MissingActionException] Action SweeshController::parameters() could not be found.
+Exception Attributes: array (
+  'controller' => 'SweeshController',
+  'action' => 'parameters',
+)
+Request URL: /Sweesh/sweesh/parameters
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SweeshController), Object(CakeRequest))
+#2 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-01-27 02:47:20 Error: [SocketException] mail() [<a href='http://php.net/function.mail'>function.mail</a> : Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set()
+Request URL: /Sweesh/users/signup
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\lib\Cake\Network\Email\MailTransport.php(51): MailTransport->_mail('pambourg@edu.ec...', 'About', 'Mon message\r\n\r\n', 'From: My Site <...', NULL)
+#1 C:\wamp64\www\Sweesh\lib\Cake\Network\Email\CakeEmail.php(1173): MailTransport->send(Object(CakeEmail))
+#2 C:\wamp64\www\Sweesh\app\Controller\UsersController.php(52): CakeEmail->send('Mon message')
+#3 [internal function]: UsersController->signup()
+#4 C:\wamp64\www\Sweesh\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#5 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#6 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#7 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2017-01-27 02:50:00 Error: [SocketException] mail() [<a href='http://php.net/function.mail'>function.mail</a> : Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set()
+Request URL: /Sweesh/users/signup
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\lib\Cake\Network\Email\MailTransport.php(51): MailTransport->_mail('alexis.pamdzadz...', 'Subject', 'Message\r\n\r\n', 'From: weesh.io@...', NULL)
+#1 C:\wamp64\www\Sweesh\lib\Cake\Network\Email\CakeEmail.php(1173): MailTransport->send(Object(CakeEmail))
+#2 C:\wamp64\www\Sweesh\lib\Cake\Network\Email\CakeEmail.php(1222): CakeEmail->send('Message')
+#3 C:\wamp64\www\Sweesh\app\Controller\UsersController.php(48): CakeEmail::deliver('alexis.pamdzadz...', 'Subject', 'Message', Array)
+#4 [internal function]: UsersController->signup()
+#5 C:\wamp64\www\Sweesh\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#6 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#7 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#8 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2017-01-27 02:57:05 Error: [SocketException] mail() [<a href='http://php.net/function.mail'>function.mail</a> : Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set()
+Request URL: /Sweesh/users/signup
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\lib\Cake\Network\Email\MailTransport.php(51): MailTransport->_mail('alexis.pambourg...', 'Subject', 'Message\r\n\r\n', 'From: weesh.io@...', NULL)
+#1 C:\wamp64\www\Sweesh\lib\Cake\Network\Email\CakeEmail.php(1173): MailTransport->send(Object(CakeEmail))
+#2 C:\wamp64\www\Sweesh\lib\Cake\Network\Email\CakeEmail.php(1222): CakeEmail->send('Message')
+#3 C:\wamp64\www\Sweesh\app\Controller\UsersController.php(48): CakeEmail::deliver('alexis.pambourg...', 'Subject', 'Message', Array)
+#4 [internal function]: UsersController->signup()
+#5 C:\wamp64\www\Sweesh\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#6 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#7 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#8 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2017-01-27 02:59:32 Error: [SocketException] SMTP server did not accept the password.
+Request URL: /Sweesh/users/signup
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\lib\Cake\Network\Email\SmtpTransport.php(96): SmtpTransport->_auth()
+#1 C:\wamp64\www\Sweesh\lib\Cake\Network\Email\CakeEmail.php(1173): SmtpTransport->send(Object(CakeEmail))
+#2 C:\wamp64\www\Sweesh\app\Controller\UsersController.php(55): CakeEmail->send('Mon message')
+#3 [internal function]: UsersController->signup()
+#4 C:\wamp64\www\Sweesh\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#5 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#6 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#7 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2017-01-27 03:06:23 Error: [SocketException] SMTP server did not accept the password.
+Request URL: /Sweesh/users/signup
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\lib\Cake\Network\Email\SmtpTransport.php(96): SmtpTransport->_auth()
+#1 C:\wamp64\www\Sweesh\lib\Cake\Network\Email\CakeEmail.php(1173): SmtpTransport->send(Object(CakeEmail))
+#2 C:\wamp64\www\Sweesh\app\Controller\UsersController.php(57): CakeEmail->send('Merci pour votr...')
+#3 [internal function]: UsersController->signup()
+#4 C:\wamp64\www\Sweesh\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#5 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#6 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#7 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2017-01-27 03:06:50 Error: [SocketException] SMTP server did not accept the password.
+Request URL: /Sweesh/users/signup
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\lib\Cake\Network\Email\SmtpTransport.php(96): SmtpTransport->_auth()
+#1 C:\wamp64\www\Sweesh\lib\Cake\Network\Email\CakeEmail.php(1173): SmtpTransport->send(Object(CakeEmail))
+#2 C:\wamp64\www\Sweesh\app\Controller\UsersController.php(57): CakeEmail->send('Merci pour votr...')
+#3 [internal function]: UsersController->signup()
+#4 C:\wamp64\www\Sweesh\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#5 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#6 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#7 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}

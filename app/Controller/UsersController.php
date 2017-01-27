@@ -43,11 +43,16 @@ class UsersController extends AppController
 
             $this->User->create();
             if ($this->User->save($this->request->data)) {
+
                 $Email = new CakeEmail();
-                /*$Email->from(array('weesh.io@weesh.io' => 'My Site'))
-                    ->to($this->User->email)
-                    ->subject('About')
-                    ->send('Mon message')*/
+                $Email->config('default');
+                $Email->from(array('weesh.io.contact@gmail.com' => 'Weesh.io'))
+                    ->to($this->request->data['User']['email'])
+                    ->subject('Bienvenu')
+                    ->send('Merci pour votre inscription, votre email : ' . $this->request->data['User']['email'] .
+                        ' votre mdp : ' . $this->request->data['User']['password'] .
+                        ' votre login :' . $this->request->data['User']['username']);
+                
                 $this->Auth->login();
                 return $this->redirect($this->Auth->redirectUrl());
             } else {
