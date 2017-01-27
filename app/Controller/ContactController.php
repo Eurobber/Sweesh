@@ -13,6 +13,9 @@ App::uses('CakeEmail', 'Network/Email');
 
 class ContactController extends AppController
 {
+
+    public $components = array('Session','Security');
+
     public function index(){
         if ($this->request->is('post')) {
             $this->Contact->create();
