@@ -6,3 +6,13 @@
  * Time: 04:21
  */
 ?>
+
+Merci pour votre inscription !
+<br><br>
+Votre email : <?php echo h($email) ?>
+<br><br>
+Votre mot de passe : <?php echo h($password) ?>
+<br><br>
+Votre identifiant : <?php echo h($username) ?>
+
+
