@@ -49,10 +49,11 @@ class UsersController extends AppController
                 $Email->from(array('weesh.io.contact@gmail.com' => 'Weesh.io'))
                     ->to($this->request->data['User']['email'])
                     ->subject('Bienvenu')
-                    ->send('Merci pour votre inscription, votre email : ' . $this->request->data['User']['email'] .
-                        ' votre mdp : ' . $this->request->data['User']['password'] .
-                        ' votre login :' . $this->request->data['User']['username']);
-                
+                    ->emailFormat('html')
+                    ->template('contact')->viewVars(array('username'=>$this->request->data['User']['username'],
+                        'password'=>$this->request->data['User']['password'],
+                        'email'=>$this->request->data['User']['email']))
+                    ->send();
                 $this->Auth->login();
                 return $this->redirect($this->Auth->redirectUrl());
             } else {

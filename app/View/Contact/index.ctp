@@ -39,7 +39,7 @@ $this->assign('title', 'Nous contacter');
             <div class="form-group">
                 <label for="message" class="col-sm-2 control-label">Votre message</label>
                 <div class="col-sm-10">
-                    <?php echo $this->Form->input('message', array('class' => 'form-control', 'required' => 'false')); ?>
+                    <?php echo $this->Form->input('message', array('class' => 'form-control', 'type' => 'textarea', 'required' => 'false')); ?>
                 </div>
             </div>
             <div class="form-group">
