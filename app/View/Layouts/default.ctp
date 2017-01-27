@@ -210,7 +210,7 @@ echo $this->Html->docType();
                             <ul>
                                 <li><a href="page-faq.html">FAQ's</a></li>
                                 <li><a href="sitemap.html">Sitemap</a></li>
-                                <li><a href="contact-us.html">Contact</a></li>
+                                <li><?php echo $this->Html->link('Contact', array('controller' => 'contact', 'action' => 'index')); ?></li>
                             </ul>
                         </nav>
                     </div>

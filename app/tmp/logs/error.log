@@ -3168,3 +3168,114 @@ Stack Trace:
 #1 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
 #2 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
+2017-01-26 23:57:23 Error: [MissingActionException] Action SweeshController::myProducts() could not be found.
+Exception Attributes: array (
+  'controller' => 'SweeshController',
+  'action' => 'myProducts',
+)
+Request URL: /Sweesh/sweesh/myProducts
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SweeshController), Object(CakeRequest))
+#2 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-01-26 23:57:25 Error: [MissingActionException] Action SweeshController::myLists() could not be found.
+Exception Attributes: array (
+  'controller' => 'SweeshController',
+  'action' => 'myLists',
+)
+Request URL: /Sweesh/sweesh/myLists
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SweeshController), Object(CakeRequest))
+#2 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-01-26 23:57:25 Error: [MissingActionException] Action SweeshController::parameters() could not be found.
+Exception Attributes: array (
+  'controller' => 'SweeshController',
+  'action' => 'parameters',
+)
+Request URL: /Sweesh/sweesh/parameters
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SweeshController), Object(CakeRequest))
+#2 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-01-27 00:45:51 Error: [MissingTableException] Table contacts for model Contact was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'contacts',
+  'class' => 'Contact',
+  'ds' => 'default',
+)
+Request URL: /Sweesh/contact
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\lib\Cake\Model\Model.php(3648): Model->setSource('contacts')
+#1 C:\wamp64\www\Sweesh\lib\Cake\Model\Model.php(1387): Model->getDataSource()
+#2 C:\wamp64\www\Sweesh\lib\Cake\View\Helper\FormHelper.php(215): Model->schema()
+#3 C:\wamp64\www\Sweesh\lib\Cake\View\Helper\FormHelper.php(468): FormHelper->_introspectModel('Contact', 'fields')
+#4 C:\wamp64\www\Sweesh\app\View\Contact\index.ctp(20): FormHelper->create('Contact', Array)
+#5 C:\wamp64\www\Sweesh\lib\Cake\View\View.php(971): include('C:\\wamp64\\www\\S...')
+#6 C:\wamp64\www\Sweesh\lib\Cake\View\View.php(933): View->_evaluate('C:\\wamp64\\www\\S...', Array)
+#7 C:\wamp64\www\Sweesh\lib\Cake\View\View.php(473): View->_render('C:\\wamp64\\www\\S...')
+#8 C:\wamp64\www\Sweesh\lib\Cake\Controller\Controller.php(960): View->render('index', NULL)
+#9 C:\wamp64\www\Sweesh\app\Controller\ContactController.php(15): Controller->render('index')
+#10 [internal function]: ContactController->index()
+#11 C:\wamp64\www\Sweesh\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(ContactController), Array)
+#12 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#13 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ContactController), Object(CakeRequest))
+#14 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2017-01-27 01:03:02 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'site_name' doesn't have a default value
+Request URL: /Sweesh/contact
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\lib\Cake\Model\Datasource\DboSource.php(461): PDOStatement->execute(Array)
+#1 C:\wamp64\www\Sweesh\lib\Cake\Model\Datasource\DboSource.php(427): DboSource->_execute('INSERT INTO `sw...', Array)
+#2 C:\wamp64\www\Sweesh\lib\Cake\Model\Datasource\DboSource.php(1020): DboSource->execute('INSERT INTO `sw...')
+#3 C:\wamp64\www\Sweesh\lib\Cake\Model\Model.php(1928): DboSource->create(Object(Contact), Array, Array)
+#4 C:\wamp64\www\Sweesh\lib\Cake\Model\Model.php(1751): Model->_doSave(Array, Array)
+#5 C:\wamp64\www\Sweesh\app\Controller\ContactController.php(17): Model->save(Array)
+#6 [internal function]: ContactController->index()
+#7 C:\wamp64\www\Sweesh\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(ContactController), Array)
+#8 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ContactController), Object(CakeRequest))
+#10 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2017-01-27 01:11:23 Error: [MissingHelperException] Helper class SessionsHelper could not be found.
+Exception Attributes: array (
+  'class' => 'SessionsHelper',
+  'plugin' => false,
+)
+Request URL: /Sweesh/contact
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\lib\Cake\View\HelperCollection.php(63): HelperCollection->load('Sessions')
+#1 C:\wamp64\www\Sweesh\lib\Cake\View\View.php(858): HelperCollection->__isset('Sessions')
+#2 C:\wamp64\www\Sweesh\app\View\Contact\index.ctp(52): View->__get('Sessions')
+#3 C:\wamp64\www\Sweesh\lib\Cake\View\View.php(971): include('C:\\wamp64\\www\\S...')
+#4 C:\wamp64\www\Sweesh\lib\Cake\View\View.php(933): View->_evaluate('C:\\wamp64\\www\\S...', Array)
+#5 C:\wamp64\www\Sweesh\lib\Cake\View\View.php(473): View->_render('C:\\wamp64\\www\\S...')
+#6 C:\wamp64\www\Sweesh\lib\Cake\Controller\Controller.php(960): View->render('index', NULL)
+#7 C:\wamp64\www\Sweesh\app\Controller\ContactController.php(24): Controller->render('index')
+#8 [internal function]: ContactController->index()
+#9 C:\wamp64\www\Sweesh\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(ContactController), Array)
+#10 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ContactController), Object(CakeRequest))
+#12 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2017-01-27 01:12:07 Error: [MissingHelperException] Helper class SessionsHelper could not be found.
+Exception Attributes: array (
+  'class' => 'SessionsHelper',
+  'plugin' => false,
+)
+Request URL: /Sweesh/contact
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\lib\Cake\View\HelperCollection.php(63): HelperCollection->load('Sessions')
+#1 C:\wamp64\www\Sweesh\lib\Cake\View\View.php(858): HelperCollection->__isset('Sessions')
+#2 C:\wamp64\www\Sweesh\app\View\Contact\index.ctp(52): View->__get('Sessions')
+#3 C:\wamp64\www\Sweesh\lib\Cake\View\View.php(971): include('C:\\wamp64\\www\\S...')
+#4 C:\wamp64\www\Sweesh\lib\Cake\View\View.php(933): View->_evaluate('C:\\wamp64\\www\\S...', Array)
+#5 C:\wamp64\www\Sweesh\lib\Cake\View\View.php(473): View->_render('C:\\wamp64\\www\\S...')
+#6 C:\wamp64\www\Sweesh\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#7 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#8 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ContactController), Object(CakeRequest))
+#9 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}

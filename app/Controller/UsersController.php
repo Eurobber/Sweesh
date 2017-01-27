@@ -1,6 +1,8 @@
 <?php
 
 App::uses('AppController', 'Controller');
+App::uses('CakeEmail', 'Network/Email');
+
 
 class UsersController extends AppController
 {
@@ -41,6 +43,11 @@ class UsersController extends AppController
 
             $this->User->create();
             if ($this->User->save($this->request->data)) {
+                $Email = new CakeEmail();
+                /*$Email->from(array('weesh.io@weesh.io' => 'My Site'))
+                    ->to($this->User->email)
+                    ->subject('About')
+                    ->send('Mon message')*/
                 $this->Auth->login();
                 return $this->redirect($this->Auth->redirectUrl());
             } else {

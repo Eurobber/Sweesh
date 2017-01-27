@@ -20,19 +20,32 @@ class User extends AppModel {
             'required' => array(
                 'rule' => 'notBlank',
                 'message' => 'Un nom d\'utilisateur est requis'
-            )
+            ),
+            'unique' => array(
+                'rule' => 'isUnique',
+                'message' => 'Ce nom d\'utilisateur est déjà pris'
+            ),
+            'alphaNum' => array(
+                'rule' => 'alphanumeric',
+                'message' => 'Chiffres et lettres uniquement')
         ),
         'firstname' => array(
             'required' => array(
                 'rule' => 'notBlank',
                 'message' => 'Un prénom passe est requis'
-            )
+            ),
+            'alphaNum' => array(
+                'rule' => 'alphanumeric',
+                'message' => 'Chiffres et lettres uniquement')
         ),        
         'lastname' => array(
             'required' => array(
                 'rule' => 'notBlank',
                 'message' => 'Un nom est requis'
-            )
+            ),
+            'alphaNum' => array(
+                'rule' => 'alphanumeric',
+                'message' => 'Chiffres et lettres uniquement')
         ),
         'gender' => array(
             'valid' => array(
@@ -41,17 +54,14 @@ class User extends AppModel {
                 'allowEmpty' => false
             )
         ),
-        'role' => array(
-            'valid' => array(
-                'rule' => array('inList', array('admin', 'simpleUser')),
-                'message' => 'Merci de rentrer un rôle valide',
-                'allowEmpty' => false
-            )
-        ),
         'password' => array(
             'required' => array(
                 'rule' => 'notBlank',
                 'message' => 'Un mot de passe est requis',
+            ),
+            'min'=> array(
+                'rule' => array('minLength', '6'),
+                'message' => '6 caractères minimum'
             )
         ),
         'birthdate' => array(
@@ -76,12 +86,24 @@ class User extends AppModel {
             'required' => array(
                 'rule' => 'notBlank',
                 'message' => 'Le code postal est requis',
-            )
+            ),
+            'Num' => array(
+                'rule' => 'numeric',
+                'message' => 'Chiffres uniquement')
         ),
         'email' => array(
             'required' => array(
                 'rule' => 'notBlank',
-                'message' => 'Un e-mail correct est exigé',
+                'allowEmpty' => false,
+                'message' => 'Un e-mail correct est requis',
+            ),
+            'unique' => array(
+                'rule' => 'isUnique',
+                'message' => 'Ce mail est déjà pris'
+            ),
+            'email' => array(
+                'rule' => array('email', true),
+                'message' => 'Entrez une adresse email valide'
             )
         )
     );  
