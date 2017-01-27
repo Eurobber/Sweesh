@@ -27,7 +27,7 @@ class ContactController extends AppController
                 $Email->config('default');
                 $Email->from(array('weesh.io.contact@gmail.com' => 'Weesh.io'))
                     ->to($this->request->data['Contact']['email'])
-                    ->subject('Bienvenu')
+                    ->subject('Bienvenue')
                     ->emailFormat('html')
                     ->template('contact')->viewVars(array('site_name'=>$this->request->data['Contact']['site_name'],
                         'site_url'=>$this->request->data['Contact']['site_url'],
@@ -35,10 +35,10 @@ class ContactController extends AppController
                         'email'=>$this->request->data['Contact']['email']))
                     ->send();
 
-                $this->Flash->success(__('Votre demande à bien été prise en compte'));
+                $this->Flash->success(__('Votre demande a bien été prise en compte'));
                 return $this->redirect(array('action' => 'index'));
             } else {
-                $this->Flash->error(__('Votre demande n\'a été sauvegardé. Merci de réessayer.'));
+                $this->Flash->error(__('Votre demande n\'a pas été sauvegardée. Merci de réessayer.'));
             }
         } else if ($this->request->is('get')) {
             $this->render('index');

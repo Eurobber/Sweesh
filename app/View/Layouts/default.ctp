@@ -21,32 +21,35 @@ echo $this->Html->docType();
 
     <!-- Web Fonts  -->
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet" type="text/css">
+    <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
     <!-- STYLESHEET SECTION -->
     <?php
-    //Libs CSS
+    // Libs CSS
     echo $this->Html->css('../vendor/bootstrap-3.3.7-dist/css/bootstrap');
     echo $this->Html->css('../vendor/font-awesome-4.7.0/css/font-awesome');
     echo $this->Html->css('../vendor/animate/animate');
     echo $this->Html->css('../vendor/magnific-popup/dist/magnific-popup');
 
-    //Theme CSS
+    // Theme CSS
     echo $this->Html->css('theme');
     echo $this->Html->css('theme-blog');
     echo $this->Html->css('theme-elements');
     echo $this->Html->css('theme-shop');
 
-    //Current Page CSS
+    // Current Page CSS
     echo $this->Html->css('../vendor/rs-plugin/css/settings');
     echo $this->Html->css('../vendor/rs-plugin/css/layers');
     echo $this->Html->css('../vendor/rs-plugin/css/navigation');
     echo $this->Html->css('../vendor/circle-flip-slideshow/css/component');
 
-    //Skin css
+    // Skin css
     echo $this->Html->css('default');
-    //Skin Weesh
+    // Skin Weesh
     echo $this->Html->css('color');
-    //Theme custom CSS
+    // Theme custom CSS
     echo $this->Html->css('custom');
+    // Icones réseaux sociaux
+    echo $this->Html->css('socialicons');
     ?>
     <!-- Material design https://github.com/FezVrasta/bootstrap-material-design -->
     <?php echo $this->fetch('css'); ?>
@@ -64,8 +67,9 @@ echo $this->Html->docType();
                             <?php
                             echo $this->Html->image("logo.png", array(
                                 "alt" => "Logo",
-                                'class' => "logo",
-                                'url' => array('controller' => 'sweesh', 'action' => 'index')
+                                "class" => "logo",
+                                "style" => "border-radius:150px;",
+                                "url" => array('controller' => 'sweesh', 'action' => 'index')
                             ));
                             ?>
                         </div>
@@ -129,94 +133,66 @@ echo $this->Html->docType();
     <footer>
         <div class="container">
             <div class="row">
-                <div class="footer-ribon"><span>Get in Touch</span></div>
-                <div class="col-md-3">
+                <div class="footer-ribon"><span>Contact</span></div>
+                
+                <div class="col-md-4">
+                    <h4>Suivez-nous @Twitter</h4>
+                    <a class="twitter-timeline" data-lang="fr" data-width="320" data-height="200" data-theme="light" href="https://twitter.com/Weesh_io">Tweets by Weesh_io</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+                <div class="col-md-4">
                     <h4>Newsletter</h4>
-                    <p>Keep up on our always evolving product features and technology. Enter your e-mail and subscribe
-                        to our newsletter.</p>
+                    <p>Renseignez votre adresse e-mail et nous vous tiendrons au courant des nouvelles fonctionnalités supportées, 
+                    des nouveaux sites parcourus et des évolutions prévues.</p>
+                    <form class="form-inline" id="newsletterForm" action="#" method="POST">
+                        <div class="control-group">
+                            <div class="input-append">
+                                <input class="col-md-8" placeholder="Email Address" name="email" id="email" type="text">
+                                <button class="btn-sm btn-primary col-md-offset-1" type="submit">Go!</button>
+                            </div>
+                        </div>
+                    </form>
+                    <p style="margin-top:15px;">N'hésitez pas à utiliser le formulaire de contact (en bas 
+                    à droite de la page) pour nous suggérer votre site favori.</p>
                     <div class="alert alert-success hidden" id="newsletterSuccess"><strong>Success!</strong> You've been
                         added to our email list.
                     </div>
                     <div class="alert alert-error hidden" id="newsletterError"></div>
-                    <form class="form-inline" id="newsletterForm" action="#" method="POST">
-                        <div class="control-group">
-                            <div class="input-append">
-                                <input class="col-md-2" placeholder="Email Address" name="email" id="email" type="text">
-                                <button class="btn" type="submit">Go!</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="col-md-3">
-                    <h4>Latest Tweet</h4>
-                    <div id="tweet" class="twitter">
-                        <p>Please wait...</p>
-                    </div>
+                    
                 </div>
                 <div class="col-md-4">
                     <div class="contact-details">
-                        <h4>Contact Us</h4>
-                        <ul class="contact">
-                            <li>
-                                <p><i class="icon-map-marker"></i> <strong>Address:</strong> 1234 Street Name, City
-                                    Name, United
-                                    States</p>
-                            </li>
-                            <li>
-                                <p><i class="icon-phone"></i> <strong>Phone:</strong> (123) 456-7890</p>
-                            </li>
-                            <li>
-                                <p><i class="icon-envelope"></i> <strong>Email:</strong> <a
-                                            href="mailto:mail@example.com">mail@example.com</a></p>
-                            </li>
-                        </ul>
+                        <h4>Nous contacter</h4>
+                            <p><strong>Addresse : </strong>37, Quai de Grenelle 75015 Paris</p>
+                            <p><strong>Téléphone : </strong>01 44 39 06 00</p>
+                            <p></i> <strong>E-mail : </strong>weesh.io.contact@gmail.com</p>
                     </div>
+                    <h4>Nous suivre</h4>                  
+                        <div class="col-md-11 row social-btns">
+                            <ul class="social-icons list-inline">
+                            <li>
+                                <p><a class="btn facebook" href="https://www.facebook.com/Weesh.io/"><i class="fa fa-facebook"></i></a></p>
+                            </li>
+                            <li>
+                                <a class="btn twitter" href="https://twitter.com/weesh_io"><i class="fa fa-twitter"></i></a>
+                            </li>
+                        </ul>         
+
+                        </div>
                 </div>
-                <div class="col-md-2">
-                    <h4>Follow Us</h4>
-                    <div class="social-icons">
-                        <ul class="social-icons">
-                            <li class="facebook"><a href="http://www.facebook.com/" target="_blank"
-                                                    data-placement="bottom" rel="tooltip" title="Facebook">Facebook</a>
-                            </li>
-                            <li class="twitter"><a href="https://twitter.com/weesh_io" target="_blank"
-                                                   data-placement="bottom" rel="tooltip" title="Twitter">Twitter</a>
-                            </li>
-                            <li class="linkedin"><a href="http://www.linkedin.com/" target="_blank"
-                                                    data-placement="bottom" rel="tooltip" title="Linkedin">Linkedin</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
         </div>
         <div class="footer-copyright">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-1">
-                        <?php
-                        echo $this->Html->image("logo.png", array(
-                            "alt" => "Logo",
-                            'class' => "logo",
-                            'url' => array('controller' => 'sweesh', 'action' => 'index')
-                        ));
-                        ?>
-                    </div>
-                    <div class="col-md-7">
-                        <p>© Copyright 2017 by Weesh. All Rights Reserved.</p>
-                    </div>
-                    <div class="col-md-4">
-                        <nav id="sub-menu">
-                            <ul>
-                                <li><a href="page-faq.html">FAQ's</a></li>
+
+                    <div class="col-md-3">
+                            <ul class="list-inline">
+                                <li><a href="page-faq.html">FAQ</a></li>
                                 <li><a href="sitemap.html">Sitemap</a></li>
                                 <li><?php echo $this->Html->link('Contact', array('controller' => 'contact', 'action' => 'index')); ?>
                                 </li>
                             </ul>
-                        </nav>
                     </div>
-                </div>
-            </div>
+                    <div class="col-md-4 col-md-offset-5">
+                        <p>© Copyright 2017 by Weesh. All Rights Reserved.</p>
+                    </div>
         </div>
     </footer>
     <!-- SCRIPT SECTION -->
