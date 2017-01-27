@@ -1,16 +1,5 @@
-Nous avons bien reçu votre demande pour :
-<br><br>
-Nom du site : <?php echo h($site_name) ?>
-<br><br>
-<?php //Faire un test si c'est nul ?>
-Url du site : <?php echo h($site_url) ?>
-<br><br>
-<?php //Faire un test si c'est nul ?>
-Votre email : <?php echo (h($email)) ?>
-<br><br>
-<?php //Faire un test si c'est nul ?>
-Votre message : <?php echo nl2br(h($message)) ?>
-<br><br>
-Nous allons l'ajouter dans les plus bref délais.
-<br><br>
-Nous vous tiendrons informé.
+<?php echo "Nous avons bien reçu votre demande pour :<br><br>Nom du site :" . h($site_name) . "<br><br>"?>
+<?php if($site_url){ echo 'Url du site : ' . (h($site_url)) . '<br><br>'; }?>
+<?php if($email){ echo 'Votre email : ' . (h($email)) . '<br><br>'; }?>
+<?php if($message){ echo 'Votre message : ' .  nl2br(h($message)) . '<br><br>'; }?>
+<?php echo "Nous allons l'ajouter dans les plus bref délais.<br>Nous vous tiendrons informé." ?>

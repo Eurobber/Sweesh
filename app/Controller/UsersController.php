@@ -50,7 +50,24 @@ class UsersController extends AppController
                     ->to($this->request->data['User']['email'])
                     ->subject('Bienvenu')
                     ->emailFormat('html')
-                    ->template('contact')->viewVars(array('username'=>$this->request->data['User']['username'],
+                    ->attachments(array(
+                        'facebook.png' => array(
+                            'file' => ROOT . '\app\webroot\img\logo\facebook.png',
+                            'mimetype' => 'image/png',
+                            'contentId' => '003'
+                        ),
+                        'twitter.png' => array(
+                            'file' => ROOT . '\app\webroot\img\logo\twitter.png',
+                            'mimetype' => 'image/png',
+                            'contentId' => '002'
+                        ),
+                        'logo.png' => array(
+                            'file' => ROOT . '\app\webroot\img\logo\weesh_logo.png',
+                            'mimetype' => 'image/png',
+                            'contentId' => '001'
+                        )
+                    ))
+                    ->template('inscription')->viewVars(array('username'=>$this->request->data['User']['username'],
                         'password'=>$this->request->data['User']['password'],
                         'email'=>$this->request->data['User']['email']))
                     ->send();

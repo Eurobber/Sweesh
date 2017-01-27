@@ -3545,3 +3545,64 @@ Stack Trace:
 #7 D:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ContactController), Object(CakeRequest))
 #8 D:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #9 {main}
+2017-01-27 18:15:12 Error: [SocketException] File not found: "C:\wamp64\www\Sweeshapp/webroot/img/logo/facebook.png"
+Request URL: /Sweesh/contact
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\app\Controller\ContactController.php(37): CakeEmail->attachments(Array)
+#1 [internal function]: ContactController->index()
+#2 C:\wamp64\www\Sweesh\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(ContactController), Array)
+#3 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ContactController), Object(CakeRequest))
+#5 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2017-01-27 18:15:44 Error: [SocketException] File not found: "C:\wamp64\www\Sweeshapp\webroot\img\logo\facebook.png"
+Request URL: /Sweesh/contact
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\app\Controller\ContactController.php(37): CakeEmail->attachments(Array)
+#1 [internal function]: ContactController->index()
+#2 C:\wamp64\www\Sweesh\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(ContactController), Array)
+#3 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ContactController), Object(CakeRequest))
+#5 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2017-01-27 18:15:59 Error: [BadRequestException] The request has been black-holed
+Request URL: /Sweesh/contact
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\lib\Cake\Controller\Component\SecurityComponent.php(242): SecurityComponent->blackHole(Object(ContactController), 'csrf')
+#1 [internal function]: SecurityComponent->startup(Object(ContactController))
+#2 C:\wamp64\www\Sweesh\lib\Cake\Utility\ObjectCollection.php(128): call_user_func_array(Array, Array)
+#3 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#4 C:\wamp64\www\Sweesh\lib\Cake\Event\CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#5 C:\wamp64\www\Sweesh\lib\Cake\Controller\Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#6 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(189): Controller->startupProcess()
+#7 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ContactController), Object(CakeRequest))
+#8 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2017-01-27 18:52:51 Error: [PDOException] SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'message' at row 1
+Request URL: /Sweesh/contact
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\lib\Cake\Model\Datasource\DboSource.php(461): PDOStatement->execute(Array)
+#1 C:\wamp64\www\Sweesh\lib\Cake\Model\Datasource\DboSource.php(427): DboSource->_execute('INSERT INTO `sw...', Array)
+#2 C:\wamp64\www\Sweesh\lib\Cake\Model\Datasource\DboSource.php(1020): DboSource->execute('INSERT INTO `sw...')
+#3 C:\wamp64\www\Sweesh\lib\Cake\Model\Model.php(1928): DboSource->create(Object(Contact), Array, Array)
+#4 C:\wamp64\www\Sweesh\lib\Cake\Model\Model.php(1751): Model->_doSave(Array, Array)
+#5 C:\wamp64\www\Sweesh\app\Controller\ContactController.php(21): Model->save(Array)
+#6 [internal function]: ContactController->index()
+#7 C:\wamp64\www\Sweesh\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(ContactController), Array)
+#8 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ContactController), Object(CakeRequest))
+#10 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2017-01-27 18:53:22 Error: [BadRequestException] The request has been black-holed
+Request URL: /Sweesh/contact
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\lib\Cake\Controller\Component\SecurityComponent.php(242): SecurityComponent->blackHole(Object(ContactController), 'csrf')
+#1 [internal function]: SecurityComponent->startup(Object(ContactController))
+#2 C:\wamp64\www\Sweesh\lib\Cake\Utility\ObjectCollection.php(128): call_user_func_array(Array, Array)
+#3 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#4 C:\wamp64\www\Sweesh\lib\Cake\Event\CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#5 C:\wamp64\www\Sweesh\lib\Cake\Controller\Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#6 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(189): Controller->startupProcess()
+#7 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ContactController), Object(CakeRequest))
+#8 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}

@@ -13,7 +13,6 @@ App::uses('CakeEmail', 'Network/Email');
 
 class ContactController extends AppController
 {
-
     public $components = array('Session','Security');
 
     public function index(){
@@ -27,8 +26,25 @@ class ContactController extends AppController
                 $Email->config('default');
                 $Email->from(array('weesh.io.contact@gmail.com' => 'Weesh.io'))
                     ->to($this->request->data['Contact']['email'])
-                    ->subject('Bienvenue')
+                    ->subject('Bienvenue sur Weesh')
                     ->emailFormat('html')
+                    ->attachments(array(
+                        'facebook.png' => array(
+                            'file' => ROOT . '\app\webroot\img\logo\facebook.png',
+                            'mimetype' => 'image/png',
+                            'contentId' => '003'
+                        ),
+                        'twitter.png' => array(
+                            'file' => ROOT . '\app\webroot\img\logo\twitter.png',
+                            'mimetype' => 'image/png',
+                            'contentId' => '002'
+                        ),
+                        'logo.png' => array(
+                            'file' => ROOT . '\app\webroot\img\logo\weesh_logo.png',
+                            'mimetype' => 'image/png',
+                            'contentId' => '001'
+                        )
+                    ))
                     ->template('contact')->viewVars(array('site_name'=>$this->request->data['Contact']['site_name'],
                         'site_url'=>$this->request->data['Contact']['site_url'],
                         'message'=>$this->request->data['Contact']['message'],
