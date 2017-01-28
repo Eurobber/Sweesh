@@ -186,13 +186,14 @@ function addBigButton(el) {
     var image = document.createElement('IMG');
     image.src = 'https://i.imgsafe.org/b8ff07eb90.png';
     image.style.float = 'left';
-    image.style.marginRight = '15px';
-    image.style.width = '27px';
-    image.style.height = '27px';
+    image.style.marginLeft = '2px';
+    image.style.width = '23px';
+    image.style.height = '23px';
     clone.id = "weeshBigButton0";
-    clone.innerHTML = "Ajouter à Weesh";
+	clone.style.paddingTop = "5px";
+	clone.style.paddingBottom = "5px";
+    clone.innerHTML = "Comparer avec Weesh";
     clone.appendChild(image);
-    clone.style.backgroundColor = "purple";
     clone.addEventListener('click', function() {
             addUrlInList(document.location.href);
         }, false);
