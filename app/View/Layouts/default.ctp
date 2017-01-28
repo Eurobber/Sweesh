@@ -146,11 +146,16 @@ echo $this->Html->docType();
                     <h4>Inscrivez-vous à la newsletter</h4>
                     <p>Renseignez votre adresse e-mail et nous vous tiendrons au courant des nouvelles fonctionnalités supportées, 
                     des nouveaux sites parcourus et des évolutions prévues.</p>
-                    //Here
-                    <?php echo $this->Form->create('NewsLetter', array( 'url' => array('controller' => 'contacts', 'action' => 'registerNewsLetter'), 'class' => 'form-inline')); ?>
+                    <?php echo $this->Form->create('NewsLetter', array( 'url' => array('controller' => 'contacts', 'action' => 'registerNewsLetter'), 'class' => 'form-inline',
+                        'inputDefaults' => array('label' => false))); ?>
                         <div class="control-group">
                             <div class="input-append">
-                                <input class="col-md-8" placeholder="Votre adresse email" name="email" id="email" type="text">
+                                <?php
+                                if (AuthComponent::user()['email']){
+                                    echo $this->Form->input('email', array('default' => AuthComponent::user()['email'],'class' => 'col-md-8', 'placeholder' => 'Votre adresse email'));
+                                } else {
+                                    echo $this->Form->input('email', array('class' => 'col-md-8', 'placeholder' => 'Votre adresse email'));
+                                } ?>
                                 <button class="btn-sm btn-primary col-md-offset-1" type="submit">Go!</button>
                             </div>
                         </div>

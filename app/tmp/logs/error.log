@@ -4462,3 +4462,293 @@ Request URL: /Sweesh/news_letters/registerNewsLetter
 Stack Trace:
 #0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2017-01-28 14:04:22 Error: [MissingActionException] Action WeeshController::myProducts() could not be found.
+Exception Attributes: array (
+  'controller' => 'WeeshController',
+  'action' => 'myProducts',
+)
+Request URL: /Sweesh/weesh/myProducts
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(WeeshController), Object(CakeRequest))
+#2 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-01-28 14:04:23 Error: [MissingActionException] Action WeeshController::parameters() could not be found.
+Exception Attributes: array (
+  'controller' => 'WeeshController',
+  'action' => 'parameters',
+)
+Request URL: /Sweesh/weesh/parameters
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(WeeshController), Object(CakeRequest))
+#2 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-01-28 14:06:59 Error: [BadRequestException] The request has been black-holed
+Request URL: /Sweesh/contacts/registerNewsLetter
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\lib\Cake\Controller\Component\SecurityComponent.php(239): SecurityComponent->blackHole(Object(ContactsController), 'auth')
+#1 [internal function]: SecurityComponent->startup(Object(ContactsController))
+#2 C:\wamp64\www\Sweesh\lib\Cake\Utility\ObjectCollection.php(128): call_user_func_array(Array, Array)
+#3 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#4 C:\wamp64\www\Sweesh\lib\Cake\Event\CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#5 C:\wamp64\www\Sweesh\lib\Cake\Controller\Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#6 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(189): Controller->startupProcess()
+#7 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ContactsController), Object(CakeRequest))
+#8 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2017-01-28 14:08:20 Error: [BadRequestException] The request has been black-holed
+Request URL: /Sweesh/contacts/registerNewsLetter
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\lib\Cake\Controller\Component\SecurityComponent.php(239): SecurityComponent->blackHole(Object(ContactsController), 'auth')
+#1 [internal function]: SecurityComponent->startup(Object(ContactsController))
+#2 C:\wamp64\www\Sweesh\lib\Cake\Utility\ObjectCollection.php(128): call_user_func_array(Array, Array)
+#3 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#4 C:\wamp64\www\Sweesh\lib\Cake\Event\CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#5 C:\wamp64\www\Sweesh\lib\Cake\Controller\Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#6 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(189): Controller->startupProcess()
+#7 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ContactsController), Object(CakeRequest))
+#8 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2017-01-28 14:08:24 Error: [BadRequestException] The request has been black-holed
+Request URL: /Sweesh/contacts/registerNewsLetter
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\lib\Cake\Controller\Component\SecurityComponent.php(239): SecurityComponent->blackHole(Object(ContactsController), 'auth')
+#1 [internal function]: SecurityComponent->startup(Object(ContactsController))
+#2 C:\wamp64\www\Sweesh\lib\Cake\Utility\ObjectCollection.php(128): call_user_func_array(Array, Array)
+#3 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#4 C:\wamp64\www\Sweesh\lib\Cake\Event\CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#5 C:\wamp64\www\Sweesh\lib\Cake\Controller\Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#6 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(189): Controller->startupProcess()
+#7 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ContactsController), Object(CakeRequest))
+#8 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2017-01-28 14:09:07 Error: [BadRequestException] The request has been black-holed
+Request URL: /Sweesh/contacts/registerNewsLetter
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\lib\Cake\Controller\Component\SecurityComponent.php(239): SecurityComponent->blackHole(Object(ContactsController), 'auth')
+#1 [internal function]: SecurityComponent->startup(Object(ContactsController))
+#2 C:\wamp64\www\Sweesh\lib\Cake\Utility\ObjectCollection.php(128): call_user_func_array(Array, Array)
+#3 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#4 C:\wamp64\www\Sweesh\lib\Cake\Event\CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#5 C:\wamp64\www\Sweesh\lib\Cake\Controller\Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#6 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(189): Controller->startupProcess()
+#7 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ContactsController), Object(CakeRequest))
+#8 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2017-01-28 14:09:15 Error: Fatal Error (1): Call to a member function create() on null in [C:\wamp64\www\Sweesh\app\Controller\ContactsController.php, line 78]
+2017-01-28 14:09:15 Error: [FatalErrorException] Call to a member function create() on null
+Request URL: /Sweesh/contacts/registerNewsLetter
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\wamp64\\www\\S...', 78)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\wamp64\\www\\S...', 78, Array)
+#2 C:\wamp64\www\Sweesh\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\wamp64\\www\\S...', 78, Array)
+#3 C:\wamp64\www\Sweesh\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-01-28 14:09:21 Error: Fatal Error (1): Call to a member function create() on null in [C:\wamp64\www\Sweesh\app\Controller\ContactsController.php, line 78]
+2017-01-28 14:09:21 Error: [FatalErrorException] Call to a member function create() on null
+Request URL: /Sweesh/contacts/registerNewsLetter
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\wamp64\\www\\S...', 78)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\wamp64\\www\\S...', 78, Array)
+#2 C:\wamp64\www\Sweesh\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\wamp64\\www\\S...', 78, Array)
+#3 C:\wamp64\www\Sweesh\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-01-28 14:10:09 Error: Fatal Error (1): Call to a member function create() on null in [C:\wamp64\www\Sweesh\app\Controller\ContactsController.php, line 77]
+2017-01-28 14:10:09 Error: [FatalErrorException] Call to a member function create() on null
+Request URL: /Sweesh/contacts/registerNewsLetter
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\wamp64\\www\\S...', 77)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\wamp64\\www\\S...', 77, Array)
+#2 C:\wamp64\www\Sweesh\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\wamp64\\www\\S...', 77, Array)
+#3 C:\wamp64\www\Sweesh\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-01-28 14:11:49 Error: Fatal Error (1): Call to a member function create() on null in [C:\wamp64\www\Sweesh\app\Controller\ContactsController.php, line 77]
+2017-01-28 14:11:49 Error: [FatalErrorException] Call to a member function create() on null
+Request URL: /Sweesh/contacts/registerNewsLetter
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\wamp64\\www\\S...', 77)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\wamp64\\www\\S...', 77, Array)
+#2 C:\wamp64\www\Sweesh\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\wamp64\\www\\S...', 77, Array)
+#3 C:\wamp64\www\Sweesh\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-01-28 14:14:13 Error: Fatal Error (1): Call to a member function create() on null in [C:\wamp64\www\Sweesh\app\Controller\ContactsController.php, line 78]
+2017-01-28 14:14:13 Error: [FatalErrorException] Call to a member function create() on null
+Request URL: /Sweesh/contacts/registerNewsLetter
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\wamp64\\www\\S...', 78)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\wamp64\\www\\S...', 78, Array)
+#2 C:\wamp64\www\Sweesh\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\wamp64\\www\\S...', 78, Array)
+#3 C:\wamp64\www\Sweesh\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-01-28 14:14:41 Error: Fatal Error (1): Call to a member function create() on string in [C:\wamp64\www\Sweesh\app\Controller\ContactsController.php, line 78]
+2017-01-28 14:14:41 Error: [FatalErrorException] Call to a member function create() on string
+Request URL: /Sweesh/contacts/registerNewsLetter
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\wamp64\\www\\S...', 78)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\wamp64\\www\\S...', 78, Array)
+#2 C:\wamp64\www\Sweesh\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\wamp64\\www\\S...', 78, Array)
+#3 C:\wamp64\www\Sweesh\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-01-28 14:14:46 Error: Fatal Error (1): Call to a member function create() on string in [C:\wamp64\www\Sweesh\app\Controller\ContactsController.php, line 78]
+2017-01-28 14:14:46 Error: [FatalErrorException] Call to a member function create() on string
+Request URL: /Sweesh/contacts/registerNewsLetter
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\wamp64\\www\\S...', 78)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\wamp64\\www\\S...', 78, Array)
+#2 C:\wamp64\www\Sweesh\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\wamp64\\www\\S...', 78, Array)
+#3 C:\wamp64\www\Sweesh\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-01-28 14:16:29 Error: Fatal Error (1): Allowed memory size of 134217728 bytes exhausted (tried to allocate 62914560 bytes) in [C:\wamp64\www\Sweesh\lib\Cake\basics.php, line 120]
+2017-01-28 14:16:29 Error: [FatalErrorException] Allowed memory size of 134217728 bytes exhausted (tried to allocate 62914560 bytes)
+Request URL: /Sweesh/contacts/registerNewsLetter
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Allowed memory ...', 'C:\\wamp64\\www\\S...', 120)
+#1 [internal function]: ErrorHandler::handleError(1, 'Allowed memory ...', 'C:\\wamp64\\www\\S...', 120, Array)
+#2 C:\wamp64\www\Sweesh\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Allowed memory ...', 'C:\\wamp64\\www\\S...', 120, Array)
+#3 C:\wamp64\www\Sweesh\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-01-28 14:16:43 Error: Fatal Error (1): Call to a member function create() on null in [C:\wamp64\www\Sweesh\app\Controller\ContactsController.php, line 78]
+2017-01-28 14:16:43 Error: [FatalErrorException] Call to a member function create() on null
+Request URL: /Sweesh/contacts/registerNewsLetter
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\wamp64\\www\\S...', 78)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\wamp64\\www\\S...', 78, Array)
+#2 C:\wamp64\www\Sweesh\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\wamp64\\www\\S...', 78, Array)
+#3 C:\wamp64\www\Sweesh\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-01-28 14:18:45 Error: Fatal Error (1): Call to a member function subject() on array in [C:\wamp64\www\Sweesh\app\Controller\ContactsController.php, line 87]
+2017-01-28 14:18:45 Error: [FatalErrorException] Call to a member function subject() on array
+Request URL: /Sweesh/contacts/registerNewsLetter
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\wamp64\\www\\S...', 87)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\wamp64\\www\\S...', 87, Array)
+#2 C:\wamp64\www\Sweesh\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\wamp64\\www\\S...', 87, Array)
+#3 C:\wamp64\www\Sweesh\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-01-28 14:19:22 Error: Fatal Error (1): Call to a member function subject() on array in [C:\wamp64\www\Sweesh\app\Controller\ContactsController.php, line 87]
+2017-01-28 14:19:22 Error: [FatalErrorException] Call to a member function subject() on array
+Request URL: /Sweesh/contacts/registerNewsLetter
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\wamp64\\www\\S...', 87)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\wamp64\\www\\S...', 87, Array)
+#2 C:\wamp64\www\Sweesh\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\wamp64\\www\\S...', 87, Array)
+#3 C:\wamp64\www\Sweesh\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-01-28 14:19:48 Error: Fatal Error (1): Call to a member function send() on array in [C:\wamp64\www\Sweesh\app\Controller\ContactsController.php, line 107]
+2017-01-28 14:19:48 Error: [FatalErrorException] Call to a member function send() on array
+Request URL: /Sweesh/contacts/registerNewsLetter
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\wamp64\\www\\S...', 107)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\wamp64\\www\\S...', 107, Array)
+#2 C:\wamp64\www\Sweesh\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\wamp64\\www\\S...', 107, Array)
+#3 C:\wamp64\www\Sweesh\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-01-28 14:20:17 Error: Fatal Error (1): Call to a member function send() on array in [C:\wamp64\www\Sweesh\app\Controller\ContactsController.php, line 107]
+2017-01-28 14:20:17 Error: [FatalErrorException] Call to a member function send() on array
+Request URL: /Sweesh/contacts/registerNewsLetter
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\wamp64\\www\\S...', 107)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\wamp64\\www\\S...', 107, Array)
+#2 C:\wamp64\www\Sweesh\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\wamp64\\www\\S...', 107, Array)
+#3 C:\wamp64\www\Sweesh\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-01-28 14:20:40 Error: Fatal Error (4): syntax error, unexpected ',' in [C:\wamp64\www\Sweesh\app\Controller\ContactsController.php, line 106]
+2017-01-28 14:20:40 Error: [FatalErrorException] syntax error, unexpected ','
+Request URL: /Sweesh/contacts/registerNewsLetter
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\wamp64\\www\\S...', 106)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\wamp64\\www\\S...', 106, Array)
+#2 C:\wamp64\www\Sweesh\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\wamp64\\www\\S...', 106, Array)
+#3 C:\wamp64\www\Sweesh\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-01-28 14:21:47 Error: [MissingViewException] View file "Emails\html\news_letters.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Emails\\html\\news_letters.ctp',
+)
+Request URL: /Sweesh/contacts/registerNewsLetter
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\lib\Cake\View\View.php(470): View->_getViewFileName('newsLetters')
+#1 C:\wamp64\www\Sweesh\lib\Cake\Network\Email\CakeEmail.php(1708): View->render('newsLetters', 'default')
+#2 C:\wamp64\www\Sweesh\lib\Cake\Network\Email\CakeEmail.php(1561): CakeEmail->_renderTemplates('')
+#3 C:\wamp64\www\Sweesh\lib\Cake\Network\Email\CakeEmail.php(1171): CakeEmail->_render(Array)
+#4 C:\wamp64\www\Sweesh\app\Controller\ContactsController.php(107): CakeEmail->send()
+#5 [internal function]: ContactsController->registerNewsLetter()
+#6 C:\wamp64\www\Sweesh\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(ContactsController), Array)
+#7 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#8 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ContactsController), Object(CakeRequest))
+#9 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2017-01-28 14:22:42 Error: [MissingViewException] View file "Contacts\register_news_letter.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Contacts\\register_news_letter.ctp',
+)
+Request URL: /Sweesh/contacts/registerNewsLetter
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 C:\wamp64\www\Sweesh\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#2 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ContactsController), Object(CakeRequest))
+#4 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2017-01-28 14:27:19 Error: [BadRequestException] The request has been black-holed
+Request URL: /Sweesh/contacts/registerNewsLetter
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\lib\Cake\Controller\Component\SecurityComponent.php(239): SecurityComponent->blackHole(Object(ContactsController), 'auth')
+#1 [internal function]: SecurityComponent->startup(Object(ContactsController))
+#2 C:\wamp64\www\Sweesh\lib\Cake\Utility\ObjectCollection.php(128): call_user_func_array(Array, Array)
+#3 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#4 C:\wamp64\www\Sweesh\lib\Cake\Event\CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#5 C:\wamp64\www\Sweesh\lib\Cake\Controller\Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#6 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(189): Controller->startupProcess()
+#7 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ContactsController), Object(CakeRequest))
+#8 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2017-01-28 14:30:51 Error: [MissingViewException] View file "Contacts\register_news_letter.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Contacts\\register_news_letter.ctp',
+)
+Request URL: /Sweesh/contacts/registerNewsLetter
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 C:\wamp64\www\Sweesh\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#2 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ContactsController), Object(CakeRequest))
+#4 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2017-01-28 14:32:37 Error: [SocketException] Invalid email: ""
+Request URL: /Sweesh/contacts/registerNewsLetter
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\lib\Cake\Network\Email\CakeEmail.php(592): CakeEmail->_validateEmail('')
+#1 C:\wamp64\www\Sweesh\lib\Cake\Network\Email\CakeEmail.php(466): CakeEmail->_setEmail('_to', '', NULL)
+#2 C:\wamp64\www\Sweesh\app\Controller\ContactsController.php(86): CakeEmail->to('')
+#3 [internal function]: ContactsController->registerNewsLetter()
+#4 C:\wamp64\www\Sweesh\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(ContactsController), Array)
+#5 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#6 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ContactsController), Object(CakeRequest))
+#7 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2017-01-28 14:44:08 Error: Fatal Error (1): Call to a member function subject() on array in [C:\wamp64\www\Sweesh\app\Controller\ContactsController.php, line 87]
+2017-01-28 14:44:08 Error: [FatalErrorException] Call to a member function subject() on array
+Request URL: /Sweesh/contacts/registerNewsLetter
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\wamp64\\www\\S...', 87)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\wamp64\\www\\S...', 87, Array)
+#2 C:\wamp64\www\Sweesh\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\wamp64\\www\\S...', 87, Array)
+#3 C:\wamp64\www\Sweesh\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

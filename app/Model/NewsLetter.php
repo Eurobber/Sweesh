@@ -21,7 +21,11 @@ class NewsLetter extends AppModel
                 'rule' => array('email', true),
                 'allowEmpty' => true,
                 'message' => 'Entrez une adresse email valide'
-            )
+            ),
+            'unique' => array(
+                'rule' => 'isUnique',
+                'message' => 'Ce mail est déjà inscrit à la newsletter'
+            ),
         )
     );
 }

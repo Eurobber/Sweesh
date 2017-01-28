@@ -13,7 +13,20 @@ App::uses('CakeEmail', 'Network/Email');
 
 class ContactsController extends AppController
 {
-    public $components = array('Session','Security');
+    public $uses = array(
+        'Contact',
+        'NewsLetter'
+    );
+
+    public function beforeFilter(){
+        parent::beforeFilter();
+        $this->Auth->allow(array('index', 'registerNewsLetter'));
+    }
+
+    public function isAuthorized($user = null) {
+        // Chacun des utilisateur enregistré peut accéder aux fonctions publiques
+        return true;
+    }
 
     public function index(){
         if ($this->request->is('post')) {
@@ -63,8 +76,8 @@ class ContactsController extends AppController
 
     public function registerNewsLetter(){
 
-        //Problème de droit
         if ($this->request->is('post')) {
+            debug($this->request->data);
             $this->NewsLetter->create();
             if ($this->NewsLetter->save($this->request->data)) {
                 $Email = new CakeEmail();
@@ -90,12 +103,15 @@ class ContactsController extends AppController
                             'contentId' => '001'
                         )
                     ))
-                    ->template('newsLetters')->viewVars()
+                    ->template('newsLetters')
                     ->send();
-                $this->Flash->success(__('Votre inscription a bien été prise en compte'));
+                $this->Flash->success(__('Votre inscription à la newsletter a bien été prise en compte'));
             } else {
-                $this->Flash->error(__('Votre inscription n\'a pas été sauvegardée. Merci de réessayer.'));
+                $this->Flash->error(__('Votre inscription à la newsletter n\'a pas été sauvegardée. Merci de réessayer.'));
             }
+            $this->redirect($this->referer());
+        } else if ($this->request->is('get')) {
+            $this->redirect($this->referer());
         }
     }
 }
