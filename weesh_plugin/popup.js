@@ -231,7 +231,7 @@ $(document).ready(function () {
                     
                     $.ajax({
                         type: "POST",
-                        url: "http://localhost:3000/login",
+                        url: "http://localhost/Weesh/users/login",
                         data: {
                             "username":$('#inputLogin').val(),
                             "password":$('#inputPassword').val()
