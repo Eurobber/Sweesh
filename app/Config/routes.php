@@ -30,6 +30,10 @@
  */
 	//Router::connect('/pages/*', array('controller' => 'pages', 'action' => 'display'));
 
+    //API REST
+    Router::mapResources('recipes');
+    Router::parseExtensions();
+
 /**
  * Load all plugin routes. See the CakePlugin documentation on
  * how to customize the loading of plugin routes.

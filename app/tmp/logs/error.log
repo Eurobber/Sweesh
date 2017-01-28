@@ -4783,3 +4783,25 @@ Request URL: /Sweesh/sitemap.html
 Stack Trace:
 #0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2017-01-28 16:28:04 Error: [MissingActionException] Action WeeshController::myProducts() could not be found.
+Exception Attributes: array (
+  'controller' => 'WeeshController',
+  'action' => 'myProducts',
+)
+Request URL: /Sweesh/weesh/myProducts
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(WeeshController), Object(CakeRequest))
+#2 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-01-28 16:28:07 Error: [MissingActionException] Action WeeshController::parameters() could not be found.
+Exception Attributes: array (
+  'controller' => 'WeeshController',
+  'action' => 'parameters',
+)
+Request URL: /Sweesh/weesh/parameters
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(WeeshController), Object(CakeRequest))
+#2 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
