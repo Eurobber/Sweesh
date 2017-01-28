@@ -172,7 +172,7 @@ echo $this->Html->docType();
                 <div class="col-md-4">
                     <div class="contact-details">
                         <h4>Nous contacter</h4>
-                            <p style="margin:0;"><strong>Addresse : </strong>37, Quai de Grenelle 75015 Paris</p>
+                            <p style="margin:0;"><strong>Adresse : </strong>37, Quai de Grenelle 75015 Paris</p>
                             <p style="margin:0;"><strong>Téléphone : </strong>01 44 39 06 00</p>
                             <p style="margin:0;"></i> <strong>E-mail : </strong>weesh.io.contact@gmail.com</p>
                     </div>
