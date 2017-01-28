@@ -100,7 +100,7 @@ class UsersController extends AppController
                     $Email = new CakeEmail();
                     $Email->config('default');
                     $Email->from(array('weesh.io.contact@gmail.com' => 'Weesh.io'))
-                        ->to($this->request->data['User']['email'])
+                        ->to(AuthComponent::user()['email'])
                         ->subject('Modification de vos paramètres')
                         ->emailFormat('html')
                         ->attachments(array(

@@ -5092,3 +5092,23 @@ Stack Trace:
 #1 C:\wamp64\www\Weesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(WeeshController), Object(CakeRequest))
 #2 C:\wamp64\www\Weesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
+2017-01-28 23:15:16 Error: Fatal Error (1): Call to a member function subject() on array in [C:\wamp64\www\Weesh\app\Controller\UsersController.php, line 104]
+2017-01-28 23:15:16 Error: [FatalErrorException] Call to a member function subject() on array
+Request URL: /Weesh/users/edit/20
+Stack Trace:
+#0 C:\wamp64\www\Weesh\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\wamp64\\www\\W...', 104)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\wamp64\\www\\W...', 104, Array)
+#2 C:\wamp64\www\Weesh\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\wamp64\\www\\W...', 104, Array)
+#3 C:\wamp64\www\Weesh\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-01-28 23:17:58 Error: Fatal Error (1): Call to a member function subject() on array in [C:\wamp64\www\Weesh\app\Controller\UsersController.php, line 104]
+2017-01-28 23:17:58 Error: [FatalErrorException] Call to a member function subject() on array
+Request URL: /Weesh/users/edit/20
+Stack Trace:
+#0 C:\wamp64\www\Weesh\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\wamp64\\www\\W...', 104)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\wamp64\\www\\W...', 104, Array)
+#2 C:\wamp64\www\Weesh\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\wamp64\\www\\W...', 104, Array)
+#3 C:\wamp64\www\Weesh\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
