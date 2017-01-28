@@ -1,0 +1,9 @@
+.sameImg {
+    width:  30%;
+    height: 30%;
+    margin: 0 auto;
+    overflow: hidden;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

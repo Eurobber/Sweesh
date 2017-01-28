@@ -13,7 +13,7 @@ echo $this->Html->docType();
     <meta name="description" content="Weesh">
     <meta name="author" content="Weesh">
     <?php //<!-- Favicons -->
-    echo $this->Html->meta ( 'favicon.ico', '/img/favicon.ico', array (
+    echo $this->Html->meta('favicon.ico', '/img/favicon.ico', array (
     'type' => 'icon' 
     ) ); ?>
 
