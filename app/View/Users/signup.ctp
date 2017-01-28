@@ -6,9 +6,6 @@ $this->assign('title', 'Ajouter Utilisateur');
     <div class="home-intro">
         <div class="container">
             <div class="row justify-content-md-center">
-                <div class="span12">
-                    <p>"Make your <em>Weesh </em> come true"</p>
-                </div>
             </div>
         </div>
     </div>
@@ -80,7 +77,7 @@ $this->assign('title', 'Ajouter Utilisateur');
             </div>
             <div class="form-group">
                 <div class="col-sm-2" style="margin-top:5%;">
-                    <?php echo $this->Form->submit('Créer mon compte Weesh et commencer à comparer', array('class' => 'btn btn-lg btn-primary ', 'controller' => 'sweesh', 'action' => 'overview')) ?>
+                    <?php echo $this->Form->submit('Créer mon compte Weesh et commencer à comparer', array('class' => 'btn btn-lg btn-primary btn-orange', 'controller' => 'sweesh', 'action' => 'overview')) ?>
                 </div>
             </div>
             <?php echo $this->Form->end(); ?>

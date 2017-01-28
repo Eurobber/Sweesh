@@ -26,7 +26,6 @@ echo $this->Html->docType();
     <?php
     // Libs CSS
     echo $this->Html->css('../vendor/bootstrap-3.3.7-dist/css/bootstrap');
-    echo $this->Html->css('../vendor/font-awesome-4.7.0/css/font-awesome');
     echo $this->Html->css('../vendor/animate/animate');
     echo $this->Html->css('../vendor/magnific-popup/dist/magnific-popup');
 
@@ -46,7 +45,7 @@ echo $this->Html->docType();
     echo $this->Html->css('default');
     // Skin Weesh
     echo $this->Html->css('color');
-    // Theme custom CSS
+    // CSS custom
     echo $this->Html->css('custom');
     // Icones réseaux sociaux
     echo $this->Html->css('socialicons');
@@ -65,10 +64,9 @@ echo $this->Html->docType();
                     <div class="header-column">
                         <div class="header-logo">
                             <?php
-                            echo $this->Html->image("logo.png", array(
+                            echo $this->Html->image("wsh.png", array(
                                 "alt" => "Logo",
                                 "class" => "logo",
-                                "style" => "border-radius:150px;",
                                 "url" => array('controller' => 'sweesh', 'action' => 'index')
                             ));
                             ?>
@@ -118,6 +116,8 @@ echo $this->Html->docType();
                         </div>
                     </div>
                 </div>
+                <div class="header-row">
+                </div>
             </div>
         </div>
     </header>
@@ -143,7 +143,7 @@ echo $this->Html->docType();
                     <h4>Newsletter</h4>
                     <p>Renseignez votre adresse e-mail et nous vous tiendrons au courant des nouvelles fonctionnalités supportées, 
                     des nouveaux sites parcourus et des évolutions prévues.</p>
-                    <form class="form-inline" id="newsletterForm" action="#" method="POST">
+                    <form class="form-inline txtcenter" id="newsletterForm" action="#" method="POST">
                         <div class="control-group">
                             <div class="input-append">
                                 <input class="col-md-8" placeholder="Email Address" name="email" id="email" type="text">

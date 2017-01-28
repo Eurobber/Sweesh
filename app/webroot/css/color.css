@@ -1,3 +1,4 @@
+h1,
 h3,
 h4,
 h5 {
@@ -228,7 +229,7 @@ header nav ul.nav-main ul.dropdown-menu.active,
 header nav ul.nav-main ul.dropdown-menu.disabled,
 header nav ul.nav-main ul.dropdown-menu[disabled] {
     color: #ffffff;
-    background-color: #fe4f00;
+    background-color: #f98f04;
 }
 
 header nav ul.nav-main ul.dropdown-menu:active,
@@ -248,12 +249,14 @@ div.slider div.tp-bannertimer {
     background-color: #934999;
 }
 
-div.home-intro p em {
-    color: #fe4f00;
+div.home-intro p span {
+    color: #ffdaaa;
+    font-size:1.3em;
 }
 
 div.home-concept strong {
     color: #934999;
+    font-size:normal;
 }
 
 blockquote.testimonial {
@@ -281,7 +284,6 @@ div.pricing-table div.most-popular {
 div.pricing-table div.most-popular h3 {
     background-color: #0074ad;
     background-image: -moz-linear-gradient(top, #934999, #934999);
-    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#934999), to(#934999));
     background-image: -webkit-linear-gradient(top, #934999, #934999);
     background-image: -o-linear-gradient(top, #934999, #934999);
     background-image: linear-gradient(to bottom, #934999, #934999);

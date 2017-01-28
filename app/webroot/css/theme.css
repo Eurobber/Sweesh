@@ -4,7 +4,8 @@ body {
 }
 
 body {
-    background-color: #f5f5f5;
+    /*background-color: #fdfdfd;*/
+    background-image:url('../img/light.jpg');
     color: #777;
     font-family: 'Quicksand', sans-serif;
     font-size: 16px;
@@ -36,7 +37,7 @@ header {
 }
 
 #header .header-body {
-    background: #FFF;
+    background: #fff;
     border-top: 5px solid #EDEDED;
     border-bottom: 1px solid transparent;
     padding: 8px 0;
@@ -1805,9 +1806,9 @@ div.nivo-slider .theme-default .nivo-caption {
 /* Home Intro */
 
 div.home-intro {
-    background: linear-gradient(to right, #934999 50%, #fe4f00);
+    background: linear-gradient(to right, #934999 30%, #fe4f00);
     overflow: hidden;
-    padding: 20px 0 10px 0;
+    padding: 3% 0 10px 0;
     position: relative;
     text-align: center;
     box-shadow: 2px 1px 5px;

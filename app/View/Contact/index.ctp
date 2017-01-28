@@ -5,18 +5,13 @@ $this->assign('title', 'Nous contacter');
 <div id="content" class="content full">
     <div class="home-intro">
         <div class="container">
-            <div class="row justify-content-md-center">
-                <div class="span12">
-                    <p>"Make your <em>Weesh </em> come true"</p>
-                </div>
-            </div>
         </div>
     </div>
 </div>
 <div class="container">
     <div class="col-lg-10 col-lg-offset-1 well top-buffer-plus isRound">
-        <div class="col-lg-10 col-lg-offset-1">
-            <h1 style="text-align:left;">Vous voulez que nous ajoutions votre site e-commerce favori ? Dites-le nous ! </h1>
+        <div class="col-lg-12">
+            <h3>Un site à ajouter ? Vous le voulez, Weesh le fait !</h3>
             <?php echo $this->Form->create('Contact', array('class' => 'form-horizontal', 'inputDefaults' => array('label' => false))); ?>
             <div class="form-group">
                 <label for="username" class="col-sm-3 control-label"><span
