@@ -23,9 +23,9 @@ echo $this->Html->docType();
 
     <!-- Web Fonts  -->
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet" type="text/css">
-    <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
     <link href="https://fonts.googleapis.com/css?family=Pattaya" rel="stylesheet" type="text/css">
     <!-- STYLESHEET SECTION -->
+    <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
     <?php
     // Libs CSS
     echo $this->Html->css('../vendor/bootstrap-3.3.7-dist/css/bootstrap');

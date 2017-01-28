@@ -3606,3 +3606,703 @@ Stack Trace:
 #7 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ContactController), Object(CakeRequest))
 #8 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #9 {main}
+2017-01-27 19:09:43 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/img/projects/project.jpg
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-01-27 19:09:43 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/img/projects/project-3.jpg
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-01-27 19:09:43 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/img/projects/project-2.jpg
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-01-27 19:10:25 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/img/projects/project.jpg
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-01-27 19:10:25 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/img/projects/project-4.jpg
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-01-27 19:10:25 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/img/projects/project-3.jpg
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-01-27 19:10:25 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/img/projects/project-2.jpg
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-01-27 19:11:16 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/img/projects/project.jpg
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-01-27 19:11:17 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/img/projects/project-3.jpg
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-01-27 19:11:17 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/img/projects/project-2.jpg
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-01-27 19:11:17 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/img/projects/project-4.jpg
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-01-28 09:00:57 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [1049] Base \'weesh\' inconnue',
+  'enabled' => true,
+)
+Request URL: /Sweesh/contact
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\lib\Cake\Model\Datasource\DboSource.php(260): Mysql->connect()
+#1 C:\wamp64\www\Sweesh\lib\Cake\Model\ConnectionManager.php(105): DboSource->__construct(Array)
+#2 C:\wamp64\www\Sweesh\lib\Cake\Model\Model.php(3621): ConnectionManager::getDataSource('default')
+#3 C:\wamp64\www\Sweesh\lib\Cake\Model\Model.php(1155): Model->setDataSource('default')
+#4 C:\wamp64\www\Sweesh\lib\Cake\Model\Model.php(3648): Model->setSource('contacts')
+#5 C:\wamp64\www\Sweesh\lib\Cake\Model\Model.php(1387): Model->getDataSource()
+#6 C:\wamp64\www\Sweesh\lib\Cake\View\Helper\FormHelper.php(215): Model->schema()
+#7 C:\wamp64\www\Sweesh\lib\Cake\View\Helper\FormHelper.php(468): FormHelper->_introspectModel('Contact', 'fields')
+#8 C:\wamp64\www\Sweesh\app\View\Contact\index.ctp(113): FormHelper->create('Contact', Array)
+#9 C:\wamp64\www\Sweesh\lib\Cake\View\View.php(971): include('C:\\wamp64\\www\\S...')
+#10 C:\wamp64\www\Sweesh\lib\Cake\View\View.php(933): View->_evaluate('C:\\wamp64\\www\\S...', Array)
+#11 C:\wamp64\www\Sweesh\lib\Cake\View\View.php(473): View->_render('C:\\wamp64\\www\\S...')
+#12 C:\wamp64\www\Sweesh\lib\Cake\Controller\Controller.php(960): View->render('index', NULL)
+#13 C:\wamp64\www\Sweesh\app\Controller\ContactController.php(60): Controller->render('index')
+#14 [internal function]: ContactController->index()
+#15 C:\wamp64\www\Sweesh\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(ContactController), Array)
+#16 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#17 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ContactController), Object(CakeRequest))
+#18 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#19 {main}
+2017-01-28 09:00:57 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/img/projects/project.jpg
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-01-28 09:00:57 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/img/projects/project-2.jpg
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-01-28 09:00:57 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/img/projects/project-3.jpg
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-01-28 09:00:57 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/img/projects/project-4.jpg
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-01-28 09:01:12 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [1049] Base \'weesh\' inconnue',
+  'enabled' => true,
+)
+Request URL: /Sweesh/contact
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\lib\Cake\Model\Datasource\DboSource.php(260): Mysql->connect()
+#1 C:\wamp64\www\Sweesh\lib\Cake\Model\ConnectionManager.php(105): DboSource->__construct(Array)
+#2 C:\wamp64\www\Sweesh\lib\Cake\Model\Model.php(3621): ConnectionManager::getDataSource('default')
+#3 C:\wamp64\www\Sweesh\lib\Cake\Model\Model.php(1155): Model->setDataSource('default')
+#4 C:\wamp64\www\Sweesh\lib\Cake\Model\Model.php(3648): Model->setSource('contacts')
+#5 C:\wamp64\www\Sweesh\lib\Cake\Model\Model.php(1387): Model->getDataSource()
+#6 C:\wamp64\www\Sweesh\lib\Cake\View\Helper\FormHelper.php(215): Model->schema()
+#7 C:\wamp64\www\Sweesh\lib\Cake\View\Helper\FormHelper.php(468): FormHelper->_introspectModel('Contact', 'fields')
+#8 C:\wamp64\www\Sweesh\app\View\Contact\index.ctp(113): FormHelper->create('Contact', Array)
+#9 C:\wamp64\www\Sweesh\lib\Cake\View\View.php(971): include('C:\\wamp64\\www\\S...')
+#10 C:\wamp64\www\Sweesh\lib\Cake\View\View.php(933): View->_evaluate('C:\\wamp64\\www\\S...', Array)
+#11 C:\wamp64\www\Sweesh\lib\Cake\View\View.php(473): View->_render('C:\\wamp64\\www\\S...')
+#12 C:\wamp64\www\Sweesh\lib\Cake\Controller\Controller.php(960): View->render('index', NULL)
+#13 C:\wamp64\www\Sweesh\app\Controller\ContactController.php(60): Controller->render('index')
+#14 [internal function]: ContactController->index()
+#15 C:\wamp64\www\Sweesh\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(ContactController), Array)
+#16 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#17 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ContactController), Object(CakeRequest))
+#18 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#19 {main}
+2017-01-28 09:01:12 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/img/projects/project.jpg
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-01-28 09:01:12 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/img/projects/project-2.jpg
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-01-28 09:01:12 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/img/projects/project-3.jpg
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-01-28 09:01:12 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/img/projects/project-4.jpg
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-01-28 09:02:17 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/img/projects/project.jpg
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-01-28 09:02:17 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/img/projects/project-4.jpg
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-01-28 09:02:17 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/img/projects/project-3.jpg
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-01-28 09:02:17 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/img/projects/project-2.jpg
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-01-28 09:10:06 Error: [MissingActionException] Action WeeshController::myProducts() could not be found.
+Exception Attributes: array (
+  'controller' => 'WeeshController',
+  'action' => 'myProducts',
+)
+Request URL: /Sweesh/weesh/myProducts
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(WeeshController), Object(CakeRequest))
+#2 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-01-28 09:10:12 Error: [MissingActionException] Action WeeshController::parameters() could not be found.
+Exception Attributes: array (
+  'controller' => 'WeeshController',
+  'action' => 'parameters',
+)
+Request URL: /Sweesh/weesh/parameters
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(WeeshController), Object(CakeRequest))
+#2 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-01-28 09:10:46 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/img/projects/project-2.jpg
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-01-28 09:10:46 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/img/projects/project-3.jpg
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-01-28 09:10:46 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/img/projects/project.jpg
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-01-28 09:11:41 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/img/projects/project.jpg
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-01-28 09:11:41 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/img/projects/project-2.jpg
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-01-28 09:11:41 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/img/projects/project-4.jpg
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-01-28 09:11:41 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/img/projects/project-3.jpg
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-01-28 09:11:56 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/img/projects/project.jpg
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-01-28 09:11:56 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/img/projects/project-3.jpg
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-01-28 09:11:56 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/img/projects/project-2.jpg
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-01-28 09:11:56 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/img/projects/project-4.jpg
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-01-28 09:12:06 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/img/projects/project.jpg
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-01-28 09:12:06 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/img/projects/project-4.jpg
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-01-28 09:12:06 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/img/projects/project-2.jpg
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-01-28 09:12:22 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/img/projects/project.jpg
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-01-28 09:12:22 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/img/projects/project-3.jpg
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-01-28 09:12:22 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/img/projects/project-2.jpg
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-01-28 09:12:22 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/img/projects/project-4.jpg
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-01-28 09:14:08 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/img/projects/project-2.jpg
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-01-28 09:14:08 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/img/projects/project.jpg
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+}
+2017-01-28 09:14:08 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/img/projects/project-3.jpg
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-01-28 09:14:31 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/img/projects/project.jpg
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-01-28 09:14:31 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/img/projects/project-4.jpg
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-01-28 09:14:31 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/img/projects/project-3.jpg
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-01-28 09:14:45 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/img/projects/project.jpg
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-01-28 09:14:45 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/img/projects/project-4.jpg
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-01-28 09:14:45 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/img/projects/project-3.jpg
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-01-28 09:22:52 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/img/site_partenaire/amazon.png
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-01-28 09:22:52 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/img/projects/project-4.jpg
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-01-28 09:22:52 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/img/projects/project-3.jpg
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-01-28 09:22:52 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/img/projects/project-2.jpg
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-01-28 09:23:03 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/img/projects/project-2.jpg
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-01-28 09:23:03 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/img/projects/project-4.jpg
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-01-28 09:23:03 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/img/projects/project-3.jpg
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-01-28 09:23:20 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/img/projects/project-2.jpg
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-01-28 09:23:20 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/img/projects/project-3.jpg
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-01-28 09:23:20 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/img/projects/project-4.jpg
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-01-28 09:24:32 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/img/projects/project-4.jpg
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-01-28 09:24:32 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/img/projects/project-2.jpg
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-01-28 09:24:32 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/img/projects/project-3.jpg
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-01-28 09:25:07 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/img/projects/project-2.jpg
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-01-28 09:25:07 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/img/projects/project-3.jpg
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-01-28 09:25:07 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/img/projects/project-4.jpg
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-01-28 09:25:24 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/img/projects/project-3.jpg
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-01-28 09:25:24 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/img/projects/project-4.jpg
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-01-28 09:25:24 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/img/projects/project-2.jpg
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
