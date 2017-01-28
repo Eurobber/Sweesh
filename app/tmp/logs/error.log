@@ -4925,3 +4925,137 @@ Stack Trace:
 #1 C:\wamp64\www\Weesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersRestController), Object(CakeRequest))
 #2 C:\wamp64\www\Weesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
+2017-01-28 17:43:04 Error: [MissingActionException] Action WeeshController::myProducts() could not be found.
+Exception Attributes: array (
+  'controller' => 'WeeshController',
+  'action' => 'myProducts',
+)
+Request URL: /Weesh/weesh/myProducts
+Stack Trace:
+#0 C:\wamp64\www\Weesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp64\www\Weesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(WeeshController), Object(CakeRequest))
+#2 C:\wamp64\www\Weesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-01-28 17:44:26 Error: [MissingActionException] Action WeeshController::parameters() could not be found.
+Exception Attributes: array (
+  'controller' => 'WeeshController',
+  'action' => 'parameters',
+)
+Request URL: /Weesh/weesh/parameters
+Stack Trace:
+#0 C:\wamp64\www\Weesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp64\www\Weesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(WeeshController), Object(CakeRequest))
+#2 C:\wamp64\www\Weesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-01-28 17:44:50 Error: [MissingActionException] Action WeeshController::parameters() could not be found.
+Exception Attributes: array (
+  'controller' => 'WeeshController',
+  'action' => 'parameters',
+)
+Request URL: /Weesh/weesh/parameters
+Stack Trace:
+#0 C:\wamp64\www\Weesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp64\www\Weesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(WeeshController), Object(CakeRequest))
+#2 C:\wamp64\www\Weesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-01-28 17:57:28 Error: [MissingControllerException] Controller class UserController could not be found.
+Exception Attributes: array (
+  'class' => 'UserController',
+  'plugin' => NULL,
+)
+Request URL: /Weesh/user/edit?id=18
+Stack Trace:
+#0 C:\wamp64\www\Weesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-01-28 17:57:36 Error: [NotFoundException] Invalid user
+Request URL: /Weesh/users/edit?id=18
+Stack Trace:
+#0 [internal function]: UsersController->edit()
+#1 C:\wamp64\www\Weesh\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 C:\wamp64\www\Weesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\wamp64\www\Weesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 C:\wamp64\www\Weesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2017-01-28 17:58:58 Error: [NotFoundException] Invalid user
+Request URL: /Weesh/users/edit?id=18
+Stack Trace:
+#0 [internal function]: UsersController->edit()
+#1 C:\wamp64\www\Weesh\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 C:\wamp64\www\Weesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\wamp64\www\Weesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 C:\wamp64\www\Weesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2017-01-28 18:00:05 Error: [NotFoundException] Invalid user
+Request URL: /Weesh/users/edit?id=18
+Stack Trace:
+#0 [internal function]: UsersController->edit()
+#1 C:\wamp64\www\Weesh\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 C:\wamp64\www\Weesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\wamp64\www\Weesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 C:\wamp64\www\Weesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2017-01-28 18:01:12 Error: [MissingActionException] Action UsersController::18() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => '18',
+)
+Request URL: /Weesh/users/18/edit
+Stack Trace:
+#0 C:\wamp64\www\Weesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp64\www\Weesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\wamp64\www\Weesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-01-28 18:06:46 Error: [MissingActionException] Action WeeshController::parameters() could not be found.
+Exception Attributes: array (
+  'controller' => 'WeeshController',
+  'action' => 'parameters',
+)
+Request URL: /Weesh/weesh/parameters
+Stack Trace:
+#0 C:\wamp64\www\Weesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp64\www\Weesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(WeeshController), Object(CakeRequest))
+#2 C:\wamp64\www\Weesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-01-28 18:07:00 Error: [MissingActionException] Action WeeshController::parameters() could not be found.
+Exception Attributes: array (
+  'controller' => 'WeeshController',
+  'action' => 'parameters',
+)
+Request URL: /Weesh/weesh/parameters
+Stack Trace:
+#0 C:\wamp64\www\Weesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp64\www\Weesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(WeeshController), Object(CakeRequest))
+#2 C:\wamp64\www\Weesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-01-28 18:16:18 Error: [MissingActionException] Action WeeshController::parameters() could not be found.
+Exception Attributes: array (
+  'controller' => 'WeeshController',
+  'action' => 'parameters',
+)
+Request URL: /Weesh/weesh/parameters
+Stack Trace:
+#0 C:\wamp64\www\Weesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp64\www\Weesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(WeeshController), Object(CakeRequest))
+#2 C:\wamp64\www\Weesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-01-28 18:18:48 Error: [MissingActionException] Action WeeshController::parameters() could not be found.
+Exception Attributes: array (
+  'controller' => 'WeeshController',
+  'action' => 'parameters',
+)
+Request URL: /Weesh/weesh/parameters
+Stack Trace:
+#0 C:\wamp64\www\Weesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp64\www\Weesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(WeeshController), Object(CakeRequest))
+#2 C:\wamp64\www\Weesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-01-28 18:35:15 Error: Fatal Error (1): Call to undefined method UsersController::validator() in [C:\wamp64\www\Weesh\app\Controller\UsersController.php, line 97]
+2017-01-28 18:35:15 Error: [FatalErrorException] Call to undefined method UsersController::validator()
+Request URL: /Weesh/users/edit/18
+Stack Trace:
+#0 C:\wamp64\www\Weesh\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\\wamp64\\www\\W...', 97)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\\wamp64\\www\\W...', 97, Array)
+#2 C:\wamp64\www\Weesh\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\\wamp64\\www\\W...', 97, Array)
+#3 C:\wamp64\www\Weesh\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

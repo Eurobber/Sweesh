@@ -1,6 +1,6 @@
 <?php
 echo $this->Flash->render('auth');
-$this->assign('title', 'Inscrivez-vous sur Weesh !');
+$this->assign('title', 'Mes paramètres');
 ?>
 <div id="content" class="content full">
     <div class="home-intro">
@@ -13,18 +13,18 @@ $this->assign('title', 'Inscrivez-vous sur Weesh !');
 <div class="container">
     <div class="col-lg-12 well top-buffer-plus isRound">
         <div class="col-lg-12">
-            <h1>Rejoindre la communauté Weesh</span></h1>
+            <h1>Mes paramètres</span></h1>
             <?php echo $this->Form->create('User', array('class' => 'form-horizontal', 'inputDefaults' => array('label' => false))); ?>
             <div class="form-group">
-                <label for="username" class="col-sm-2 control-label"><span class="pull-left">Identifiant</label>
+                <label for="username" class="col-sm-2 control-label"><span class="pull-left">Mot de passe</label>
                 <div class="col-sm-3">
-                    <?php echo $this->Form->input('username', array('class' => 'form-control')); ?>
+                    <?php echo $this->Form->input('password1', array('class' => 'form-control', 'type' => 'password')); ?>
                 </div>
 
                 <label for="password" class="col-sm-3 control-label"><span
-                            class="pull-left">Mot de passe</label>
+                        class="pull-left">Confirmation du mot de passe</label>
                 <div class="col-sm-3">
-                    <?php echo $this->Form->input('password', array('class' => 'form-control')); ?>
+                    <?php echo $this->Form->input('password2', array('class' => 'form-control', 'type' => 'password')); ?>
                 </div>
             </div>
             <div class="form-group">
@@ -45,7 +45,7 @@ $this->assign('title', 'Inscrivez-vous sur Weesh !');
                 </div>
 
                 <label for="street" class="col-sm-3 control-label"><span
-                            class="pull-left">Adresse</label>
+                        class="pull-left">Adresse</label>
                 <div class="col-sm-3">
                     <?php echo $this->Form->input('street', array('class' => 'form-control')); ?>
                 </div>
@@ -57,18 +57,13 @@ $this->assign('title', 'Inscrivez-vous sur Weesh !');
                 </div>
 
                 <label for="zipcode" class="col-sm-3 control-label"><span
-                            class="pull-left">Code postal</label>
+                        class="pull-left">Code postal</label>
                 <div class="col-sm-3">
                     <?php echo $this->Form->input('zipcode', array('class' => 'form-control')); ?>
                 </div>
             </div>
             <div class="form-group">
-                <label for="email" class="col-sm-2 control-label"><span class="pull-left">E-mail</label>
-                <div class="col-sm-3">
-                    <?php echo $this->Form->input('email', array('class' => 'form-control')); ?>
-                </div>
-
-                <label for="birthdate" class="col-sm-3 control-label"><span class="pull-left">Date de naissance</label>
+                <label for="birthdate" class="col-sm-2 control-label"><span class="pull-left">Date de naissance</label>
                 <div class="col-sm-4">
                     <div class="form-inline">
                         <?php echo $this->Form->input('birthdate', array('dateFormat' => 'DMY', 'minYear' => date('Y') - 90, 'maxYear' => date('Y') - 18, 'class' => 'form-control')); ?>
@@ -77,7 +72,7 @@ $this->assign('title', 'Inscrivez-vous sur Weesh !');
             </div>
             <div class="form-group">
                 <div class="col-sm-2" style="margin-top:5%;">
-                    <?php echo $this->Form->submit('Créer mon compte Weesh et commencer à comparer', array('class' => 'btn btn-lg btn-primary btn-orange', 'controller' => 'weesh', 'action' => 'overview')) ?>
+                    <?php echo $this->Form->submit('Modifier vos informations', array('class' => 'btn btn-lg btn-primary btn-orange', 'controller' => 'weesh', 'action' => 'overview')) ?>
                 </div>
             </div>
             <?php echo $this->Form->end(); ?>

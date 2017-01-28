@@ -12,7 +12,7 @@ class UsersController extends AppController
     public function beforeFilter()
     {
         parent::beforeFilter();
-        $this->Auth->allow('add', 'logout', 'signup');
+        $this->Auth->allow('add', 'logout', 'signup', 'edit');
     }
 
 
@@ -85,20 +85,33 @@ class UsersController extends AppController
         }
     }
 
-    public function edit($id = null)
+    public function edit($id)
     {
         $this->User->id = $id;
         if (!$this->User->exists()) {
             throw new NotFoundException(__('Invalid user'));
         }
         if ($this->request->is('post') || $this->request->is('put')) {
-            if ($this->User->save($this->request->data)) {
-                $this->Flash->success(__('L\'utilisateur a été ajouté à la base de données !'));
-                return $this->redirect(array('action' => 'index'));
+            if($this->request->data['User']['password1'] == $this->request->data['User']['password2']) {
+                $this->request->data['User']['password'] = $this->request->data['User']['password1'];
+                unset($this->User->validate['password']);
+
+                if ($this->User->save($this->request->data)) {
+                    //Envoyer un mail
+                    //Object : Weesh.io Security Departement
+                    //Vos informations on été changées. Si vous n'estes pas à l'origine de ce changmenent veuillez nous contactez weesh.io-contact@gmail.com
+
+                    $this->Flash->success(__('Vos informations on bien été modifiées !'));
+                    $this->redirect($this->referer());
+                }
+                $this->Flash->error(
+                    __('Vos informations n\'on pas été modifiées. Merci de réessayer.')
+                );
+            } elseif (!$this->request->data['User']['password1'] && $this->request->data['User']['password2'] || $this->request->data['User']['password1'] && !$this->request->data['User']['password2']) {
+                $this->Flash->error(
+                    __('Veuillez rentrer le même mot de passe. Merci de réessayer.')
+                );
             }
-            $this->Flash->error(
-                __('L\'utilisateur n\'a pas été sauvegardé. Merci de réessayer.')
-            );
         } else {
             $this->request->data = $this->User->findById($id);
             unset($this->request->data['User']['password']);

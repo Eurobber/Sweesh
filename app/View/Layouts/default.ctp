@@ -95,7 +95,7 @@ echo $this->Html->docType();
                                             </li>
                                             <li><?php if (AuthComponent::user()):
                                                     // Logged in, show the parameters link
-                                                    echo $this->Html->link('Paramètres', array('controller' => 'weesh', 'action' => 'parameters'));
+                                                    echo $this->Html->link('Paramètres', array('controller' => 'users', 'action' => 'edit', AuthComponent::user()['id']));
                                                 endif; ?>
                                             </li>
                                             <li> <?php if (!AuthComponent::user()):
