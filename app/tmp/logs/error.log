@@ -4306,3 +4306,159 @@ Request URL: /Sweesh/img/projects/project-2.jpg
 Stack Trace:
 #0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2017-01-28 11:16:35 Error: [MissingControllerException] Controller class ContactsController could not be found.
+Exception Attributes: array (
+  'class' => 'ContactsController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/contacts
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-01-28 11:30:15 Error: [MissingControllerException] Controller class ContactController could not be found.
+Exception Attributes: array (
+  'class' => 'ContactController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/contact
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-01-28 11:30:20 Error: [MissingControllerException] Controller class ContactController could not be found.
+Exception Attributes: array (
+  'class' => 'ContactController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/contact
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-01-28 11:31:07 Error: [MissingControllerException] Controller class ContactController could not be found.
+Exception Attributes: array (
+  'class' => 'ContactController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/contact
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-01-28 11:31:11 Error: [MissingViewException] View file "Contacts\index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Contacts\\index.ctp',
+)
+Request URL: /Sweesh/contacts
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\lib\Cake\View\View.php(470): View->_getViewFileName('index')
+#1 C:\wamp64\www\Sweesh\lib\Cake\Controller\Controller.php(960): View->render('index', NULL)
+#2 C:\wamp64\www\Sweesh\app\Controller\ContactsController.php(64): Controller->render('index')
+#3 [internal function]: ContactsController->index()
+#4 C:\wamp64\www\Sweesh\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(ContactsController), Array)
+#5 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#6 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ContactsController), Object(CakeRequest))
+#7 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2017-01-28 11:32:33 Error: [BadRequestException] The request has been black-holed
+Request URL: /Sweesh/contacts
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\lib\Cake\Controller\Component\SecurityComponent.php(242): SecurityComponent->blackHole(Object(ContactsController), 'csrf')
+#1 [internal function]: SecurityComponent->startup(Object(ContactsController))
+#2 C:\wamp64\www\Sweesh\lib\Cake\Utility\ObjectCollection.php(128): call_user_func_array(Array, Array)
+#3 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#4 C:\wamp64\www\Sweesh\lib\Cake\Event\CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#5 C:\wamp64\www\Sweesh\lib\Cake\Controller\Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#6 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(189): Controller->startupProcess()
+#7 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ContactsController), Object(CakeRequest))
+#8 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2017-01-28 11:37:15 Error: [MissingTableException] Table news_letters for model NewsLetter was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'news_letters',
+  'class' => 'NewsLetter',
+  'ds' => 'default',
+)
+Request URL: /Sweesh/contacts
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\lib\Cake\Model\Model.php(3648): Model->setSource('news_letters')
+#1 C:\wamp64\www\Sweesh\lib\Cake\Model\Model.php(1387): Model->getDataSource()
+#2 C:\wamp64\www\Sweesh\lib\Cake\View\Helper\FormHelper.php(215): Model->schema()
+#3 C:\wamp64\www\Sweesh\lib\Cake\View\Helper\FormHelper.php(468): FormHelper->_introspectModel('NewsLetter', 'fields')
+#4 C:\wamp64\www\Sweesh\app\View\Layouts\default.ctp(150): FormHelper->create('NewsLetter', Array)
+#5 C:\wamp64\www\Sweesh\lib\Cake\View\View.php(971): include('C:\\wamp64\\www\\S...')
+#6 C:\wamp64\www\Sweesh\lib\Cake\View\View.php(933): View->_evaluate('C:\\wamp64\\www\\S...', Array)
+#7 C:\wamp64\www\Sweesh\lib\Cake\View\View.php(546): View->_render('C:\\wamp64\\www\\S...')
+#8 C:\wamp64\www\Sweesh\lib\Cake\View\View.php(481): View->renderLayout('', 'default')
+#9 C:\wamp64\www\Sweesh\lib\Cake\Controller\Controller.php(960): View->render('index', NULL)
+#10 C:\wamp64\www\Sweesh\app\Controller\ContactsController.php(64): Controller->render('index')
+#11 [internal function]: ContactsController->index()
+#12 C:\wamp64\www\Sweesh\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(ContactsController), Array)
+#13 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#14 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ContactsController), Object(CakeRequest))
+#15 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2017-01-28 11:37:27 Error: [MissingTableException] Table news_letters for model NewsLetter was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'news_letters',
+  'class' => 'NewsLetter',
+  'ds' => 'default',
+)
+Request URL: /Sweesh/weesh
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\lib\Cake\Model\Model.php(3648): Model->setSource('news_letters')
+#1 C:\wamp64\www\Sweesh\lib\Cake\Model\Model.php(1387): Model->getDataSource()
+#2 C:\wamp64\www\Sweesh\lib\Cake\View\Helper\FormHelper.php(215): Model->schema()
+#3 C:\wamp64\www\Sweesh\lib\Cake\View\Helper\FormHelper.php(468): FormHelper->_introspectModel('NewsLetter', 'fields')
+#4 C:\wamp64\www\Sweesh\app\View\Layouts\default.ctp(150): FormHelper->create('NewsLetter', Array)
+#5 C:\wamp64\www\Sweesh\lib\Cake\View\View.php(971): include('C:\\wamp64\\www\\S...')
+#6 C:\wamp64\www\Sweesh\lib\Cake\View\View.php(933): View->_evaluate('C:\\wamp64\\www\\S...', Array)
+#7 C:\wamp64\www\Sweesh\lib\Cake\View\View.php(546): View->_render('C:\\wamp64\\www\\S...')
+#8 C:\wamp64\www\Sweesh\lib\Cake\View\View.php(481): View->renderLayout('', 'default')
+#9 C:\wamp64\www\Sweesh\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#10 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#11 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(WeeshController), Object(CakeRequest))
+#12 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2017-01-28 11:42:19 Error: [MissingControllerException] Controller class NewsLettersController could not be found.
+Exception Attributes: array (
+  'class' => 'NewsLettersController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/news_letters/registerNewsLetter
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-01-28 11:43:10 Error: [MissingControllerException] Controller class NewsLettersController could not be found.
+Exception Attributes: array (
+  'class' => 'NewsLettersController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/news_letters/registerNewsLetter
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-01-28 11:43:37 Error: [MissingControllerException] Controller class NewsLettersController could not be found.
+Exception Attributes: array (
+  'class' => 'NewsLettersController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/news_letters/registerNewsLetter
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-01-28 11:43:44 Error: [MissingControllerException] Controller class NewsLettersController could not be found.
+Exception Attributes: array (
+  'class' => 'NewsLettersController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/news_letters/registerNewsLetter
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-01-28 11:45:45 Error: [MissingControllerException] Controller class NewsLettersController could not be found.
+Exception Attributes: array (
+  'class' => 'NewsLettersController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/news_letters/registerNewsLetter
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

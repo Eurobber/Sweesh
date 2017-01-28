@@ -207,7 +207,7 @@ $this->assign('title', 'Nous contacter');
     <div class="col-lg-10 col-lg-offset-1 well top-buffer-plus isRound">
         <div class="col-lg-10 col-lg-offset-1">
             <h3 style="text-align:left;">Un site à ajouter ? Vous le voulez, Weesh le fait ! </h3>
-            <?php echo $this->Form->create('Contact', array('class' => 'form-horizontal', 'inputDefaults' => array('label' => false))); ?>
+            <?php echo $this->Form->create('Contact', array('action' => 'index', 'class' => 'form-horizontal', 'inputDefaults' => array('label' => false))); ?>
             <div class="form-group">
                 <label for="username" class="col-sm-3 control-label"><span
                             class="pull-left">Site à ajouter<span style="color:red;">*</span></label>
@@ -226,7 +226,12 @@ $this->assign('title', 'Nous contacter');
                 <label for="email" class="col-sm-3 control-label"><span
                             class="pull-left">Adresse e-mail</label>
                 <div class="col-sm-9">
-                    <?php echo $this->Form->input('email', array('class' => 'form-control', 'required' => 'false')); ?>
+                    <?php
+                    if (AuthComponent::user()['email']){
+                        echo $this->Form->input('email', array('default' => AuthComponent::user()['email'],'class' => 'form-control', 'required' => 'false'));
+                    } else {
+                        echo $this->Form->input('email', array('class' => 'form-control', 'required' => 'false'));
+                    } ?>
                 </div>
             </div>
             <div class="form-group">

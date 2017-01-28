@@ -146,13 +146,15 @@ echo $this->Html->docType();
                     <h4>Inscrivez-vous à la newsletter</h4>
                     <p>Renseignez votre adresse e-mail et nous vous tiendrons au courant des nouvelles fonctionnalités supportées, 
                     des nouveaux sites parcourus et des évolutions prévues.</p>
-                    <form class="form-inline" id="newsletterForm" action="#" method="POST">
+                    //Here
+                    <?php echo $this->Form->create('NewsLetter', array( 'url' => array('controller' => 'contacts', 'action' => 'registerNewsLetter'), 'class' => 'form-inline')); ?>
                         <div class="control-group">
                             <div class="input-append">
-                                <input class="col-md-8" placeholder="Votre adresse email ..." name="email" id="email" type="text">
+                                <input class="col-md-8" placeholder="Votre adresse email" name="email" id="email" type="text">
                                 <button class="btn-sm btn-primary col-md-offset-1" type="submit">Go!</button>
                             </div>
                         </div>
+                    <?php echo $this->Form->end(); ?>
                     </form>
                     <p style="margin-top:15px;">Cliquez sur "Contact" (en bas 
                     de la page) pour nous suggérer un nouveau site à supporter.</p>
@@ -188,7 +190,7 @@ echo $this->Html->docType();
                             <ul class="list-inline">
                                 <li><a href="page-faq.html">FAQ</a></li>
                                 <li><a href="sitemap.html">Plan du site</a></li>
-                                <li><?php echo $this->Html->link('Contact', array('controller' => 'contact', 'action' => 'index')); ?>
+                                <li><?php echo $this->Html->link('Contact', array('controller' => 'contacts', 'action' => 'index')); ?>
                                 </li>
                             </ul>
                     </div>
