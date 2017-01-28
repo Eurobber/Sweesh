@@ -241,8 +241,10 @@ $(document).ready(function () {
                             $('#msgSuccessLog').show();
                             $('#formConnect').hide();
                             $('#registerButton').hide();
+							$('#connectButton').hide();
                             $('#loggedDiv').show();
                             setWeeshListes();
+							chrome.storage.sync.set({'login':data.username});
                             $("#msgSuccessLog").html("Bienvenue "+$('#inputLogin').val()+" !");
                         },
                         error: function(data){
