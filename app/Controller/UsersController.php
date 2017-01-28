@@ -97,9 +97,31 @@ class UsersController extends AppController
                 unset($this->User->validate['password']);
 
                 if ($this->User->save($this->request->data)) {
-                    //Envoyer un mail
-                    //Object : Weesh.io Security Departement
-                    //Vos informations on été changées. Si vous n'estes pas à l'origine de ce changmenent veuillez nous contactez weesh.io-contact@gmail.com
+                    $Email = new CakeEmail();
+                    $Email->config('default');
+                    $Email->from(array('weesh.io.contact@gmail.com' => 'Weesh.io'))
+                        ->to($this->request->data['User']['email'])
+                        ->subject('Modification de vos paramètres')
+                        ->emailFormat('html')
+                        ->attachments(array(
+                            'facebook.png' => array(
+                                'file' => ROOT . '\app\webroot\img\logo\facebook.png',
+                                'mimetype' => 'image/png',
+                                'contentId' => '003'
+                            ),
+                            'twitter.png' => array(
+                                'file' => ROOT . '\app\webroot\img\logo\twitter.png',
+                                'mimetype' => 'image/png',
+                                'contentId' => '002'
+                            ),
+                            'logo.png' => array(
+                                'file' => ROOT . '\app\webroot\img\logo\weesh_logo.png',
+                                'mimetype' => 'image/png',
+                                'contentId' => '001'
+                            )
+                        ))
+                        ->template('edit')
+                        ->send();
 
                     $this->Flash->success(__('Vos informations on bien été modifiées !'));
                     $this->redirect($this->referer());
