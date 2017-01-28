@@ -13,7 +13,9 @@ echo $this->Html->docType();
     <meta name="description" content="Weesh">
     <meta name="author" content="Weesh">
     <?php //<!-- Favicons -->
-    echo $this->Html->meta('icon'); ?>
+    echo $this->Html->meta ( 'favicon.ico', '/img/favicon.ico', array (
+    'type' => 'icon' 
+    ) ); ?>
 
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
@@ -68,7 +70,7 @@ echo $this->Html->docType();
                             echo $this->Html->image("wsh.png", array(
                                 "alt" => "Logo",
                                 "class" => "logo",
-                                "url" => array('controller' => 'sweesh', 'action' => 'index')
+                                "url" => array('controller' => 'weesh', 'action' => 'index')
                             ));
                             ?>
                         </div>
@@ -83,17 +85,17 @@ echo $this->Html->docType();
                                         <ul class="nav nav-pills nav-main" id="mainNav">
                                             <li><?php if (AuthComponent::user()):
                                                     // Logged in, show the my products link
-                                                    echo $this->Html->link('Mes Produits', array('controller' => 'sweesh', 'action' => 'myProducts'), array('class' => 'purple'));
+                                                    echo $this->Html->link('Mes Produits', array('controller' => 'weesh', 'action' => 'myProducts'), array('class' => 'purple'));
                                                 endif; ?>
                                             </li>
                                             <li><?php if (AuthComponent::user()):
                                                     // Logged in, show the my products link
-                                                    echo $this->Html->link('Mes Listes', array('controller' => 'sweesh', 'action' => 'myLists'), array('class' => 'purple'));
+                                                    echo $this->Html->link('Mes Listes', array('controller' => 'weesh', 'action' => 'myLists'), array('class' => 'purple'));
                                                 endif; ?>
                                             </li>
                                             <li><?php if (AuthComponent::user()):
                                                     // Logged in, show the parameters link
-                                                    echo $this->Html->link('Paramètres', array('controller' => 'sweesh', 'action' => 'parameters'));
+                                                    echo $this->Html->link('Paramètres', array('controller' => 'weesh', 'action' => 'parameters'));
                                                 endif; ?>
                                             </li>
                                             <li> <?php if (!AuthComponent::user()):

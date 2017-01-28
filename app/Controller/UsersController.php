@@ -78,7 +78,7 @@ class UsersController extends AppController
             }
         } else if ($this->request->is('get')) {
             if (AuthComponent::user()) { // Si déja connecté retour à la page d'acceuil
-                $this->redirect(array('controller' => 'sweesh', 'action' => 'index'));
+                $this->redirect(array('controller' => 'weesh', 'action' => 'index'));
             } else {
                 $this->render('signup');
             }
@@ -132,7 +132,7 @@ class UsersController extends AppController
             }
         } else if ($this->request->is('get')) {
             if (AuthComponent::user()) { // Si déja connecté retour à la page d'acceuil
-                $this->redirect(array('controller' => 'sweesh', 'action' => 'index'));
+                $this->redirect(array('controller' => 'weesh', 'action' => 'index'));
             } else {
                 $this->render('login');
             }

@@ -1,6 +1,6 @@
 <?php
 
-class SweeshController extends AppController{
+class WeeshController extends AppController{
 
 	public function index() {}
 

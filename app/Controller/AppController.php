@@ -38,12 +38,12 @@ class AppController extends Controller {
         'Flash',
         'Auth' => array(
             'loginRedirect' => array(
-                'controller' => 'sweesh',
+                'controller' => 'weesh',
                 'action' => 'index'
             ),
             'authError' => 'Pensiez-vous réellement que vous étiez autorisés à voir cela ?',
             'logoutRedirect' => array(
-                'controller' => 'sweesh',
+                'controller' => 'weesh',
                 'action' => 'index'
             ),
             'authenticate' => array(
