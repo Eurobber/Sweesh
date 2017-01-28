@@ -4805,3 +4805,123 @@ Stack Trace:
 #1 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(WeeshController), Object(CakeRequest))
 #2 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
+2017-01-28 17:04:37 Error: [MissingActionException] Action WeeshController::recipes() could not be found.
+Exception Attributes: array (
+  'controller' => 'WeeshController',
+  'action' => 'recipes',
+)
+Request URL: /Sweesh/weesh/recipes/18
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(WeeshController), Object(CakeRequest))
+#2 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-01-28 17:04:53 Error: [MissingActionException] Action WeeshController::recipes() could not be found.
+Exception Attributes: array (
+  'controller' => 'WeeshController',
+  'action' => 'recipes',
+)
+Request URL: /Sweesh/weesh/recipes/18.json
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(WeeshController), Object(CakeRequest))
+#2 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-01-28 17:05:22 Error: [MissingActionException] Action WeeshController::18() could not be found.
+Exception Attributes: array (
+  'controller' => 'WeeshController',
+  'action' => '18',
+)
+Request URL: /Sweesh/weesh/18.json
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(WeeshController), Object(CakeRequest))
+#2 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-01-28 17:05:24 Error: [MissingActionException] Action WeeshController::18() could not be found.
+Exception Attributes: array (
+  'controller' => 'WeeshController',
+  'action' => '18',
+)
+Request URL: /Sweesh/weesh/18.json
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(WeeshController), Object(CakeRequest))
+#2 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-01-28 17:05:42 Error: [MissingActionException] Action WeeshController::18() could not be found.
+Exception Attributes: array (
+  'controller' => 'WeeshController',
+  'action' => '18',
+)
+Request URL: /Sweesh/Weesh/18.json
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(WeeshController), Object(CakeRequest))
+#2 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-01-28 17:06:10 Error: [MissingActionException] Action WeeshController::view() could not be found.
+Exception Attributes: array (
+  'controller' => 'WeeshController',
+  'action' => 'view',
+)
+Request URL: /Sweesh/Weesh/view/18.json
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(WeeshController), Object(CakeRequest))
+#2 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-01-28 17:06:28 Error: [MissingControllerException] Controller class UserController could not be found.
+Exception Attributes: array (
+  'class' => 'UserController',
+  'plugin' => NULL,
+)
+Request URL: /Sweesh/User/view/18.json
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-01-28 17:06:36 Error: [MissingViewException] View file "Users\view.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Users\\view.ctp',
+)
+Request URL: /Sweesh/Users/view/18.json
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 C:\wamp64\www\Sweesh\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#2 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2017-01-28 17:06:57 Error: [MissingActionException] Action UsersController::18() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => '18',
+)
+Request URL: /Sweesh/Users/18.json
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-01-28 17:08:17 Error: [MissingActionException] Action UsersController::18() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => '18',
+)
+Request URL: /Sweesh/Users/18.json
+Stack Trace:
+#0 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp64\www\Sweesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\wamp64\www\Sweesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-01-28 17:30:37 Error: [MissingActionException] Action UsersRestController::18() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersRestController',
+  'action' => '18',
+)
+Request URL: /Weesh/UsersRest/18.json
+Stack Trace:
+#0 C:\wamp64\www\Weesh\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp64\www\Weesh\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersRestController), Object(CakeRequest))
+#2 C:\wamp64\www\Weesh\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
