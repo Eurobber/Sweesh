@@ -22,6 +22,7 @@ echo $this->Html->docType();
     <!-- Web Fonts  -->
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet" type="text/css">
     <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
+    <link href="https://fonts.googleapis.com/css?family=Pattaya" rel="stylesheet" type="text/css">
     <!-- STYLESHEET SECTION -->
     <?php
     // Libs CSS
@@ -133,7 +134,7 @@ echo $this->Html->docType();
     <footer>
         <div class="container">
             <div class="row">
-                <div class="footer-ribon"><span>Contact</span></div>
+                <div class="footer-ribon"><span style="font-family: 'Pattaya', sans-serif;">Plus d'informations</span></div>
                 
                 <div class="col-md-4">
                     <h4>Suivez-nous @Twitter</h4>
@@ -143,7 +144,7 @@ echo $this->Html->docType();
                     <h4>Newsletter</h4>
                     <p>Renseignez votre adresse e-mail et nous vous tiendrons au courant des nouvelles fonctionnalités supportées, 
                     des nouveaux sites parcourus et des évolutions prévues.</p>
-                    <form class="form-inline txtcenter" id="newsletterForm" action="#" method="POST">
+                    <form class="form-inline" id="newsletterForm" action="#" method="POST">
                         <div class="control-group">
                             <div class="input-append">
                                 <input class="col-md-8" placeholder="Email Address" name="email" id="email" type="text">
