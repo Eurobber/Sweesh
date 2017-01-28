@@ -79,6 +79,7 @@
           #loggedDiv{
               display: none;
           }
+		  .top-buffer { margin-top:10px; }
           
           
       </style>
@@ -107,23 +108,25 @@
               <button id="clear" class="btn btn-block btn-danger">Vider la liste</button>
             </div>
     
-          <div id="tabs-2"> 
+          <div id="tabs-2" > 
                 <h3 id='msgErrorLog'>Cet utilisateur n'est pas reconnu.</h3>
                 <h3 id='msgSuccessLog'>Bienvenue !</h3>
-               <form id="formConnect" class="form-signin">
-			   <div class="row">
-                    <h2 class="form-signin-heading">Se connecter à Weesh</h2>
-                    <input type="email" id="inputLogin" class="form-control" placeholder="Nom d'utilisateur" required autofocus>
-                    <input type="password" id="inputPassword" class="form-control" placeholder="Mot de passe" required>
+               
+			   <div class="container">
+					<div class="row">
+					<form id="formConnect" class="form-signin">
+						<h2 class="form-signin-heading">Se connecter à Weesh</h2>
+						<input type="email" id="inputLogin" class="form-control top-buffer" placeholder="Nom d'utilisateur" required autofocus>
+						<input type="password" id="inputPassword" class="form-control top-buffer" placeholder="Mot de passe" required>
+					</div>
+					<div class="row top-buffer">
+						<button class="btn btn-lg btn-primary btn-block" id="connectButton" type="submit">Me connecter</button>
+					</form>
+					</div>
+					<div class="row top-buffer">
+						<button class="btn btn-lg btn-success btn-block" id="registerButton" type="button">Créer un compte sur Weesh</button>
+					</div>
 				</div>
-				<div class="row">
-                    <button class="btn btn-lg btn-primary btn-block" id="connectButton" type="submit">Connect</button>
-                </form>
-				</div>
-				<div class="row">
-					<button class="btn btn-lg btn-success btn-block" id="registerButton" type="button">Register</button>
-				</div>
-				
 				<div id="loggedDiv">Voici vos listes disponibles : <!-- CSS none, à passer en show -->           
 				<ul id="weeshListsLogged"></ul></div> <!-- CSS none, à passer en show -->          
 			</div>
