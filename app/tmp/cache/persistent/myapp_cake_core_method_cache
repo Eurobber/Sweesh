@@ -1,2 +1,2 @@
-1485614948
-a:3:{i:0;b:0;s:4:"name";a:6:{s:32:"898ed9879e9c4c45dc9fb2446a838b8c";s:7:"`weesh`";s:32:"28def499c5860102ae9318d497ebd98a";s:14:"`news_letters`";s:32:"47eb7bb09414c64f779510914712b6ee";s:7:"`count`";s:32:"a6d9c716626528a0d81d16fc1c23dd5c";s:20:"`NewsLetter`.`email`";s:32:"13c6745eb375eda98da2b7e58f40caf6";s:12:"`NewsLetter`";s:32:"ae1bde34794270bb273f407db5974619";s:7:"`email`";}s:6:"fields";a:1:{s:32:"08082f8d65635e4a4bccf074f6865ef5";a:1:{i:0;s:19:"COUNT(*) AS `count`";}}}
+1485615368
+a:2:{i:0;b:0;s:4:"name";a:2:{s:32:"898ed9879e9c4c45dc9fb2446a838b8c";s:7:"`weesh`";s:32:"28def499c5860102ae9318d497ebd98a";s:14:"`news_letters`";}}
