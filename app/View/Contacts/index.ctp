@@ -23,7 +23,7 @@ $this->assign('title', 'Nous contacter');
                                         <span class="thumb-info-wrapper">
                                             <?php echo $this->Html->image('site_partenaire/amazon.jpg', array(
                                                 'alt' => 'amazon',
-                                                'class' => 'img-responsive'
+                                                'class' => 'img-responsive sameIcon',
                                             )); ?>
                                         </span>
                                     </span>
@@ -37,7 +37,7 @@ $this->assign('title', 'Nous contacter');
                                         <span class="thumb-info-wrapper">
                                             <?php echo $this->Html->image('site_partenaire/castorama.jpg', array(
                                                 'alt' => 'castorama',
-                                                'class' => 'img-responsive'
+                                                'class' => 'img-responsive sameIcon'
                                             )); ?>
                                         </span>
                                     </span>
@@ -51,7 +51,7 @@ $this->assign('title', 'Nous contacter');
                                         <span class="thumb-info-wrapper">
                                             <?php echo $this->Html->image('site_partenaire/cdiscount.png', array(
                                                 'alt' => 'cdiscount',
-                                                'class' => 'img-responsive')); ?>
+                                                'class' => 'img-responsive sameIcon')); ?>
                                         </span>
                                     </span>
                                     </a>
@@ -64,7 +64,7 @@ $this->assign('title', 'Nous contacter');
                                         <span class="thumb-info-wrapper">
                                             <?php echo $this->Html->image('site_partenaire/darty.png', array(
                                                 'alt' => 'darty',
-                                                'class' => 'img-responsive'
+                                                'class' => 'img-responsive sameIcon'
                                             )); ?>
                                             </span>
                                         </span>
@@ -79,7 +79,7 @@ $this->assign('title', 'Nous contacter');
                                         <span class="thumb-info-wrapper">
                                             <?php echo $this->Html->image('site_partenaire/fnac.gif', array(
                                                 'alt' => 'fnac',
-                                                'class' => 'img-responsive')); ?>
+                                                'class' => 'img-responsive sameIcon')); ?>
                                         </span>
                                     </span>
                                     </a>
@@ -92,7 +92,7 @@ $this->assign('title', 'Nous contacter');
                                         <span class="thumb-info-wrapper">
                                             <?php echo $this->Html->image('site_partenaire/grosbill.png', array(
                                                 'alt' => 'grosbill',
-                                                'class' => 'img-responsive')); ?>
+                                                'class' => 'img-responsive sameIcon')); ?>
                                         </span>
                                     </span>
                                     </a>
@@ -107,7 +107,7 @@ $this->assign('title', 'Nous contacter');
                                         <span class="thumb-info-wrapper">
                                             <?php echo $this->Html->image('site_partenaire/laredoute.png', array(
                                                 'alt' => 'laredoute',
-                                                'class' => 'img-responsive')); ?>
+                                                'class' => 'img-responsive sameIcon')); ?>
                                         </span>
                                     </span>
                                     </a>
@@ -120,23 +120,10 @@ $this->assign('title', 'Nous contacter');
                                         <span class="thumb-info-wrapper">
                                             <?php echo $this->Html->image('site_partenaire/ldlc.png', array(
                                                 'alt' => 'ldlc',
-                                                'class' => 'img-responsive')); ?>
+                                                'class' => 'img-responsive sameIcon')); ?>
                                             </span>
                                         </span>
                                         </span>
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="col-md-2 col-sm-4 col-xs-12">
-                                <div class="portfolio-item">
-                                    <a href="http://www.leroymerlin.fr/" target="_blank">
-                                    <span class="thumb-info thumb-info-lighten">
-                                        <span class="thumb-info-wrapper">
-                                            <?php echo $this->Html->image('site_partenaire/leroymerlin.png', array(
-                                                'alt' => 'leroymerlin',
-                                                'class' => 'img-responsive')); ?>
-                                        </span>
-                                    </span>
                                     </a>
                                 </div>
                             </li>
@@ -147,7 +134,7 @@ $this->assign('title', 'Nous contacter');
                                         <span class="thumb-info-wrapper">
                                             <?php echo $this->Html->image('site_partenaire/priceminister.jpg', array(
                                                 'alt' => 'priceminister',
-                                                'class' => 'img-responsive')); ?>
+                                                'class' => 'img-responsive sameIcon')); ?>
                                         </span>
                                     </span>
                                     </a>
@@ -160,7 +147,7 @@ $this->assign('title', 'Nous contacter');
                                         <span class="thumb-info-wrapper">
                                             <?php echo $this->Html->image('site_partenaire/rueducommerce.png', array(
                                                 'alt' => 'rueducommerce',
-                                                'class' => 'img-responsive')); ?>
+                                                'class' => 'img-responsive sameIcon')); ?>
                                         </span>
                                     </span>
                                     </a>
@@ -173,15 +160,13 @@ $this->assign('title', 'Nous contacter');
                                         <span class="thumb-info-wrapper">
                                             <?php echo $this->Html->image('site_partenaire/tesco.jpg', array(
                                                 'alt' => 'tesco',
-                                                'class' => 'img-responsive')); ?>
+                                                'class' => 'img-responsive sameIcon')); ?>
                                             </span>
                                         </span>
                                         </span>
                                     </a>
                                 </div>
                             </li>
-                        </div>
-                        <div class="row">
                             <li class="col-md-2 col-sm-4 col-xs-12">
                                 <div class="portfolio-item">
                                     <a href="http://www.ubaldi.com/accueil/" target="_blank">
@@ -189,7 +174,7 @@ $this->assign('title', 'Nous contacter');
                                         <span class="thumb-info-wrapper">
                                             <?php echo $this->Html->image('site_partenaire/ubaldi.gif', array(
                                                 'alt' => 'ubaldi',
-                                                'class' => 'img-responsive')); ?>
+                                                'class' => 'img-responsive sameIcon')); ?>
                                             </span>
                                         </span>
                                         </span>
