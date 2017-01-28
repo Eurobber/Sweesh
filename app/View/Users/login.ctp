@@ -1,6 +1,6 @@
 <?php
 echo $this->Flash->render('auth');
-$this->assign('title', 'Connexion à sWeesh');
+$this->assign('title', 'Connectez-vous à Weesh !');
 ?>
 <div id="content" class="content full">
     <div class="home-intro">

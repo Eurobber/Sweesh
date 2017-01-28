@@ -48,7 +48,7 @@ class UsersController extends AppController
                 $Email->config('default');
                 $Email->from(array('weesh.io.contact@gmail.com' => 'Weesh.io'))
                     ->to($this->request->data['User']['email'])
-                    ->subject('Bienvenu')
+                    ->subject('Bienvenue')
                     ->emailFormat('html')
                     ->attachments(array(
                         'facebook.png' => array(

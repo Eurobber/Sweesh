@@ -2201,40 +2201,24 @@ footer h4 {
 }
 
 div.footer-copyright {
-    background: #0C0C0C;
-    border-top: 4px solid #111;
-    margin-top: 40px;
-    padding: 30px 0 10px;
+    margin-top: 2%;
+    padding:0;
 }
 
-div.footer-copyright nav {
-    float: right;
-}
-
-div.footer-copyright nav ul {
-    list-style: none;
+div.footer-copyright  ul.list-inline {
     margin: 0;
-    padding: 0;
+    display: table;
+    width: 100%;
 }
 
-div.footer-copyright nav ul li {
-    border-left: 1px solid #505050;
-    display: inline-block;
-    line-height: 12px;
-    margin: 0;
-    padding: 0 8px;
+div.footer-copyright ul.list-inline li {
+    display: table-cell;
+    width: 1%;
+    float: none;
+    text-align: center;
 }
 
-div.footer-copyright nav ul li:first-child {
-    border: medium none;
-    padding-left: 0;
-}
 
-div.footer-copyright p {
-    color: #555;
-    margin: 0;
-    padding: 0;
-}
 
 footer div.alert a {
     color: #222 !important;

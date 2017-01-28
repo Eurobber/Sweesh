@@ -90,7 +90,7 @@ echo $this->Html->docType();
                                             </li>
                                             <li><?php if (AuthComponent::user()):
                                                     // Logged in, show the my products link
-                                                    echo $this->Html->link('Mes Listes', array('controller' => 'weesh', 'action' => 'myLists'), array('class' => 'purple'));
+                                                    echo $this->Html->link('Mes Listes', array('controller' => 'weeshlist', 'action' => 'index'), array('class' => 'purple'));
                                                 endif; ?>
                                             </li>
                                             <li><?php if (AuthComponent::user()):
@@ -139,23 +139,23 @@ echo $this->Html->docType();
                 <div class="footer-ribon"><span style="font-family: 'Pattaya', sans-serif;">Plus d'informations</span></div>
                 
                 <div class="col-md-4">
-                    <h4>Suivez-nous @Twitter</h4>
+                    <h4>Nous sommes sur @Twitter</h4>
                     <a class="twitter-timeline" data-lang="fr" data-width="320" data-height="200" data-theme="light" href="https://twitter.com/Weesh_io">Tweets by Weesh_io</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
                 </div>
                 <div class="col-md-4">
-                    <h4>Newsletter</h4>
+                    <h4>Inscrivez-vous à la newsletter</h4>
                     <p>Renseignez votre adresse e-mail et nous vous tiendrons au courant des nouvelles fonctionnalités supportées, 
                     des nouveaux sites parcourus et des évolutions prévues.</p>
                     <form class="form-inline" id="newsletterForm" action="#" method="POST">
                         <div class="control-group">
                             <div class="input-append">
-                                <input class="col-md-8" placeholder="Email Address" name="email" id="email" type="text">
+                                <input class="col-md-8" placeholder="Votre adresse email ..." name="email" id="email" type="text">
                                 <button class="btn-sm btn-primary col-md-offset-1" type="submit">Go!</button>
                             </div>
                         </div>
                     </form>
-                    <p style="margin-top:15px;">N'hésitez pas à utiliser le formulaire de contact (en bas 
-                    à droite de la page) pour nous suggérer votre site favori.</p>
+                    <p style="margin-top:15px;">Cliquez sur "Contact" (en bas 
+                    de la page) pour nous suggérer un nouveau site à supporter.</p>
                     <div class="alert alert-success hidden" id="newsletterSuccess"><strong>Success!</strong> You've been
                         added to our email list.
                     </div>
@@ -165,11 +165,11 @@ echo $this->Html->docType();
                 <div class="col-md-4">
                     <div class="contact-details">
                         <h4>Nous contacter</h4>
-                            <p><strong>Addresse : </strong>37, Quai de Grenelle 75015 Paris</p>
-                            <p><strong>Téléphone : </strong>01 44 39 06 00</p>
-                            <p></i> <strong>E-mail : </strong>weesh.io.contact@gmail.com</p>
+                            <p style="margin:0;"><strong>Addresse : </strong>37, Quai de Grenelle 75015 Paris</p>
+                            <p style="margin:0;"><strong>Téléphone : </strong>01 44 39 06 00</p>
+                            <p style="margin:0;"></i> <strong>E-mail : </strong>weesh.io.contact@gmail.com</p>
                     </div>
-                    <h4>Nous suivre</h4>                  
+                    <h4 style="margin-top:4%;">Nous suivre</h4>                  
                         <div class="col-md-11 row social-btns">
                             <ul class="social-icons list-inline">
                             <li>
@@ -184,17 +184,16 @@ echo $this->Html->docType();
                 </div>
         </div>
         <div class="footer-copyright">
-
-                    <div class="col-md-3">
+                    <div class="col-md-4 col-md-offset-4">
                             <ul class="list-inline">
                                 <li><a href="page-faq.html">FAQ</a></li>
-                                <li><a href="sitemap.html">Sitemap</a></li>
+                                <li><a href="sitemap.html">Plan du site</a></li>
                                 <li><?php echo $this->Html->link('Contact', array('controller' => 'contact', 'action' => 'index')); ?>
                                 </li>
                             </ul>
                     </div>
-                    <div class="col-md-4 col-md-offset-5">
-                        <p>© Copyright 2017 by Weesh. All Rights Reserved.</p>
+                    <div class="col-md-4">
+                        <p>© Copyright 2017 Weesh.io | All Rights Reserved.</p>
                     </div>
         </div>
     </footer>

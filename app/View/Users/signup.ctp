@@ -1,6 +1,6 @@
 <?php
 echo $this->Flash->render('auth');
-$this->assign('title', 'Ajouter Utilisateur');
+$this->assign('title', 'Inscrivez-vous sur Weesh !');
 ?>
 <div id="content" class="content full">
     <div class="home-intro">
