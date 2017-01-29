@@ -16,7 +16,11 @@ class WeeshlistController extends AppController{
         return true;
     }
 
-	public function index() {}
+	public function index() {
+
+        $lists = $this->WeeshList->find('all', array('conditions' => array('WeeshList.user_id' => AuthComponent::user()['id'])));
+        $this->set('lists', $lists);
+    }
 
     public function add(){
         if ($this->request->is('post')){
