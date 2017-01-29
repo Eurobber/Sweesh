@@ -34,7 +34,7 @@
                         $i++;
                         foreach ($value as $item) {
                             ?>
-                            <li data-target="<?php echo '/weeshlist/view/' . $item['id'] ?>" data-slide-to="<?php $i ?>"></li>
+                            <li data-target="#myCarousel" data-slide-to="<?php $i ?>"></li>
                         <?php }
                     } ?>
                 </ol>
@@ -45,11 +45,13 @@
                         foreach ($value as $item) {
                             ?>
                             <div class="item">
+                                <a href="<?php echo '/weeshlist/view/' . $item['id'] ?>">
                                 <?php echo $this->Html->image('testCarousel/ubaldi_90356.jpg', ['alt' => 'Light', 'class' => 'sameImg']); ?>
                                 <div class="carousel-caption">
                                     <h3><?php echo $item['name'] ?></h3>
                                     <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
                                 </div>
+                                </a>
                             </div>
                             <?php
                         }
