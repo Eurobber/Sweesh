@@ -72,10 +72,7 @@ class ItemsRestController extends AppController {
             'item' => $item,
             '_serialize' => array('item')
         ));
-    }
-
-    
-   
+    }  
     
 }
 ?>

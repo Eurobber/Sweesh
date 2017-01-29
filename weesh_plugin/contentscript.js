@@ -196,19 +196,6 @@ function addBigButton(el) {
     clone.appendChild(image);
     clone.addEventListener('click', function() {
             addUrlInList(document.location.href);
-			$.ajax({
-                    type: "POST",
-                    url: "http://localhost/Weesh/items_rest.json",
-                    data: {
-                        "url":url
-                    },
-                    success: function(data){
-                        alert('item ajouté dans Weesh !');
-                    },
-                    error: function(data){
-						alert('erreur');
-                    }
-                });
         }, false);
     pntNode.parentNode.appendChild(clone);
 }
