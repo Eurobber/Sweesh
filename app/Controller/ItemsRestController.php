@@ -8,7 +8,23 @@ class ItemsRestController extends AppController {
     public $helpers = array('Html', 'Form');
     public $components = array('RequestHandler');
 
+    
+     function beforeFilter() {
+        parent::beforeFilter();
+        if(in_array($this->params['controller'],array('items_rest'))){
+            // For RESTful web service requests, we check the name of our contoller
+            $this->Auth->allow();
+            // this line should always be there to ensure that all rest calls are secure
+            /* $this->Security->requireSecure(); */
+            $this->Security->unlockedActions = array('edit','delete','add','view');
 
+        }else{
+            // setup out Auth
+            $this->Auth->allow();         
+        }
+     }
+    
+    
     public static function array_utf8_encode($dat)
     {
         if (is_string($dat))
@@ -22,25 +38,34 @@ class ItemsRestController extends AppController {
     }
 
     public function index() {
-        $items = $this->Item->find('all');
-        $items = $this->array_utf8_encode ($items);
-        $this->set(array(
-            'items' => $items,
-            '_serialize' => array('items')
-        ));
+        if ($this->request->is('get')) {
+            $items = $this->Item->find('all');
+            $items = $this->array_utf8_encode ($items);
+            $this->set(array(
+                'items' => $items,
+                '_serialize' => array('items')
+            ));
+        } else {
+            $this->set(array(
+                'items' => 'error',
+                '_serialize' => array('items')
+            ));
+        }
     }
 
     public function add() {
-        $this->Item->create();
-        if ($this->Item->save($this->request->data)) {
-             $message = 'Produit correctement ajouté';
-        } else {
-            $message = 'Erreur lors de l\'ajout du produit';
+        if ($this->request->is('post')) {
+            $this->Item->create();
+            if ($this->Item->save($this->request->data)) {
+                 $message = 'Produit correctement ajouté';
+            } else {
+                $message = 'Erreur lors de l\'ajout du produit';
+            }
+            $this->set(array(
+                'message' => $message,
+                '_serialize' => array('message')
+            ));
         }
-        $this->set(array(
-            'message' => $message,
-            '_serialize' => array('message')
-        ));
     }
     public function view($id) {
         $item = $this->Item->findById($id);
@@ -50,5 +75,8 @@ class ItemsRestController extends AppController {
         ));
     }
 
+    
+   
+    
 }
 ?>

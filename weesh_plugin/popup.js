@@ -9,6 +9,23 @@ var prices = [];
         urls = listUrls;
         urls.forEach(myFunction);
         
+        $.ajax({
+            type: "POST",
+            url: "http://localhost:8888/Weesh/items_rest.json",
+            data: {
+                'url':urls[0]
+                  },
+            success: function(data){
+                console.log("data suuccess");
+                console.log(data);
+            },
+            error: function(data){
+                console.log("data error");
+                console.log(data);
+            }
+        });
+        
+        
         chrome.runtime.sendMessage({method:'getImgs'}, function(img){
             if (typeof img != 'undefined' && img != null && img.length != 0) {
                 setImgs(img);
@@ -231,7 +248,7 @@ $(document).ready(function () {
                     
                     $.ajax({
                         type: "POST",
-                        url: "http://localhost/Weesh/users/login",
+                        url: "http://localhost:3000/login",
                         data: {
                             "username":$('#inputLogin').val(),
                             "password":$('#inputPassword').val()
@@ -241,10 +258,8 @@ $(document).ready(function () {
                             $('#msgSuccessLog').show();
                             $('#formConnect').hide();
                             $('#registerButton').hide();
-							$('#connectButton').hide();
                             $('#loggedDiv').show();
                             setWeeshListes();
-							chrome.storage.sync.set({'login':data.username});
                             $("#msgSuccessLog").html("Bienvenue "+$('#inputLogin').val()+" !");
                         },
                         error: function(data){
@@ -256,18 +271,18 @@ $(document).ready(function () {
     
     function setWeeshListes(){
         $.ajax({
-                        type: "GET",
-                        url: "http://localhost:3000/users/"+$('#inputLogin').val()+"/weeshlists",
-                        success: function(data){
-                            console.log(data);
-                            
-                            $.each(data, function(i, item) {
-                                $('#weeshListsLogged').append('<li id="weeshList'+i+'">'+item.title+'</li>');
-                            });
-                        },
-                        error: function(data){
-                            console.log('error?');
-                        }
-                    });
+            type: "GET",
+            url: "http://localhost:3000/users/"+$('#inputLogin').val()+"/weeshlists",
+            success: function(data){
+                console.log(data);
+
+                $.each(data, function(i, item) {
+                    $('#weeshListsLogged').append('<li id="weeshList'+i+'">'+item.title+'</li>');
+                });
+            },
+            error: function(data){
+                console.log('error?');
+            }
+        });
     }
-            }); 
+}); 
