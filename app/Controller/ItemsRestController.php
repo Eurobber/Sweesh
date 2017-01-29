@@ -16,7 +16,6 @@ class ItemsRestController extends AppController {
             $this->Auth->allow();
             // this line should always be there to ensure that all rest calls are secure
             /* $this->Security->requireSecure(); */
-            $this->Security->unlockedActions = array('edit','delete','add','view');
 
         }else{
             // setup out Auth
