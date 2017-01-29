@@ -92,9 +92,12 @@ class UsersController extends AppController
             throw new NotFoundException(__('Invalid user'));
         }
         if ($this->request->is('post') || $this->request->is('put')) {
-            if($this->request->data['User']['password1'] == $this->request->data['User']['password2']) {
-                $this->request->data['User']['password'] = $this->request->data['User']['password1'];
-                unset($this->User->validate['password']);
+            if($this->request->data['User']['password1'] == $this->request->data['User']['password2'] ) {
+                if($this->request->data['User']['password1'] != '' && $this->request->data['User']['password2'] != ''){
+                    $this->request->data['User']['password'] = $this->request->data['User']['password1'];
+                } else {
+                    unset($this->User->validate['password']);
+                }
 
                 if ($this->User->save($this->request->data)) {
                     $Email = new CakeEmail();
