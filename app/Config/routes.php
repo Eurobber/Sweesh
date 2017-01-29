@@ -31,7 +31,7 @@
 	//Router::connect('/pages/*', array('controller' => 'pages', 'action' => 'display'));
 
     //API REST
-    Router::mapResources('recipes');
+    Router::mapResources('items_rest');
     Router::parseExtensions();
 
 /**

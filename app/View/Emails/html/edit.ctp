@@ -1,1 +1,1 @@
-<?php echo "Vos informations on été changées. Si vous n'êtes pas à l'origine de ce changement veuillez nous contactez à weesh.io-contact@gmail.com" ?>
+<?php echo "Des informations de votre profil viennent d'être modifiées. Si vous n'êtes pas à l'origine de ce changement, veuillez nous contacter à weesh.io-contact@gmail.com" ?>

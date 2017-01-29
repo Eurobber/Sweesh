@@ -23,7 +23,7 @@ class ItemsRestController extends AppController {
 
     public function index() {
         $items = $this->Item->find('all');
-        $items = $this->array_utf8_encode ($items);
+        $items = $this->array_utf8_encode($items);
         $this->set(array(
             'items' => $items,
             '_serialize' => array('items')
