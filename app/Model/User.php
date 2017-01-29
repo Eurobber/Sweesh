@@ -5,6 +5,13 @@ App::uses('SimplePasswordHasher', 'Controller/Component/Auth');
 
 class User extends AppModel {
 
+    public $hasMany = array(
+        'WeeshList' => array(
+            'className' => 'WeeshList',
+            'foreignKey' => 'user_id'
+        )
+    );
+
     public function beforeSave($options = array()) {
         if (isset($this->data[$this->alias]['password'])) {
             $passwordHasher = new SimplePasswordHasher();
@@ -13,6 +20,11 @@ class User extends AppModel {
             );
         }
         return true;
+    }
+
+    public function getUserByName($name)
+    {
+        return $this->findByName($name);
     }
 
     public $validate = array(
