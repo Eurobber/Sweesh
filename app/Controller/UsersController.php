@@ -126,7 +126,7 @@ class UsersController extends AppController
                         ->template('edit')
                         ->send();
 
-                    $this->Flash->success(__('Vos informations on bien été modifiées !'));
+                    $this->Flash->success(__('Vos informations ont bien été modifiées !'));
                     $this->redirect($this->referer());
                 }
                 $this->Flash->error(
