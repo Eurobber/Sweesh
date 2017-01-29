@@ -38,7 +38,6 @@ class ItemsRestController extends AppController {
     }
 
     public function index() {
-<<<<<<< HEAD
         if ($this->request->is('get')) {
             $items = $this->Item->find('all');
             $items = $this->array_utf8_encode ($items);
@@ -52,14 +51,6 @@ class ItemsRestController extends AppController {
                 '_serialize' => array('items')
             ));
         }
-=======
-        $items = $this->Item->find('all');
-        $items = $this->array_utf8_encode($items);
-        $this->set(array(
-            'items' => $items,
-            '_serialize' => array('items')
-        ));
->>>>>>> origin/master
     }
 
     public function add() {
