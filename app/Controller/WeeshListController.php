@@ -5,7 +5,7 @@ App::uses('AppController', 'Controller');
 
 class WeeshlistController extends AppController{
 
-    public $uses = 'WeeshList';
+    public $uses = array('WeeshList', 'ItemsLnkWeeshlists', 'Item');
 
     public function beforeFilter(){
         parent::beforeFilter();
@@ -17,7 +17,6 @@ class WeeshlistController extends AppController{
     }
 
 	public function index() {
-
         $lists = $this->WeeshList->find('all', array('conditions' => array('WeeshList.user_id' => AuthComponent::user()['id'])));
         $this->set('lists', $lists);
     }
@@ -52,7 +51,6 @@ class WeeshlistController extends AppController{
         return $this->redirect(array('action' => 'index'));
     }
 
-    // NOT TESTED
     public function view($id)
     {
         $this->WeeshList->id = $id;
@@ -60,6 +58,31 @@ class WeeshlistController extends AppController{
             throw new NotFoundException(__('La weeshlist n\'existe pas'));
         }
         $this->set('weeshlist', $this->WeeshList->findById($id));
+        $itemsLnk = $this->ItemsLnkWeeshlists->find('all', array('conditions' => array('ItemsLnkWeeshlists.weeshlist' => $id)));
+        $items = [];
+
+        //Faire un test si c'est nul
+        foreach ($itemsLnk as $value) {
+            if(!empty($items))
+            {
+                array_push($items, self::array_utf8_encode($this->Item->find('all', array('conditions' => array('Item.id' => $value['ItemsLnkWeeshlists']['item'])))));
+            } else {
+                $items = self::array_utf8_encode($this->Item->find('all', array('conditions' => array('Item.id' => $value['ItemsLnkWeeshlists']['item']))));
+            }
+        }
+        $this->set('items', $items);
+    }
+
+    public static function array_utf8_encode($dat)
+    {
+        if (is_string($dat))
+            return utf8_encode($dat);
+        if (!is_array($dat))
+            return $dat;
+        $ret = array();
+        foreach ($dat as $i => $d)
+            $ret[$i] = self::array_utf8_encode($d);
+        return $ret;
     }
 }
 ?>

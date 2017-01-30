@@ -7,7 +7,7 @@
     </div>
 </div>
 
-<?php if (!AuthComponent::user()): ?>
+<?php if (!AuthComponent::user()) { ?>
     <div class="container">
         <div class="row center bloc">
             <p class="col-md-12">
@@ -20,7 +20,7 @@
             </div>
         </div>
     </div>
-<?php else: ?>
+<?php } elseif (!empty($lists)) { ?>
     <div class="container">
         <div class="row center bloc">
             <p class="col-md-12">
@@ -29,7 +29,7 @@
                 <!-- Indicators -->
                 <ol class="carousel-indicators">
                     <?php
-                    $i =0;
+                    $i = 0;
                     foreach ($lists as $value) {
                         $i++;
                         foreach ($value as $item) {
@@ -45,12 +45,12 @@
                         foreach ($value as $item) {
                             ?>
                             <div class="item">
-                                <a href="<?php echo '/weeshlist/view/' . $item['id'] ?>">
-                                <?php echo $this->Html->image('testCarousel/ubaldi_90356.jpg', ['alt' => 'Light', 'class' => 'sameImg']); ?>
-                                <div class="carousel-caption">
-                                    <h3><?php echo $item['name'] ?></h3>
-                                    <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
-                                </div>
+                                <a href="<?php echo '/Weesh/weeshlist/view/' . $item['id'] ?>">
+                                    <?php echo $this->Html->image('testCarousel/ubaldi_90356.jpg', ['alt' => 'Light', 'class' => 'sameImg']); ?>
+                                    <div class="carousel-caption">
+                                        <h3><?php echo $item['name'] ?></h3>
+                                        <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
+                                    </div>
                                 </a>
                             </div>
                             <?php
@@ -70,7 +70,8 @@
             </div>
         </div>
     </div>
-    <!-- Faire une if, si pas de weeshlist ne pas afficher le caroussel -->
+<?php }; ?>
+<?php if (AuthComponent::user()) { ?>
     <div class="container">
         <div class="row center bloc">
             <p class="col-md-12">
@@ -97,7 +98,7 @@
             <?php echo $this->Session->flash(); ?>
         </div>
     </div>
-<?php endif; ?>
+<?php }; ?>
 <?php $this->start('script'); ?>
 <script type="text/javascript">
     $('.carousel-indicators').children().first().addClass("active")

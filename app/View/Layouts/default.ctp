@@ -193,10 +193,9 @@ echo $this->Html->docType();
         <div class="footer-copyright">
                     <div class="col-md-4 col-md-offset-4">
                             <ul class="list-inline">
-                                <li><a href="#">FAQ</a></li>
+                                <li><?php echo $this->Html->link('FAQ', array('controller' => 'weesh', 'action' => 'faq')); ?></a></li>
                                 <li><a href="#">Plan du site</a></li>
-                                <li><?php echo $this->Html->link('Contact', array('controller' => 'contacts', 'action' => 'index')); ?>
-                                </li>
+                                <li><?php echo $this->Html->link('Contact', array('controller' => 'contacts', 'action' => 'index')); ?></li>
                             </ul>
                     </div>
                     <div class="col-md-4">

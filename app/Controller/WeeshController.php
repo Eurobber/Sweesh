@@ -2,9 +2,11 @@
 
 class WeeshController extends AppController{
 
-	public function index() {}
+    public function index() {}
+    public function faq() {}
 
-	public function beforeFilter(){
+
+    public function beforeFilter(){
 			parent::beforeFilter();
 			$this->Auth->allow('index');
 	}

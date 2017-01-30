@@ -7,7 +7,6 @@ class ItemsRestController extends AppController {
     public $uses = array('Item');
     public $helpers = array('Html', 'Form');
     public $components = array('RequestHandler');
-
     
      function beforeFilter() {
         parent::beforeFilter();
@@ -22,7 +21,6 @@ class ItemsRestController extends AppController {
             $this->Auth->allow();         
         }
      }
-    
     
     public static function array_utf8_encode($dat)
     {
@@ -72,7 +70,6 @@ class ItemsRestController extends AppController {
             'item' => $item,
             '_serialize' => array('item')
         ));
-    }  
-    
+    }
 }
 ?>

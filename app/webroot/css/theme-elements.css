@@ -35,6 +35,7 @@ h3 {
 }
 
 h4 {
+	color: #777;
 	font-size: 1.4em;
 	font-weight: 400;
 	letter-spacing: normal;
@@ -43,19 +44,12 @@ h4 {
 }
 
 h5 {
+	color: #777;
 	font-size: 1em;
-	font-weight: 600;
+	font-weight: bold;
 	letter-spacing: normal;
 	line-height: 18px;
 	margin: 0 0 14px 0;
-	text-transform: uppercase;
-    color: #777;
-    font-size: 1.8em;
-    font-weight: 400;
-    letter-spacing: normal;
-    line-height: 24px;
-    margin-bottom: 33px;
-    text-transform: uppercase;
 }
 
 h6 {
