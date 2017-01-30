@@ -108,17 +108,17 @@ class UsersController extends AppController
                         ->emailFormat('html')
                         ->attachments(array(
                             'facebook.png' => array(
-                                'file' => ROOT . '\app\webroot\img\logo\facebook.png',
+                                'file' => ROOT . '/app\webroot/img/logo/facebook.png',
                                 'mimetype' => 'image/png',
                                 'contentId' => '003'
                             ),
                             'twitter.png' => array(
-                                'file' => ROOT . '\app\webroot\img\logo\twitter.png',
+                                'file' => ROOT . '/app/webroot/img/logo/twitter.png',
                                 'mimetype' => 'image/png',
                                 'contentId' => '002'
                             ),
                             'logo.png' => array(
-                                'file' => ROOT . '\app\webroot\img\logo\weesh_logo.png',
+                                'file' => ROOT . '/app/webroot/img/logo/weesh_logo.png',
                                 'mimetype' => 'image/png',
                                 'contentId' => '001'
                             )
