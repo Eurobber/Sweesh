@@ -9,11 +9,12 @@ var prices = [];
         urls = listUrls;
         urls.forEach(myFunction);
         
+       
         $.ajax({
             type: "POST",
             url: "http://localhost/Weesh/new_sources_rest.json",
             data: {
-                'url':urls[0]
+                'url':urls
                   },
             success: function(data){
                 console.log("data suuccess");
@@ -24,6 +25,8 @@ var prices = [];
                 console.log(data);
             }
         });
+        
+        
         
         
         chrome.runtime.sendMessage({method:'getImgs'}, function(img){

@@ -66,6 +66,11 @@
           }
           #clear {
             margin-top: 30px;
+            position: absolute;
+              position: fixed;
+              bottom: 0;
+              width: 100%;
+              left: 0;
           }
           #msgErrorLog{
               color:darkred;
@@ -82,6 +87,19 @@
 		  .top-buffer { margin-top:10px; }
 		  img.small {width: 49px; height: 47px; display: inline-block;}
           
+          .tabsOnglets {
+              position:absolute;
+              position: fixed;
+              top:0;
+              background-color:lightgrey;
+              width: 100%;
+              margin-top: -5px;
+          }
+          
+          .contentTabs{
+              margin-top: 30px;
+              margin-bottom: 50px;
+          }
           
       </style>
       <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
@@ -96,17 +114,18 @@
   </head>
   <body>
     <div class="tabs customTabs">
-        <ul>
+        <ul class="tabsOnglets">
             <li id="tab1"><a href="#tabs-1">Weeshlist</a></li>
             <li id="tab2"><a href="#tabs-2">Connexion</a></li>
             <li id="tab3"><a href="#tabs-3"></a></li>
             <li id="tab4"><a href="#tabs-4"><span class="ui-icon ui-icon-info"></span></a></li>
         </ul>
+        <div class="contentTabs">
           <div id="tabs-1"> 
-              
+              <h3 class="form-signin-heading">Voici votre Weeshlist locale <img class="small" src="iconT.png"></h3>
                 <ul class="weeshList" id="list">
                 </ul>
-              <button id="clear" class="btn btn-block btn-danger">Vider la liste</button>
+              <button id="clear" class="btn btn-danger">Vider la liste</button>
             </div>
     
           <div id="tabs-2" > 
@@ -119,6 +138,7 @@
 						<h2 class="form-signin-heading">Connexion à Weesh <img class="small" src="iconT.png"></h2>
 						<input type="email" id="inputLogin" class="form-control top-buffer" placeholder="Nom d'utilisateur" required autofocus>
 						<input type="password" id="inputPassword" class="form-control top-buffer" placeholder="Mot de passe" required>
+                        </form>
 					</div>
 					<div class="row top-buffer">
 						<button class="btn btn-lg btn-primary btn-block" id="connectButton" type="submit">Me connecter</button>					
@@ -126,7 +146,7 @@
 					<div class="row top-buffer">
 						<button class="btn btn-lg btn-success btn-block" id="registerButton" type="button">Créer un compte sur Weesh</button>
 					</div>
-					</form>
+					
 				</div>
 				<div id="loggedDiv">Voici vos listes disponibles : <!-- CSS none, à passer en show -->           
 				<ul id="weeshListsLogged"></ul></div> <!-- CSS none, à passer en show -->          
@@ -143,7 +163,7 @@
             <h4><span class="label label-default">New</span> Sites à venir</h4>
             <a id="fnacButton" href=""><img src="http://www.ncmb.fr/wp-content/uploads/2015/09/logo-fnac-comm.jpg"/></a>
         </div>
-        
+        </div>
         
     </div>
       
