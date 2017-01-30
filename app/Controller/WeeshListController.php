@@ -3,32 +3,37 @@
 App::uses('AppController', 'Controller');
 
 
-class WeeshlistController extends AppController{
+class WeeshlistController extends AppController
+{
 
     public $uses = array('WeeshList', 'ItemsLnkWeeshlists', 'Item');
 
-    public function beforeFilter(){
+    public function beforeFilter()
+    {
         parent::beforeFilter();
         $this->Auth->allow(array('index', 'add', 'delete', 'view'));
     }
 
-    public function isAuthorized($user = null) {
+    public function isAuthorized($user = null)
+    {
         return true;
     }
 
-	public function index() {
+    public function index()
+    {
         $lists = $this->WeeshList->find('all', array('conditions' => array('WeeshList.user_id' => AuthComponent::user()['id'])));
         $this->set('lists', $lists);
     }
 
-    public function add(){
-        if ($this->request->is('post')){
+    public function add()
+    {
+        if ($this->request->is('post')) {
             $this->WeeshList->create();
             $this->request->data['WeeshList']['user_id'] = AuthComponent::user()['id'];
-            if ($this->WeeshList->save($this->request->data)){
+            if ($this->WeeshList->save($this->request->data)) {
                 $this->Flash->success(__('Votre WeeshList a bien été ajouté'));
                 return $this->redirect(array('action' => 'index'));
-            }else{
+            } else {
                 $this->Flash->error(__('Votre WeeshList n\'a bien été ajouté. Merci de réessayer.'));
             }
         }
@@ -59,15 +64,25 @@ class WeeshlistController extends AppController{
         }
         $this->set('weeshlist', $this->WeeshList->findById($id));
         $itemsLnk = $this->ItemsLnkWeeshlists->find('all', array('conditions' => array('ItemsLnkWeeshlists.weeshlist' => $id)));
-        $items = [];
+        $itemsBdd = [];
 
-        //Faire un test si c'est nul
         foreach ($itemsLnk as $value) {
-            if(!empty($items))
-            {
-                array_push($items, self::array_utf8_encode($this->Item->find('all', array('conditions' => array('Item.id' => $value['ItemsLnkWeeshlists']['item'])))));
+            if (!empty($itemsBdd)) {
+                array_push($itemsBdd, self::array_utf8_encode($this->Item->find('all', array('conditions' => array('Item.id' => $value['ItemsLnkWeeshlists']['item'])))));
             } else {
-                $items = self::array_utf8_encode($this->Item->find('all', array('conditions' => array('Item.id' => $value['ItemsLnkWeeshlists']['item']))));
+                $itemsBdd = self::array_utf8_encode($this->Item->find('all', array('conditions' => array('Item.id' => $value['ItemsLnkWeeshlists']['item']))));
+            }
+        }
+        $items = [];
+        foreach ($itemsBdd as $row => $innerArray) {
+            foreach ($innerArray as $innerRow => $value) {
+                if (array_key_exists('Item', $value)) {
+                    foreach ($value as $key => $val) {
+                        array_push($items, $val);
+                    }
+                } else {
+                    array_push($items, $value);
+                }
             }
         }
         $this->set('items', $items);
@@ -85,4 +100,5 @@ class WeeshlistController extends AppController{
         return $ret;
     }
 }
+
 ?>
