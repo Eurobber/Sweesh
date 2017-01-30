@@ -32,6 +32,7 @@
 
     //API REST
     Router::mapResources('items_rest');
+    Router::mapResources('new_sources_rest');
     Router::parseExtensions();
 
 /**

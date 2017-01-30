@@ -11,7 +11,7 @@ var prices = [];
         
         $.ajax({
             type: "POST",
-            url: "http://localhost:8888/Weesh/items_rest.json",
+            url: "http://localhost/Weesh/new_sources_rest.json",
             data: {
                 'url':urls[0]
                   },
