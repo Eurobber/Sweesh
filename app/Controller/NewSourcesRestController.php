@@ -40,12 +40,27 @@ class NewSourcesRestController extends AppController {
 
     public function add() {
         if ($this->request->is('post')) {
+            $urls = $this->request->data;
+            for ($i = 0 ; $i<count($urls['url']);$i++) {
+                $this->NewSource->create();
+                $data = [
+                    'url'=>$urls['url'][$i]
+                ];
+                if($this->NewSource->save($data)) {
+                    $message = 'URL correctement ajout\ée';
+                }
+                 else {
+                    $message = 'Erreur lors de l\'ajout de l\'URL';
+                }
+            }
+            
+            /*
             $this->NewSource->create();
             if ($this->NewSource->save($this->request->data)) {
                  $message = 'URL correctement ajoutée';
             } else {
                 $message = 'Erreur lors de l\'ajout de l\'URL';
-            }
+            }*/
             $this->set(array(
                 'message' => $message,
                 '_serialize' => array('message')
