@@ -9,7 +9,7 @@ App::uses('AppModel', 'Model');
 
 class WeeshList extends AppModel
 {
-    public $useTable  = 'weeshlists';
+    public $useTable  = 'weesh_lists';
     public $belongTo = array(
         'User' => array(
             'className' => 'User',
