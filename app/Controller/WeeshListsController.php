@@ -34,7 +34,8 @@ class WeeshListsController extends AppController
                 $this->Flash->success(__('Votre WeeshList a bien été ajouté'));
                 return $this->redirect(array('action' => 'index'));
             } else {
-                $this->Flash->error(__('Votre WeeshList n\'a bien été ajouté. Merci de réessayer.'));
+                $this->Flash->error(__('Votre WeeshList n\'a pas été ajouté. Merci de réessayer.'));
+                return $this->redirect(array('action' => 'index'));
             }
         }
     }
