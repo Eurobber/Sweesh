@@ -50,14 +50,35 @@ function ubaldiButton(a) {
     console.log(count);
     for(var i = 0 ; i < count ; i++) {
         if(typeof listLi[i] == "undefined") continue;
+        
         var img = listLi[i].getElementsByClassName('img-placeholder img-defer img-ratio-cc la-img');
+        
+        
+        
+        
+        
+            
         var price = listLi[i].getElementsByClassName('prix rebours-prix rebours-inited');
         var link = img[0].getElementsByTagName('a')[0].href;
 
+        
         img = img[0].getElementsByTagName('img');
+        
+        var str = img[0].dataset.src;
+        var str2 = img[0].src;
+        
+        if (typeof img[0].dataset.src != "undefined" && str.length > 2) {
+            console.log(str.length);
+            listImg.push(img[0].dataset.src);
+        } 
+        if (typeof img[0].src != "undefined" && str2.length > 2) {
+            console.log(str2.length);
+            listImg.push(img[0].src);
+        }
+        
         listNames.push(img[0].alt);
-        if (typeof img[0].dataset.src != "undefined") listImg.push(img[0].dataset.src);
-        if (typeof img[0].src != "undefined") listImg.push(img[0].src);
+        
+        
 
         listUrl.push(link);
         listPrices.push(price[0].dataset.prixVente);
