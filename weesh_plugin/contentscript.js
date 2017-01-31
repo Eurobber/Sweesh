@@ -23,6 +23,7 @@ function partA() {
     var c = document.getElementById('submit.add-to-cart-announce');
     var ubaldi = document.getElementById('main-liste-articles');
     var ubaldiBig = document.getElementsByClassName('ajaxBt btn btn-lg btn-panier btn-icone bi-panier-ajout bi-gauche');
+    var darty = document.getElementsByClassName('product_detail next_prev_info');
     
     if(a!=null) amazonPutButton(a);
     if(c!=null) addBigButton(c, "a-button a-spacing-small a-button-primary a-button-icon",
@@ -30,8 +31,10 @@ function partA() {
     if(ubaldi!=null) ubaldiButton(ubaldi);
     if(ubaldiBig!=null) {
         var myBton = addBigButton(ubaldiBig[0],"","","","");
-        myBton.className = "btn btn-lg";
+        if (typeof myBton != 'undefined') myBton.className = "btn btn-lg";
     }
+    
+    if(darty!=null) dartyButton(darty);
     
     
     
@@ -44,6 +47,25 @@ function partA() {
     //if(b!=null) addManyButtons(b);
     
 }
+function dartyButton(a) {
+    var count = a.length;
+    for(var i = 0 ; i < count ; i++) {
+        var img = a[i].getElementsByTagName('img')[0].src;
+        var name = a[i].getElementsByTagName('img')[0].alt;
+        var url = a[i].getElementsByTagName('a')[0].href;
+        var price = a[i].getElementsByClassName('sale_price')[0].innerText;
+        listImg.push(img);
+        listNames.push(name);
+        listPrices.push(price);
+        listUrl.push(url);
+    }
+    
+    console.log(listImg);
+    console.log(listPrices);
+    console.log(listNames);
+    console.log(listUrl);
+}
+
 function ubaldiButton(a) {
     
     var count = a.children.length;
@@ -167,7 +189,8 @@ function addButton(i,el){
 }
 
 function addBigButton(el,clname,srcIm,price,name) {
-    if (document.getElementById('weeshBigButton0'))return;
+    console.log(el);
+    if (document.getElementById('weeshBigButton0')) return;
     var pntNode = el.parentNode;
     var clone = pntNode.cloneNode(true); // "deep" clone
     var image = document.createElement('IMG');
@@ -233,7 +256,7 @@ function addElementInList(id) {
     var nameSend = listNames[res];
     
     if(!priceSend.includes("€")) priceSend = priceSend+" €";
-    if(!priceSend.includes("EUR")) priceSend = priceSend.replace("EUR", " ");
+    priceSend = priceSend.replace("EUR", " ");
     
     chrome.runtime.sendMessage({method:'setItem',url:link,img:srcImg,price:priceSend,name:nameSend});
 }
