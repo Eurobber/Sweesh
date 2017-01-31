@@ -33,6 +33,8 @@
     //API REST
     Router::mapResources('items_rest');
     Router::mapResources('new_sources_rest');
+    Router::mapResources('users_rest');
+    Router::connect("/users_rest/login", array("controller" => "users_rest", "action" => "login", "[method]" => "POST"));
     Router::parseExtensions();
 
 /**
