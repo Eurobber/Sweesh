@@ -22,10 +22,18 @@ function partA() {
     //var b = document.getElementsByClassName('a-size-base a-color-price s-price a-text-bold');
     var c = document.getElementById('submit.add-to-cart-announce');
     var ubaldi = document.getElementById('main-liste-articles');
+    var ubaldiBig = document.getElementsByClassName('ajaxBt btn btn-lg btn-panier btn-icone bi-panier-ajout bi-gauche');
     
     if(a!=null) amazonPutButton(a);
-    if(c!=null) addBigButton(c);
+    if(c!=null) addBigButton(c, "a-button a-spacing-small a-button-primary a-button-icon",
+                             'landingImage', 'priceblock_saleprice', 'landingImage');
     if(ubaldi!=null) ubaldiButton(ubaldi);
+    if(ubaldiBig!=null) {
+        var myBton = addBigButton(ubaldiBig[0],"","","","");
+        myBton.className = "btn btn-lg";
+    }
+    
+    
     
     
     //Google search
@@ -130,11 +138,6 @@ function amazonPutButton(a){
             x++;
         }
     );
-    
-    console.log(listImg);
-    console.log(listNames);
-    console.log(listUrl);
-    console.log(listPrices);
 }
 
 function addButton(i,el){
@@ -162,36 +165,8 @@ function addButton(i,el){
     return btn[i];
     
 }
-/*
-function addManyButtons(el) {
-    
-    for (var j = 0; j < el.length; j++) {
-        if (document.getElementById('weeshButtonAdded'+j))continue;
-        url[j] = el[j].parentNode;
-        url[j] = url[j].getAttribute("href");
-        
-        nodes[j] = document.createElement('IMG');
-        btn[j] = document.createElement('BUTTON');
-        nodes[j].src = 'https://i.imgsafe.org/b8ff07eb90.png';
-        nodes[j].style.float = 'left';
-        btn[j].id = 'weeshButtonAdded'+j;
-        nodes[j].style.marginRight = '15px';
-        nodes[j].style.width = '15px';
-        nodes[j].style.height = '15px';
-        nodes[j].style.zIndex = 1000;
-        btn[j].innerText = "+";
-        btn[j].appendChild(nodes[j]);
 
-        btn[j].addEventListener('click', function() {
-            addElementInList(this.id);
-        }, false);
-        
-        el[j].style.setProperty ("background-color", "lightgrey", "important");
-        insertAfter(el[j].parentNode, btn[j]);
-    }
-}*/
-
-function addBigButton(el) {
+function addBigButton(el,clname,srcIm,price,name) {
     if (document.getElementById('weeshBigButton0'))return;
     var pntNode = el.parentNode;
     var clone = pntNode.cloneNode(true); // "deep" clone
@@ -207,25 +182,44 @@ function addBigButton(el) {
     clone.innerHTML = "Ajouter à ma liste Weesh";
     clone.appendChild(image);
     clone.className = "";
-    clone.className = "a-button a-spacing-small a-button-primary a-button-icon";
+    clone.className = clname;
     clone.style.color="white";
     clone.style.backgroundColor = "#934999";
-    clone.addEventListener('click', function() {
-            addUrlInList(document.location.href);
+    if(srcIm!="") {
+        clone.addEventListener('click', function() {
+            addUrlInList(document.location.href, srcIm,price,name);
         }, false);
+    } else {
+        clone.addEventListener('click', function() {
+            addBigButtonUrl(document.location.href);
+        }, false);
+    }
     pntNode.parentNode.style.height = "60px";
     pntNode.parentNode.appendChild(clone);
+    return clone;
 }
 
 function insertAfter(referenceNode, newNode) {
     referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
 }
 
-function addUrlInList(link){
-    var srcImg = document.getElementById('landingImage').src;
-    var priceSend = document.getElementById('priceblock_saleprice').innerHTML;
-    var nameSend = document.getElementById('landingImage').alt;
+function addUrlInList(link,srcIm,price,name){
+    var srcImg = document.getElementById(srcIm).src;
+    var priceSend = document.getElementById(price).innerHTML;
+    var nameSend = document.getElementById(name).alt;
         
+    chrome.runtime.sendMessage({method:'setItem',url:link,img:srcImg,price:priceSend,name:nameSend});
+}
+
+function addBigButtonUrl(link){
+    var srcImg = document.getElementsByClassName("zc-target diapo-full-img diapo-full-img-placeholder")[0].src;
+    var price = document.getElementsByClassName('prix rebours-prix rebours-inited');
+    var priceSend = price[0].dataset.prixVente;
+    var nameSend = document.getElementsByClassName("fa-titre-article")[0].innerText;
+        
+    if(!priceSend.includes("€")) priceSend = priceSend+" €";
+    if(!priceSend.includes("EUR")) priceSend = priceSend.replace("EUR", " ");
+    
     chrome.runtime.sendMessage({method:'setItem',url:link,img:srcImg,price:priceSend,name:nameSend});
 }
 
