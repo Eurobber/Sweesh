@@ -39,7 +39,12 @@
     );
 	Router::connect(
    		'/users/:username/weesh_lists', 
-    	array('controller' => 'weesh_lists_rest', 'action' => 'add'), 
+    	array('controller' => 'weesh_lists_rest', 'action' => 'add', '[method]' => 'POST'), 
+    	array('pass' => array('username'))
+	);
+	Router::connect(
+   		'/users/:username/weesh_lists', 
+    	array('controller' => 'weesh_lists_rest', 'action' => 'index', '[method]' => 'GET'), 
     	array('pass' => array('username'))
 	);
 	Router::parseExtensions();

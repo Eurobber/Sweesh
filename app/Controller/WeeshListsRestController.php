@@ -12,6 +12,18 @@ class WeeshListsRestController extends AppController {
         $this->Auth->allow('add');
     }
 
+    public function index($username) {
+        // On retrouve l'id de l'utilisateur
+        $username = urldecode($username);
+        $user = $this->User->find('first', array('conditions' => array('User.username' => $username), 'fields' => array('User.id')));
+
+        // Réponse
+        $this->set(array(
+            'weesh_lists' => $user['WeeshList'],
+            '_serialize' => array('weesh_lists')
+        ));
+    }
+
     public function add($username) {
         // On retrouve l'id de l'utilisateur
         $username = urldecode($username);
