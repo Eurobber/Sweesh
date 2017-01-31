@@ -44,16 +44,14 @@ class UsersRestController extends AppController {
 
     public function login() {
         if ($this->User->authenticate($this->request->data)) {
-            $this->set(array(
-                'users' => "true",
-                '_serialize' => array('users')
-            ));
+            $logged = "true";
         } else {
-            $this->set(array(
-                'users' => "false",
-                '_serialize' => array('users')
-            ));
+            $logged = "false";
         }
+        $this->set(array(
+            'logged' => $logged,
+            '_serialize' => array('logged')
+        ));
     }
 
 }
