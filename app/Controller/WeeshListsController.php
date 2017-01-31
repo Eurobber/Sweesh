@@ -3,7 +3,7 @@
 App::uses('AppController', 'Controller');
 
 
-class WeeshlistController extends AppController
+class WeeshListsController extends AppController
 {
 
     public $uses = array('WeeshList', 'ItemsLnkWeeshlists', 'Item');

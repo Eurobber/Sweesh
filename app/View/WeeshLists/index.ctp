@@ -76,7 +76,7 @@
         <div class="row center bloc">
             <p class="col-md-12">
             <h3><?php echo 'Vous voulez ajouter une weeshlist ?' ?></h3></p>
-            <?php echo $this->Form->create('WeeshList', array('url' => array('controller' => 'weeshlist', 'action' => 'add'), 'class' => 'form-horizontal', 'inputDefaults' => array('label' => false))); ?>
+            <?php echo $this->Form->create('WeeshList', array('url' => array('controller' => 'weesh_lists', 'action' => 'add'), 'class' => 'form-horizontal', 'inputDefaults' => array('label' => false))); ?>
             <div class="form-group">
                 <label for="username" class="col-sm-2 control-label"><span class="pull-left">Nom</label>
                 <div class="col-sm-3">
@@ -91,7 +91,7 @@
             </div>
             <div class="form-group">
                 <div class="col-sm-2" style="margin-top:5%;">
-                    <?php echo $this->Form->submit('Créer', array('class' => 'btn btn-lg btn-primary btn-orange', 'controller' => 'WeeshList', 'action' => 'add')) ?>
+                    <?php echo $this->Form->submit('Créer', array('class' => 'btn btn-lg btn-primary btn-orange', 'controller' => 'weesh_lists', 'action' => 'add')) ?>
                 </div>
             </div>
             <?php echo $this->Form->end(); ?>
