@@ -1604,6 +1604,20 @@ html[dir="rtl"] #header .header-search .btn-default {
     border: 0;
 }
 
+ul.list-group:after {
+    clear: both;
+    display: block;
+    content: "";
+}
+
+tbody > tr {
+    cursor: pointer;
+}
+
+.result {
+    margin-top: 20px;
+}
+
 
 /* Responsive */
 
