@@ -36,14 +36,13 @@ function partA() {
     //if(b!=null) addManyButtons(b);
     
 }
-
 function ubaldiButton(a) {
     
     var count = a.children.length;
     var listLi = a.getElementsByClassName('la-article zc-parent clearfix');
     
     for(var i = 0 ; i < count ; i++) {
-        if (document.getElementById('weeshButtonAdded'+i)) return;
+        if (document.getElementById('weeshButtonAdded'+i)) continue;
         if(typeof listLi[i] == "undefined") continue;
         
         var img = listLi[i].getElementsByClassName('img-placeholder img-defer img-ratio-cc la-img');
@@ -65,27 +64,28 @@ function ubaldiButton(a) {
 
         var btn = addButton(listImg.length-1,listLi[i]);
         var css = listLi[i].getElementsByClassName('rebours-clignote la-prix-inner clignote-inited')[0];
-        btn.style.position = "absolute";
-        btn.style.top = (css.offsetParent.offsetTop + css.offsetTop) + "px";
-        btn.style.left = (15 +css.offsetWidth + css.offsetLeft) + "px";
+        //btn.style.position = "relative";
+        btn.style.marginBottom = "15px";
+        btn.style.marginLeft = "76%";
+        //btn.style.width = "100%";
+        //btn.style.cssFloat = "right";
+        //btn.style.top = (css.offsetParent.offsetTop + css.offsetTop) + "px";
+        //btn.style.left = (15 +css.offsetWidth + css.offsetLeft) + "px";
         
     }
 }
 
 
 function amazonPutButton(a){
-    listImg=[];
-    listNames=[];
-    listUrl=[];
-    listPrices=[];
     
     var count = a.children.length;
     var listLi = a.getElementsByTagName('li');
 
     
-    for(var i = 0 ; listImg.length < count ; i++) {
-        if (document.getElementById('weeshButtonAdded'+i)) return;
-        if(typeof listLi[i].getElementsByTagName('img')[0] != "undefined"
+    for(var i = 0 ; i < count ; i++) {
+        if (document.getElementById('weeshButtonAdded'+i)) continue;
+        if (typeof listLi[i] == "undefined") continue;
+        if( typeof listLi[i].getElementsByTagName('img')[0] != "undefined"
           && typeof listLi[i].getElementsByTagName('h2')[0] != "undefined"
           && typeof listLi[i].getElementsByTagName('a')[0] != "undefined"
           ) {
@@ -95,10 +95,16 @@ function amazonPutButton(a){
             listUrl.push(listLi[i].getElementsByTagName('a')[0].href);
             
             if(typeof listLi[i].getElementsByClassName('a-size-base a-color-price a-text-bold')[0] != "undefined")              {
-            listPrices.push(listLi[i].getElementsByClassName('a-size-base a-color-price a-text-bold')[0]
+                listPrices.push(listLi[i]
+                            .getElementsByClassName('a-size-base a-color-price a-text-bold')[0]
                             .innerHTML);
-            addButton(listImg.length-1,listLi[i]
-                      .getElementsByClassName('a-size-base a-color-price a-text-bold')[0]);
+                
+                var btn = addButton(listImg.length-1,listLi[i]);
+                var css = listLi[i].getElementsByClassName('a-size-base a-color-price a-text-bold')[0];
+                
+                btn.style.position = "absolute";
+                btn.style.top = (200+listLi[i].offsetTop) + "px";
+                btn.style.left = (245+ listLi[i].offsetLeft) + "px";
             }
             
             else if (typeof listLi[i].getElementsByClassName('sx-price sx-price-large')[0] != "undefined") {
@@ -143,6 +149,10 @@ function addButton(i,el){
         nodes[i].style.height = '15px';
         nodes[i].style.zIndex = 1000;
         btn[i].innerText = "+";
+    btn[i].style.color="white";
+    btn[i].style.backgroundColor = "#934999";    
+    btn[i].style.borderRadius="7px";
+    
         btn[i].appendChild(nodes[i]);
         btn[i].addEventListener('click', function() {
             addElementInList(this.id);
@@ -194,11 +204,16 @@ function addBigButton(el) {
     clone.id = "weeshBigButton0";
 	clone.style.paddingTop = "5px";
 	clone.style.paddingBottom = "5px";
-    clone.innerHTML = "Comparer avec Weesh";
+    clone.innerHTML = "Ajouter à ma liste Weesh";
     clone.appendChild(image);
+    clone.className = "";
+    clone.className = "a-button a-spacing-small a-button-primary a-button-icon";
+    clone.style.color="white";
+    clone.style.backgroundColor = "#934999";
     clone.addEventListener('click', function() {
             addUrlInList(document.location.href);
         }, false);
+    pntNode.parentNode.style.height = "60px";
     pntNode.parentNode.appendChild(clone);
 }
 
@@ -208,7 +223,7 @@ function insertAfter(referenceNode, newNode) {
 
 function addUrlInList(link){
     var srcImg = document.getElementById('landingImage').src;
-    var priceSend = document.getElementById('priceblock_ourprice').innerHTML;
+    var priceSend = document.getElementById('priceblock_saleprice').innerHTML;
     var nameSend = document.getElementById('landingImage').alt;
         
     chrome.runtime.sendMessage({method:'setItem',url:link,img:srcImg,price:priceSend,name:nameSend});
@@ -224,6 +239,7 @@ function addElementInList(id) {
     var nameSend = listNames[res];
     
     if(!priceSend.includes("€")) priceSend = priceSend+" €";
+    if(!priceSend.includes("EUR")) priceSend = priceSend.replace("EUR", " ");
     
     chrome.runtime.sendMessage({method:'setItem',url:link,img:srcImg,price:priceSend,name:nameSend});
 }
