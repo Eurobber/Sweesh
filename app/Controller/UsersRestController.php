@@ -18,7 +18,7 @@ class UsersRestController extends AppController {
     public function beforeFilter()
     {
         parent::beforeFilter();
-        $this->Auth->allow('index', 'view');
+        $this->Auth->allow('index', 'view', 'login');
     }
 
     public function isAuthorized($user = null)
@@ -41,5 +41,20 @@ class UsersRestController extends AppController {
             '_serialize' => array('user')
         ));
     }
+
+    public function login() {
+        if ($this->User->authenticate($this->request->data)) {
+            $this->set(array(
+                'users' => "true",
+                '_serialize' => array('users')
+            ));
+        } else {
+            $this->set(array(
+                'users' => "false",
+                '_serialize' => array('users')
+            ));
+        }
+    }
+
 }
 ?>

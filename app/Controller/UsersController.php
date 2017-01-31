@@ -181,4 +181,20 @@ class UsersController extends AppController
     {
         return $this->redirect($this->Auth->logout());
     }
+
+    // // Authentification par REST
+    // public function authenticate($data) {
+    //             var_dump("test2");
+
+    //     $user = $this->User->find('first', array(
+    //         'conditions' => array('User.username' => $data['username'])
+    //     ));
+    //     var_dump($user);
+    //     if($user['User']['password'] !== AuthComponent::password($data['password']) {
+    //         return false;
+    //     }
+
+    //     unset($user['User']['password']);
+    //     return $user;
+    // }
 }

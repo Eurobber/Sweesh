@@ -21,19 +21,11 @@ class WeeshController extends AppController{
         }
     }
     
- 
-
-    public function initialize()
-    {
-        parent::initialize();
-        $this->loadComponent('Paginator');
-    }
-    
         public function myProducts()
     {
-
+        
         $my = self::array_utf8_encode($this->Item->find('all'));
- $items = [];
+        $items = [];
         foreach ($my as $row => $innerArray) {
             foreach ($innerArray as $innerRow => $value) {
                 if (array_key_exists('Item', $value)) {

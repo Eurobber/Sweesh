@@ -119,4 +119,16 @@ class User extends AppModel {
             )
         )
     );  
+
+    public function authenticate($data) {
+        $user = $this->find('first', array('conditions' => array('User.username' => $data['username'])));
+        if ($user) {
+            if (Security::hash($data['password'], NULL, true) === $user['User']['password']) {
+                return $user;
+            }
+        }
+
+        return false;
+    }
+
 }
