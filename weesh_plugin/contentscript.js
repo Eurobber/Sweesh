@@ -1,20 +1,19 @@
-chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
-    console.log("URL CHANGED: " + request.data.url);
-    window.setTimeout(partA,500);
-    window.setTimeout(partA,3000);
-    window.setTimeout(partA,6000);
-});
+var listImg = [];
+var listUrl = [];
+var listPrices = [];
+var listNames = [];
 
 var btn = [];
 var nodes = [];
 var url = [];
 
 
-var listImg = [];
-var listUrl = [];
-var listPrices = [];
-var listNames = [];
-
+chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
+    console.log("URL CHANGED: " + request.data.url);
+    window.setTimeout(partA,500);
+    window.setTimeout(partA,3000);
+    window.setTimeout(partA,6000);
+});
 
 function partA() { 
     
@@ -39,25 +38,15 @@ function partA() {
 }
 
 function ubaldiButton(a) {
-    listImg=[];
-    listNames=[];
-    listUrl=[];
-    listPrices=[];
     
     var count = a.children.length;
     var listLi = a.getElementsByClassName('la-article zc-parent clearfix');
     
-    console.log(count);
     for(var i = 0 ; i < count ; i++) {
+        if (document.getElementById('weeshButtonAdded'+i)) return;
         if(typeof listLi[i] == "undefined") continue;
         
         var img = listLi[i].getElementsByClassName('img-placeholder img-defer img-ratio-cc la-img');
-        
-        
-        
-        
-        
-            
         var price = listLi[i].getElementsByClassName('prix rebours-prix rebours-inited');
         var link = img[0].getElementsByTagName('a')[0].href;
 
@@ -67,30 +56,20 @@ function ubaldiButton(a) {
         var str = img[0].dataset.src;
         var str2 = img[0].src;
         
-        if (typeof img[0].dataset.src != "undefined" && str.length > 2) {
-            console.log(str.length);
-            listImg.push(img[0].dataset.src);
-        } 
-        if (typeof img[0].src != "undefined" && str2.length > 2) {
-            console.log(str2.length);
-            listImg.push(img[0].src);
-        }
+        if (typeof img[0].dataset.src != "undefined" && str.length > 2) listImg.push(img[0].dataset.src);
+        if (typeof img[0].src != "undefined" && str2.length > 2) listImg.push(img[0].src);
         
         listNames.push(img[0].alt);
-        
-        
-
         listUrl.push(link);
         listPrices.push(price[0].dataset.prixVente);
 
-        addButton(listImg.length-1,listLi[i]
-                  .getElementsByClassName('rebours-clignote la-prix-inner clignote-inited')[0]);
+        var btn = addButton(listImg.length-1,listLi[i]);
+        var css = listLi[i].getElementsByClassName('rebours-clignote la-prix-inner clignote-inited')[0];
+        btn.style.position = "absolute";
+        btn.style.top = (css.offsetParent.offsetTop + css.offsetTop) + "px";
+        btn.style.left = (15 +css.offsetWidth + css.offsetLeft) + "px";
+        
     }
-    
-    console.log(listNames);
-    console.log(listImg);
-    console.log(listUrl);
-    console.log(listPrices);
 }
 
 
@@ -105,7 +84,7 @@ function amazonPutButton(a){
 
     
     for(var i = 0 ; listImg.length < count ; i++) {
-        
+        if (document.getElementById('weeshButtonAdded'+i)) return;
         if(typeof listLi[i].getElementsByTagName('img')[0] != "undefined"
           && typeof listLi[i].getElementsByTagName('h2')[0] != "undefined"
           && typeof listLi[i].getElementsByTagName('a')[0] != "undefined"
@@ -153,7 +132,7 @@ function amazonPutButton(a){
 }
 
 function addButton(i,el){
-    if (document.getElementById('weeshButtonAdded'+i))return;
+    
         nodes[i] = document.createElement('IMG');
         btn[i] = document.createElement('BUTTON');
         nodes[i].src = 'https://i.imgsafe.org/b8ff07eb90.png';
@@ -168,8 +147,10 @@ function addButton(i,el){
         btn[i].addEventListener('click', function() {
             addElementInList(this.id);
         }, false);
-        el.style.setProperty ("background-color", "lightgrey", "important");
-        insertAfter(el.parentNode, btn[i]);
+        //el.style.setProperty ("background-color", "lightgrey", "important");
+        insertAfter(el, btn[i]);
+    return btn[i];
+    
 }
 /*
 function addManyButtons(el) {
@@ -235,11 +216,14 @@ function addUrlInList(link){
 
 
 function addElementInList(id) {
+    
     var res = id.substring(16);
     var link = listUrl[res];
     var srcImg = listImg[res];
     var priceSend = listPrices[res];
     var nameSend = listNames[res];
-        
+    
+    if(!priceSend.includes("€")) priceSend = priceSend+" €";
+    
     chrome.runtime.sendMessage({method:'setItem',url:link,img:srcImg,price:priceSend,name:nameSend});
 }
