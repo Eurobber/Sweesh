@@ -247,6 +247,13 @@ $(document).ready(function () {
                     return false;
                 });
     
+                $('#dartyButton').on('click', function(){
+                    chrome.tabs.create({url: "http://www.darty.com/"});
+                    return false;
+                });
+    
+    
+    
                 $('#connectButton').on('click', function(){
                     
                     $.ajax({

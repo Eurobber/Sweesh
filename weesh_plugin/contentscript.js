@@ -25,16 +25,22 @@ function partA() {
     var ubaldiBig = document.getElementsByClassName('ajaxBt btn btn-lg btn-panier btn-icone bi-panier-ajout bi-gauche');
     var darty = document.getElementsByClassName('product_detail next_prev_info');
     
+    
+    
     if(a!=null) amazonPutButton(a);
     if(c!=null) addBigButton(c, "a-button a-spacing-small a-button-primary a-button-icon",
                              'landingImage', 'priceblock_saleprice', 'landingImage');
+    
+    
+    
     if(ubaldi!=null) ubaldiButton(ubaldi);
-    if(ubaldiBig!=null) {
+    if(ubaldiBig.length>0) {
         var myBton = addBigButton(ubaldiBig[0],"","","","");
         if (typeof myBton != 'undefined') myBton.className = "btn btn-lg";
     }
     
     if(darty!=null) dartyButton(darty);
+    
     
     
     
@@ -49,6 +55,7 @@ function partA() {
 }
 function dartyButton(a) {
     var count = a.length;
+    if(listPrices.length == count)return;
     for(var i = 0 ; i < count ; i++) {
         var img = a[i].getElementsByTagName('img')[0].src;
         var name = a[i].getElementsByTagName('img')[0].alt;
@@ -58,12 +65,13 @@ function dartyButton(a) {
         listNames.push(name);
         listPrices.push(price);
         listUrl.push(url);
+        
+        var btn = addButton(listImg.length-1,a[i]);
+        btn.style.marginBottom = "15px";
+        btn.style.marginLeft = "75%";
+        btn.style.width = '154px';
+        btn.style.height = '40px';
     }
-    
-    console.log(listImg);
-    console.log(listPrices);
-    console.log(listNames);
-    console.log(listUrl);
 }
 
 function ubaldiButton(a) {
