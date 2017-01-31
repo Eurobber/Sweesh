@@ -41,7 +41,7 @@ class NewSourcesRestController extends AppController {
     public function add() {
         if ($this->request->is('post')) {
             $urls = $this->request->data;
-            for ($i = 0 ; $i<count($urls['url']);$i++) {
+            for ($i = 0 ; $i < count($urls['url']) ; $i++) {
                 $this->NewSource->create();
                 $data = [
                     'url'=>$urls['url'][$i]

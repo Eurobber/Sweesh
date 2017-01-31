@@ -1,20 +1,19 @@
-chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
-    console.log("URL CHANGED: " + request.data.url);
-    window.setTimeout(partA,500);
-    window.setTimeout(partA,3000);
-    window.setTimeout(partA,6000);
-});
+var listImg = [];
+var listUrl = [];
+var listPrices = [];
+var listNames = [];
 
 var btn = [];
 var nodes = [];
 var url = [];
 
 
-var listImg = [];
-var listUrl = [];
-var listPrices = [];
-var listNames = [];
-
+chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
+    console.log("URL CHANGED: " + request.data.url);
+    window.setTimeout(partA,500);
+    window.setTimeout(partA,3000);
+    window.setTimeout(partA,6000);
+});
 
 function partA() { 
     
@@ -23,10 +22,21 @@ function partA() {
     //var b = document.getElementsByClassName('a-size-base a-color-price s-price a-text-bold');
     var c = document.getElementById('submit.add-to-cart-announce');
     var ubaldi = document.getElementById('main-liste-articles');
+    var ubaldiBig = document.getElementsByClassName('ajaxBt btn btn-lg btn-panier btn-icone bi-panier-ajout bi-gauche');
+    var darty = document.getElementsByClassName('product_detail next_prev_info');
     
     if(a!=null) amazonPutButton(a);
-    if(c!=null) addBigButton(c);
+    if(c!=null) addBigButton(c, "a-button a-spacing-small a-button-primary a-button-icon",
+                             'landingImage', 'priceblock_saleprice', 'landingImage');
     if(ubaldi!=null) ubaldiButton(ubaldi);
+    if(ubaldiBig!=null) {
+        var myBton = addBigButton(ubaldiBig[0],"","","","");
+        if (typeof myBton != 'undefined') myBton.className = "btn btn-lg";
+    }
+    
+    if(darty!=null) dartyButton(darty);
+    
+    
     
     
     //Google search
@@ -37,55 +47,75 @@ function partA() {
     //if(b!=null) addManyButtons(b);
     
 }
+function dartyButton(a) {
+    var count = a.length;
+    for(var i = 0 ; i < count ; i++) {
+        var img = a[i].getElementsByTagName('img')[0].src;
+        var name = a[i].getElementsByTagName('img')[0].alt;
+        var url = a[i].getElementsByTagName('a')[0].href;
+        var price = a[i].getElementsByClassName('sale_price')[0].innerText;
+        listImg.push(img);
+        listNames.push(name);
+        listPrices.push(price);
+        listUrl.push(url);
+    }
+    
+    console.log(listImg);
+    console.log(listPrices);
+    console.log(listNames);
+    console.log(listUrl);
+}
 
 function ubaldiButton(a) {
-    listImg=[];
-    listNames=[];
-    listUrl=[];
-    listPrices=[];
     
     var count = a.children.length;
     var listLi = a.getElementsByClassName('la-article zc-parent clearfix');
     
-    console.log(count);
     for(var i = 0 ; i < count ; i++) {
+        if (document.getElementById('weeshButtonAdded'+i)) continue;
         if(typeof listLi[i] == "undefined") continue;
+        
         var img = listLi[i].getElementsByClassName('img-placeholder img-defer img-ratio-cc la-img');
         var price = listLi[i].getElementsByClassName('prix rebours-prix rebours-inited');
         var link = img[0].getElementsByTagName('a')[0].href;
 
+        
         img = img[0].getElementsByTagName('img');
+        
+        var str = img[0].dataset.src;
+        var str2 = img[0].src;
+        
+        if (typeof img[0].dataset.src != "undefined" && str.length > 2) listImg.push(img[0].dataset.src);
+        if (typeof img[0].src != "undefined" && str2.length > 2) listImg.push(img[0].src);
+        
         listNames.push(img[0].alt);
-        if (typeof img[0].dataset.src != "undefined") listImg.push(img[0].dataset.src);
-        if (typeof img[0].src != "undefined") listImg.push(img[0].src);
-
         listUrl.push(link);
         listPrices.push(price[0].dataset.prixVente);
 
-        addButton(listImg.length-1,listLi[i]
-                  .getElementsByClassName('rebours-clignote la-prix-inner clignote-inited')[0]);
+        var btn = addButton(listImg.length-1,listLi[i]);
+        var css = listLi[i].getElementsByClassName('rebours-clignote la-prix-inner clignote-inited')[0];
+        //btn.style.position = "relative";
+        btn.style.marginBottom = "15px";
+        btn.style.marginLeft = "76%";
+        //btn.style.width = "100%";
+        //btn.style.cssFloat = "right";
+        //btn.style.top = (css.offsetParent.offsetTop + css.offsetTop) + "px";
+        //btn.style.left = (15 +css.offsetWidth + css.offsetLeft) + "px";
+        
     }
-    
-    console.log(listNames);
-    console.log(listImg);
-    console.log(listUrl);
-    console.log(listPrices);
 }
 
 
 function amazonPutButton(a){
-    listImg=[];
-    listNames=[];
-    listUrl=[];
-    listPrices=[];
     
     var count = a.children.length;
     var listLi = a.getElementsByTagName('li');
 
     
-    for(var i = 0 ; listImg.length < count ; i++) {
-        
-        if(typeof listLi[i].getElementsByTagName('img')[0] != "undefined"
+    for(var i = 0 ; i < count ; i++) {
+        if (document.getElementById('weeshButtonAdded'+i)) continue;
+        if (typeof listLi[i] == "undefined") continue;
+        if( typeof listLi[i].getElementsByTagName('img')[0] != "undefined"
           && typeof listLi[i].getElementsByTagName('h2')[0] != "undefined"
           && typeof listLi[i].getElementsByTagName('a')[0] != "undefined"
           ) {
@@ -95,10 +125,16 @@ function amazonPutButton(a){
             listUrl.push(listLi[i].getElementsByTagName('a')[0].href);
             
             if(typeof listLi[i].getElementsByClassName('a-size-base a-color-price a-text-bold')[0] != "undefined")              {
-            listPrices.push(listLi[i].getElementsByClassName('a-size-base a-color-price a-text-bold')[0]
+                listPrices.push(listLi[i]
+                            .getElementsByClassName('a-size-base a-color-price a-text-bold')[0]
                             .innerHTML);
-            addButton(listImg.length-1,listLi[i]
-                      .getElementsByClassName('a-size-base a-color-price a-text-bold')[0]);
+                
+                var btn = addButton(listImg.length-1,listLi[i]);
+                var css = listLi[i].getElementsByClassName('a-size-base a-color-price a-text-bold')[0];
+                
+                btn.style.position = "absolute";
+                btn.style.top = (200+listLi[i].offsetTop) + "px";
+                btn.style.left = (245+ listLi[i].offsetLeft) + "px";
             }
             
             else if (typeof listLi[i].getElementsByClassName('sx-price sx-price-large')[0] != "undefined") {
@@ -124,15 +160,10 @@ function amazonPutButton(a){
             x++;
         }
     );
-    
-    console.log(listImg);
-    console.log(listNames);
-    console.log(listUrl);
-    console.log(listPrices);
 }
 
 function addButton(i,el){
-    if (document.getElementById('weeshButtonAdded'+i))return;
+    
         nodes[i] = document.createElement('IMG');
         btn[i] = document.createElement('BUTTON');
         nodes[i].src = 'https://i.imgsafe.org/b8ff07eb90.png';
@@ -143,44 +174,23 @@ function addButton(i,el){
         nodes[i].style.height = '15px';
         nodes[i].style.zIndex = 1000;
         btn[i].innerText = "+";
+    btn[i].style.color="white";
+    btn[i].style.backgroundColor = "#934999";    
+    btn[i].style.borderRadius="7px";
+    
         btn[i].appendChild(nodes[i]);
         btn[i].addEventListener('click', function() {
             addElementInList(this.id);
         }, false);
-        el.style.setProperty ("background-color", "lightgrey", "important");
-        insertAfter(el.parentNode, btn[i]);
-}
-/*
-function addManyButtons(el) {
+        //el.style.setProperty ("background-color", "lightgrey", "important");
+        insertAfter(el, btn[i]);
+    return btn[i];
     
-    for (var j = 0; j < el.length; j++) {
-        if (document.getElementById('weeshButtonAdded'+j))continue;
-        url[j] = el[j].parentNode;
-        url[j] = url[j].getAttribute("href");
-        
-        nodes[j] = document.createElement('IMG');
-        btn[j] = document.createElement('BUTTON');
-        nodes[j].src = 'https://i.imgsafe.org/b8ff07eb90.png';
-        nodes[j].style.float = 'left';
-        btn[j].id = 'weeshButtonAdded'+j;
-        nodes[j].style.marginRight = '15px';
-        nodes[j].style.width = '15px';
-        nodes[j].style.height = '15px';
-        nodes[j].style.zIndex = 1000;
-        btn[j].innerText = "+";
-        btn[j].appendChild(nodes[j]);
+}
 
-        btn[j].addEventListener('click', function() {
-            addElementInList(this.id);
-        }, false);
-        
-        el[j].style.setProperty ("background-color", "lightgrey", "important");
-        insertAfter(el[j].parentNode, btn[j]);
-    }
-}*/
-
-function addBigButton(el) {
-    if (document.getElementById('weeshBigButton0'))return;
+function addBigButton(el,clname,srcIm,price,name) {
+    console.log(el);
+    if (document.getElementById('weeshBigButton0')) return;
     var pntNode = el.parentNode;
     var clone = pntNode.cloneNode(true); // "deep" clone
     var image = document.createElement('IMG');
@@ -192,33 +202,61 @@ function addBigButton(el) {
     clone.id = "weeshBigButton0";
 	clone.style.paddingTop = "5px";
 	clone.style.paddingBottom = "5px";
-    clone.innerHTML = "Comparer avec Weesh";
+    clone.innerHTML = "Ajouter à ma liste Weesh";
     clone.appendChild(image);
-    clone.addEventListener('click', function() {
-            addUrlInList(document.location.href);
+    clone.className = "";
+    clone.className = clname;
+    clone.style.color="white";
+    clone.style.backgroundColor = "#934999";
+    if(srcIm!="") {
+        clone.addEventListener('click', function() {
+            addUrlInList(document.location.href, srcIm,price,name);
         }, false);
+    } else {
+        clone.addEventListener('click', function() {
+            addBigButtonUrl(document.location.href);
+        }, false);
+    }
+    pntNode.parentNode.style.height = "60px";
     pntNode.parentNode.appendChild(clone);
+    return clone;
 }
 
 function insertAfter(referenceNode, newNode) {
     referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
 }
 
-function addUrlInList(link){
-    var srcImg = document.getElementById('landingImage').src;
-    var priceSend = document.getElementById('priceblock_ourprice').innerHTML;
-    var nameSend = document.getElementById('landingImage').alt;
+function addUrlInList(link,srcIm,price,name){
+    var srcImg = document.getElementById(srcIm).src;
+    var priceSend = document.getElementById(price).innerHTML;
+    var nameSend = document.getElementById(name).alt;
         
+    chrome.runtime.sendMessage({method:'setItem',url:link,img:srcImg,price:priceSend,name:nameSend});
+}
+
+function addBigButtonUrl(link){
+    var srcImg = document.getElementsByClassName("zc-target diapo-full-img diapo-full-img-placeholder")[0].src;
+    var price = document.getElementsByClassName('prix rebours-prix rebours-inited');
+    var priceSend = price[0].dataset.prixVente;
+    var nameSend = document.getElementsByClassName("fa-titre-article")[0].innerText;
+        
+    if(!priceSend.includes("€")) priceSend = priceSend+" €";
+    if(!priceSend.includes("EUR")) priceSend = priceSend.replace("EUR", " ");
+    
     chrome.runtime.sendMessage({method:'setItem',url:link,img:srcImg,price:priceSend,name:nameSend});
 }
 
 
 function addElementInList(id) {
+    
     var res = id.substring(16);
     var link = listUrl[res];
     var srcImg = listImg[res];
     var priceSend = listPrices[res];
     var nameSend = listNames[res];
-        
+    
+    if(!priceSend.includes("€")) priceSend = priceSend+" €";
+    priceSend = priceSend.replace("EUR", " ");
+    
     chrome.runtime.sendMessage({method:'setItem',url:link,img:srcImg,price:priceSend,name:nameSend});
 }
