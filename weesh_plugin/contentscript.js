@@ -45,6 +45,7 @@ function partA() {
         if (typeof myBton != 'undefined') {
             myBton.className = "btn btn-lg";
             myBton.style.marginTop = '10px';
+            
         }
     }
     
@@ -282,6 +283,7 @@ function addBigButtonUrl(link){
     if(!priceSend.includes("€")) priceSend = priceSend+" €";
     if(!priceSend.includes("EUR")) priceSend = priceSend.replace("EUR", " ");
     
+    
     chrome.runtime.sendMessage({method:'setItem',url:link,img:srcImg,price:priceSend,name:nameSend});
 }
 
@@ -296,6 +298,7 @@ function addElementInList(id) {
     
     if(!priceSend.includes("€")) priceSend = priceSend+" €";
     priceSend = priceSend.replace("EUR", " ");
+    priceSend = priceSend.replace("*", " ");
     
     chrome.runtime.sendMessage({method:'setItem',url:link,img:srcImg,price:priceSend,name:nameSend});
 }
