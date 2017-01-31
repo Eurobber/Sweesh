@@ -67,13 +67,17 @@
             width: 100px; /* you can use % */
             height: auto;
           }
-          #clear {
+          #clear, #deconnect {
             margin-top: 30px;
             position: absolute;
               position: fixed;
               bottom: 0;
               width: 100%;
               left: 0;
+          }
+          
+          #deconnect {
+              display:none;
           }
           #msgErrorLog{
               color:darkred;
@@ -119,7 +123,7 @@
     <div class="tabs customTabs">
         <ul class="tabsOnglets">
             <li id="tab1"><a href="#tabs-1">Weeshlist</a></li>
-            <li id="tab2"><a href="#tabs-2">Connexion</a></li>
+            <li id="tab2"><a href="#tabs-2">Mon compte</a></li>
             <li id="tab3"><a href="#tabs-3"></a></li>
             <li id="tab4"><a href="#tabs-4"><span class="ui-icon ui-icon-info"></span></a></li>
         </ul>
@@ -152,7 +156,8 @@
 					
 				</div>
 				<div id="loggedDiv">Voici vos listes disponibles : <!-- CSS none, à passer en show -->           
-				<ul id="weeshListsLogged"></ul></div> <!-- CSS none, à passer en show -->          
+				<ul id="weeshListsLogged"></ul></div><!-- CSS none, à passer en show --> 
+              <button id="deconnect" class="btn btn-danger">Déconnexion</button>
 			</div>
 			
         <div id="tabs-3">
