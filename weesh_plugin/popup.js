@@ -4,31 +4,41 @@ var urls = [];
 var names = [];
 var prices = [];
 
-!chrome.runtime.sendMessage({method:'getUrls'}, function(listUrls){
+function isLogged(username){
+        $('#msgErrorLog').hide();
+        $('#msgSuccessLog').show();
+        $('#formConnect').hide();
+        $('#connectButton').hide();
+        $('#registerButton').hide();
+        $('#loggedDiv').show();
+        $('#deconnect').show();
+        
+        //setWeeshListes();
+        $("#msgSuccessLog").html("Bienvenue "+username+" !");
+    }
+
+chrome.runtime.sendMessage({method:'getUrls'}, function(listUrls){
     if (typeof listUrls != 'undefined' && listUrls != null && listUrls.length != 0) {
         urls = listUrls;
         urls.forEach(myFunction);
         
-       
         $.ajax({
             type: "POST",
-            url: "http://localhost/Weesh/new_sources_rest.json",
+            url: "http://localhost:8888/Weesh/new_sources_rest.json",
             data: {
                 'url':urls
                   },
             success: function(data){
-                console.log("data suuccess");
+                console.log("data suuccess get sources");
                 console.log(data);
             },
             error: function(data){
-                console.log("data error");
+                console.log("data error get sources");
                 console.log(data);
             }
         });
         
-        
-        
-        
+             
         chrome.runtime.sendMessage({method:'getImgs'}, function(img){
             if (typeof img != 'undefined' && img != null && img.length != 0) {
                 setImgs(img);
@@ -227,6 +237,10 @@ if (!chrome.runtime.error) {
 });
 
 
+chrome.storage.sync.get("localUsername", function(imgsL) {
+    if(imgsL['localUsername'] != 'undefined_username') isLogged(imgsL['localUsername']);
+});
+
 $(document).ready(function () {
                 $("div.tabs").tabs();
                 $('#registerButton').on('click', function(){
@@ -251,6 +265,20 @@ $(document).ready(function () {
                     chrome.tabs.create({url: "http://www.darty.com/"});
                     return false;
                 });
+                $('#deconnect').on('click', function(){
+                     chrome.storage.sync.set({'localUsername':'undefined_username'}, function() {
+                                    console.log('delete username');
+                                });
+                   
+                    $('#msgSuccessLog').hide();
+                    $('#formConnect').show();
+                    $('#connectButton').show();
+                    $('#registerButton').show();
+                    $('#loggedDiv').hide();
+                    $('#deconnect').hide();
+        
+                    return false;
+                });
     
     
     
@@ -258,26 +286,29 @@ $(document).ready(function () {
                     
                     $.ajax({
                         type: "POST",
-                        url: "http://localhost:3000/login",
+                        url: "http://localhost:8888/Weesh/users_rest/login.json",
                         data: {
                             "username":$('#inputLogin').val(),
                             "password":$('#inputPassword').val()
                         },
                         success: function(data){
-                            $('#msgErrorLog').hide();
-                            $('#msgSuccessLog').show();
-                            $('#formConnect').hide();
-                            $('#registerButton').hide();
-                            $('#loggedDiv').show();
-                            setWeeshListes();
-                            $("#msgSuccessLog").html("Bienvenue "+$('#inputLogin').val()+" !");
+                            if(data['users'] == 'true') {
+                                chrome.storage.sync.set({'localUsername':$('#inputLogin').val()}, function() {
+                                    console.log('saved username');
+                                });
+                                chrome.storage.sync.set({'localPassword':$('#inputPassword').val()}, function() {});
+                                isLogged($('#inputLogin').val());
+                            } else {
+                                $('#msgErrorLog').show();
+                                $('#msgSuccessLog').hide();
+                            }
                         },
                         error: function(data){
-                            $('#msgErrorLog').show();
-                            $('#msgSuccessLog').hide();
+                            console.log('error login');
                         }
                     });
                 });
+    
     
     function setWeeshListes(){
         $.ajax({
