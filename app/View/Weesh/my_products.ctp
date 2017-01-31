@@ -35,7 +35,7 @@
         </div>
     </div>
     <?php
-                foreach ($items as $value) { echo $value
+                foreach ($items as $value) {
                     ?>
         <!-- Modal -->
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -49,8 +49,18 @@
                             <div class="d-flex w-100 justify-content-between">
                                 <h5 class="mb-1">  <?php echo $value['title'] ?> <div class="portfolio-item">
                 
-                    </div></h5> <small><?php echo $value['price'] ?>€</small> </div>
+                    </div></h5> <small>Prix: <?php echo $value['price'] ?>€</small> </div>
                         </div>
+                        <hr>
+                        <p> Description:
+                            <?php echo $value['description'] ?>
+                        </p>
+                        <p> Marque:
+                            <?php echo $value['brand'] ?>
+                        </p>
+                        <p> Modèle:
+                            <?php echo $value['model'] ?>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -59,9 +69,7 @@
             <!--        <td>
                             <?php echo $value['description'] ?>
                         </td>
-                        <td>
-                            <?php echo $value['details'] ?>
-                        </td>
+                       
                         <td>
                             <?php echo $value['image'] ?>
                         </td>
@@ -71,12 +79,7 @@
                         <td>
                             <?php echo $value['model'] ?>
                         </td>
-                        <td>
-                            <?php echo $value['original_price'] ?>
-                        </td>
-                        <td>
-                            <?php echo $value['sale_price'] ?>
-                        </td>
+                  
                         <td>
                             <?php echo $value['tags'] ?>
                         </td>
