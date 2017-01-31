@@ -1,5 +1,7 @@
 <?php
 
+App::uses('Controller', 'Controller');
+
 class WeeshController extends AppController{
 
     public function index() {}
