@@ -58,10 +58,9 @@ class Item extends AppModel
     }
 
     // Au moins l'un des identifiants doit être renseigné (isbn/ean/brand&model)
-	function beforeValidate(){
+	function beforeValidate($options=array()){
 	    $valid = (!empty($this->data[$this->name]['isbn']) || !empty($this->data[$this->name]['ean']) || !empty($this->data[$this->name]['brand']) || !empty($this->data[$this->name]['model']));
 	    return $valid && parent::beforeValidate(); 
 	}
 }
 ?>
-
