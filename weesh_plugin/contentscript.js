@@ -24,7 +24,7 @@ function partA() {
     var ubaldi = document.getElementById('main-liste-articles');
     var ubaldiBig = document.getElementsByClassName('ajaxBt btn btn-lg btn-panier btn-icone bi-panier-ajout bi-gauche');
     var darty = document.getElementsByClassName('product_detail next_prev_info');
-    
+    var dartyBig = document.getElementsByClassName('retirer_magasin');
     
     
     if(a!=null) amazonPutButton(a);
@@ -40,6 +40,13 @@ function partA() {
     }
     
     if(darty!=null) dartyButton(darty);
+    if(dartyBig.length>0) {
+        var myBton = addBigButton(dartyBig[0],"","v6horizontal_new_product_page_sizes darty_product_img","product_price font-novecentosSWBD","darty");
+        if (typeof myBton != 'undefined') {
+            myBton.className = "btn btn-lg";
+            myBton.style.marginTop = '10px';
+        }
+    }
     
     
     
@@ -177,14 +184,19 @@ function addButton(i,el){
         nodes[i].src = 'https://i.imgsafe.org/b8ff07eb90.png';
         nodes[i].style.float = 'left';
         btn[i].id = 'weeshButtonAdded'+i;
-        nodes[i].style.marginRight = '15px';
-        nodes[i].style.width = '15px';
-        nodes[i].style.height = '15px';
+        nodes[i].style.marginTop = '-30px';
+        
+    
+        nodes[i].style.width = '30px';
+        nodes[i].style.height = '30px';
         nodes[i].style.zIndex = 1000;
-        btn[i].innerText = "+";
-    btn[i].style.color="white";
-    btn[i].style.backgroundColor = "#934999";    
-    btn[i].style.borderRadius="7px";
+        var p = document.createElement('P');
+        p.innerText = "Ajoutez à votre Weeshlist";
+        p.style.marginLeft = '30px';
+        btn[i].append(p);
+        btn[i].style.color="white";
+        btn[i].style.backgroundColor = "#934999";    
+        btn[i].style.borderRadius="7px";
     
         btn[i].appendChild(nodes[i]);
         btn[i].addEventListener('click', function() {
@@ -210,19 +222,23 @@ function addBigButton(el,clname,srcIm,price,name) {
     clone.id = "weeshBigButton0";
 	clone.style.paddingTop = "5px";
 	clone.style.paddingBottom = "5px";
-    clone.innerHTML = "Ajouter à ma liste Weesh";
+    clone.innerHTML = "Ajouter à ma Weeshlist";
     clone.appendChild(image);
     clone.className = "";
     clone.className = clname;
     clone.style.color="white";
     clone.style.backgroundColor = "#934999";
-    if(srcIm!="") {
+    if(clname!="") {
         clone.addEventListener('click', function() {
             addUrlInList(document.location.href, srcIm,price,name);
         }, false);
-    } else {
+    } else if(srcIm=="") {
         clone.addEventListener('click', function() {
             addBigButtonUrl(document.location.href);
+        }, false);
+    } else if (name=='darty') {
+        clone.addEventListener('click', function() {
+            addUrlDarty(document.location.href,srcIm,price);
         }, false);
     }
     pntNode.parentNode.style.height = "60px";
@@ -235,12 +251,27 @@ function insertAfter(referenceNode, newNode) {
 }
 
 function addUrlInList(link,srcIm,price,name){
+
     var srcImg = document.getElementById(srcIm).src;
     var priceSend = document.getElementById(price).innerHTML;
     var nameSend = document.getElementById(name).alt;
-        
+     
     chrome.runtime.sendMessage({method:'setItem',url:link,img:srcImg,price:priceSend,name:nameSend});
 }
+
+function addUrlDarty(link,srcIm,price,name){
+
+    var srcImg = document.getElementsByClassName(srcIm);
+    srcImg = srcImg[0].getElementsByTagName('img');
+    var priceSend = document.getElementsByClassName(price)[0].innerText;
+    var nameSend = srcImg[0].alt;
+     
+    console.log(srcImg);
+    console.log(srcImg[0].src);
+    console.log(srcImg[0].alt);
+    chrome.runtime.sendMessage({method:'setItem',url:link,img:srcImg[0].src,price:priceSend,name:nameSend});
+}
+
 
 function addBigButtonUrl(link){
     var srcImg = document.getElementsByClassName("zc-target diapo-full-img diapo-full-img-placeholder")[0].src;
