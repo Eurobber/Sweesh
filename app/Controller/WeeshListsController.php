@@ -6,7 +6,7 @@ App::uses('AppController', 'Controller');
 class WeeshListsController extends AppController
 {
 
-    public $uses = array('WeeshList', 'ItemsLnkWeeshlists', 'Item');
+    public $uses = array('WeeshList', 'Item');
 
     public function beforeFilter()
     {
@@ -64,29 +64,32 @@ class WeeshListsController extends AppController
             throw new NotFoundException(__('La weeshlist n\'existe pas'));
         }
         $this->set('weeshlist', $this->WeeshList->findById($id));
-        $itemsLnk = $this->ItemsLnkWeeshlists->find('all', array('conditions' => array('ItemsLnkWeeshlists.weeshlist' => $id)));
-        $itemsBdd = [];
 
-        foreach ($itemsLnk as $value) {
-            if (!empty($itemsBdd)) {
-                array_push($itemsBdd, self::array_utf8_encode($this->Item->find('all', array('conditions' => array('Item.id' => $value['ItemsLnkWeeshlists']['item'])))));
-            } else {
-                $itemsBdd = self::array_utf8_encode($this->Item->find('all', array('conditions' => array('Item.id' => $value['ItemsLnkWeeshlists']['item']))));
-            }
-        }
-        $items = [];
-        foreach ($itemsBdd as $row => $innerArray) {
-            foreach ($innerArray as $innerRow => $value) {
-                if (array_key_exists('Item', $value)) {
-                    foreach ($value as $key => $val) {
-                        array_push($items, $val);
-                    }
-                } else {
-                    array_push($items, $value);
-                }
-            }
-        }
-        $this->set('items', $items);
+        // TODO À modifier (supprimer ?) car la table ItemsLnkWeeshlists n'existe plus, la relation many-to-many est gérée avec CakePHP
+
+        // $itemsLnk = $this->ItemsLnkWeeshlists->find('all', array('conditions' => array('ItemsLnkWeeshlists.weeshlist' => $id)));
+        // $itemsBdd = [];
+
+        // foreach ($itemsLnk as $value) {
+        //     if (!empty($itemsBdd)) {
+        //         array_push($itemsBdd, self::array_utf8_encode($this->Item->find('all', array('conditions' => array('Item.id' => $value['ItemsLnkWeeshlists']['item'])))));
+        //     } else {
+        //         $itemsBdd = self::array_utf8_encode($this->Item->find('all', array('conditions' => array('Item.id' => $value['ItemsLnkWeeshlists']['item']))));
+        //     }
+        // }
+        // $items = [];
+        // foreach ($itemsBdd as $row => $innerArray) {
+        //     foreach ($innerArray as $innerRow => $value) {
+        //         if (array_key_exists('Item', $value)) {
+        //             foreach ($value as $key => $val) {
+        //                 array_push($items, $val);
+        //             }
+        //         } else {
+        //             array_push($items, $value);
+        //         }
+        //     }
+        // }
+        // $this->set('items', $items);
     }
 
     public static function array_utf8_encode($dat)

@@ -12,6 +12,25 @@ class Item extends AppModel
 {
     public $useTable  = 'items';
 
+    // A décommenter si on veut pouvoir retourner les weeshlists associés en même temps qu'un item
+    // public $hasAndBelongsToMany = array(
+    //     'WeeshList' =>
+    //         array(
+    //             'className' => 'WeeshList',
+    //             //'joinTable' => 'items_weesh_lists',
+    //             // 'foreignKey' => 'item_id',
+    //             // 'associationForeignKey' => 'weesh_list_id',
+    //             // 'unique' => true,
+    //             // 'conditions' => '',
+    //             // 'fields' => '',
+    //             // 'order' => '',
+    //             // 'limit' => '',
+    //             // 'offset' => '',
+    //             // 'finderQuery' => '',
+    //             // 'with' => ''
+    //         )
+    // );
+
     public $validate = array(
         'isbn' => array(
             'unique' => array(

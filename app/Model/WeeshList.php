@@ -10,11 +10,24 @@ App::uses('AppModel', 'Model');
 class WeeshList extends AppModel
 {
     public $useTable  = 'weesh_lists';
-    public $belongTo = array(
-        'User' => array(
-            'className' => 'User',
-            'foreignKey' => 'user_id'
-        ));
+    
+    public $hasAndBelongsToMany = array(
+        'Item' =>
+            array(
+                'className' => 'Item',
+                //'joinTable' => 'items_weesh_lists',
+                // 'foreignKey' => 'item_id',
+                // 'associationForeignKey' => 'weesh_list_id',
+                // 'unique' => true,
+                // 'conditions' => '',
+                // 'fields' => '',
+                // 'order' => '',
+                // 'limit' => '',
+                // 'offset' => '',
+                // 'finderQuery' => '',
+                // 'with' => ''
+            )
+    );
 
     public $validate = array(
         'name' => array(

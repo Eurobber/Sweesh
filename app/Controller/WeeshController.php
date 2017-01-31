@@ -7,7 +7,7 @@ class WeeshController extends AppController{
     public function index() {}
     public function faq() {}
 
-    public $uses = array('WeeshList', 'ItemsLnkWeeshlists', 'Item');
+    public $uses = array('WeeshList', 'Item');
  
     public function beforeFilter(){
 			parent::beforeFilter();
