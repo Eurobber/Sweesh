@@ -33,10 +33,10 @@
     //API REST
     Router::mapResources('items_rest');
     Router::mapResources('new_sources_rest');
-    Router::connect(
-    	'/users_rest/login', 
-    	array('controller' => 'users_rest', 'action' => 'login', '[method]' => 'POST')
-    );
+    // Router::connect(
+    // 	'/users_rest/login', 
+    // 	array('controller' => 'users_rest', 'action' => 'login', '[method]' => 'POST')
+    // );
 	Router::connect(
    		'/users/:username/weesh_lists', 
     	array('controller' => 'weesh_lists_rest', 'action' => 'add', '[method]' => 'POST'), 
