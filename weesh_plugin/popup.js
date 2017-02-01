@@ -56,6 +56,7 @@ chrome.runtime.sendMessage({method:'getUrls'}, function(listUrls){
                 chrome.storage.sync.get("localUsername", function(data) {
                     if(data['localUsername'] != 'undefined_username') {
                         isLogged(data['localUsername']);
+                        var usernameTemps = data['localUsername'];
 
                         chrome.storage.sync.get('localWeeshListId', function(data) {
                             console.log(data['localWeeshListId']);
@@ -77,7 +78,9 @@ chrome.runtime.sendMessage({method:'getUrls'}, function(listUrls){
                                     $('#msgWeeshSync').show();
                                     $('#msgWeeshSyncInc').hide();
                                     $('#imgWeeshSyncInc').hide();
-                                    setWeeshListes(data['localUsername']);
+                                    console.log(usernameTemps);
+                                    
+                                    setWeeshListes(usernameTemps);
                                     
                                     
                                     chrome.storage.sync.set({'localUrlList':[]}, function() {
