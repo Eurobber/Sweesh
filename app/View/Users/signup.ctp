@@ -10,7 +10,7 @@ $this->assign('title', 'Inscrivez-vous sur Weesh !');
         </div>
     </div>
     <div class="container">
-        <div class="col-lg-12 well top-buffer-plus isRound">
+        <div class="col-lg-12 well top-buffer-plus bloc">
             <div class="col-lg-12">
                 <h1>Rejoindre la communauté Weesh</span></h1>
                 <?php echo $this->Form->create('User', array('class' => 'form-horizontal', 'inputDefaults' => array('label' => false))); ?>
