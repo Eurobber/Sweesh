@@ -4,7 +4,7 @@ App::uses('AppController', 'Controller');
 
 class NewSourcesRestController extends AppController {
 
-    public $uses = array('NewSource');
+    public $uses = array('NewSource', 'Weeshlist');
     public $helpers = array('Html', 'Form');
     public $components = array('RequestHandler');
 
@@ -40,12 +40,13 @@ class NewSourcesRestController extends AppController {
 
     public function add() {
         if ($this->request->is('post')) {
-            $urls = $this->request->data;
-            for ($i = 0 ; $i < count($urls['url']) ; $i++) {
+            $post = $this->request->data;
+            $wid = $post['weeshlistid'];
+            for ($i = 0 ; $i < count($post['url']) ; $i++) {
                 $this->NewSource->create();
                 $data = [
-                    'url'=>$urls['url'][$i],
-                    'user_name'=>$urls['username'][$i]
+                    'url'=>$post['url'][$i],
+                    'weeshlistid'=> $wid
                 ];
                 if($this->NewSource->save($data)) {
                     $message = 'URL correctement ajout\ée';
