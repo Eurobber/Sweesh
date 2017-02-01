@@ -328,7 +328,7 @@ function setWeeshListes(username){
     
         $.ajax({
             type: "GET",
-            url: "http:localhost:8888/Weesh/weesh_lists_rest/index/"+username+".json",
+            url: "http:localhost:8888/Weesh/weesh_lists_rest/index/"+ encodeURI(username)+".json",
             success: function(data){
                 chrome.storage.sync.set({'localWeeshListId':data['weesh_lists'][0].id}, function() {});
                  $('#weeshListsLogged').empty();
