@@ -96,7 +96,7 @@
                     <div class="box-content">
                         <h4 class="heading-primary"><strong>Geoffroy</strong></h4>
                         <p style="margin-left: 90px;">Mentor de l'équipe Weesh
-                            <br>et co-fondateur de B-maker</p>
+                            <br>et co-fondateur de <b><a href="http://bmaker.fr/">B-maker</a></b> </p>
                     </div>
                 </div>
             </li>
@@ -107,7 +107,7 @@
                 <div class="featured-box">
                     <div class="box-content">
                         <h4 class="heading-primary"><strong>ECE</strong></h4>
-                        <p style="margin-left: 90px;">Avec le soutien de l'équipe d'enseignants l'ECE-Paris</p>
+                        <p style="margin-left: 90px;">Avec le soutien de l'équipe d'enseignants de l'ECE-Paris</p>
                     </div>
                 </div>
             </li>
