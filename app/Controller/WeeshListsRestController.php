@@ -12,14 +12,26 @@ class WeeshListsRestController extends AppController {
         $this->Auth->allow('index', 'add', 'addItem');
     }
 
+    public static function array_utf8_encode($dat)
+    {
+        if (is_string($dat))
+            return utf8_encode($dat);
+        if (!is_array($dat))
+            return $dat;
+        $ret = array();
+        foreach ($dat as $i => $d)
+            $ret[$i] = self::array_utf8_encode($d);
+        return $ret;
+    }
+
     public function index($username) {
         // On retrouve l'id de l'utilisateur
         $username = urldecode($username);
-        $user = $this->User->find('first', 
+        $user = $this->array_utf8_encode($this->User->find('first', 
             array(
                 'conditions' => array('User.username' => $username), 
                 'fields' => array('User.id'),
-                'recursive' => 2)); // ++ profondeur du find(), pour récupérer les produits en même temps
+                'recursive' => 2))); // ++ profondeur du find(), pour récupérer les produits en même temps
 
         // Réponse
         if ($user) {
