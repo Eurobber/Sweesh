@@ -3,8 +3,18 @@ var imgs = [];
 var urls = [];
 var names = [];
 var prices = [];
+var weeshListId;
+var localUserName;
 
 function isLogged(username){
+    if($('#list li').length == 0) {
+    
+        $('#tab1').hide();
+        $('#tabsOnglets').tabs({ active: 5});
+        
+        console.log($('#tabsOnglets'));
+    } 
+    
         $('#msgErrorLog').hide();
         $('#msgSuccessLog').show();
         $('#formConnect').hide();
@@ -13,7 +23,7 @@ function isLogged(username){
         $('#loggedDiv').show();
         $('#deconnect').show();
         $('#tab3').show();    
-    
+        localUserName = username;
         setWeeshListes(username);
         $("#msgSuccessLog").html("Bienvenue "+username+" !");
     }
@@ -27,21 +37,25 @@ chrome.runtime.sendMessage({method:'getUrls'}, function(listUrls){
 		chrome.storage.sync.get("localUsername", function(data) {
             if(data['localUsername'] != 'undefined_username') {
                 isLogged(data['localUsername']);
-                $.ajax({
-                    type: "POST",
-                    url: "http://localhost/Weesh/new_sources_rest.json",
-                    data: {
-                        'url':urls,
-                        'weeshlistid': '1'
-                          },
-                    success: function(data){
-                        console.log("data suuccess get sources");
-                        console.log(data);
-                    },
-                    error: function(data){
-                        console.log("data error get sources");
-                        console.log(data);
-                    }
+                
+                chrome.storage.sync.get('localWeeshListId', function(data) {
+                    console.log(data['localWeeshListId']);
+                    $.ajax({
+                        type: "POST",
+                        url: "http://localhost/Weesh/new_sources_rest.json",
+                        data: {
+                            'url':urls,
+                            'weeshlistid': data['localWeeshListId']
+                        },
+                        success: function(data){
+                            console.log("data suuccess get sources");
+                            console.log(data);
+                        },
+                        error: function(data){
+                            console.log("data error get sources");
+                            console.log(data);
+                        }
+                    });
                 });
 		      }
 	       });
@@ -132,6 +146,8 @@ function myFunction(item, index) {
     
     if(item==null)return;
     $('#clear').show();
+    $('#msgWeeshEmpty').hide();
+    
     index = $('#list li').length;
     $('#list').append('<li id="elementInWeeshList'+index+'"><img class="imgItem" src="null" alt="" id="uneImage" /><span classe="price"></span><button type="button" class="btn btn-danger delete">X</button><a href="'+item+'">null</a></li>');
     $('#list li:last-child').on('click', 'a', function(){
@@ -270,6 +286,7 @@ $(document).ready(function () {
                                 });
                     $('#tab3').hide();  
                     $('#weeshListsLogged').empty();
+                    $('#listOnline').empty();
                     
                     $('#msgSuccessLog').hide();
                     $('#formConnect').show();
@@ -318,7 +335,8 @@ function setWeeshListes(username){
             type: "GET",
             url: "http:localhost:8888/Weesh/weesh_lists_rest/index/"+username+".json",
             success: function(data){
-                console.log(data);
+                chrome.storage.sync.set({'localWeeshListId':data['weesh_lists'][0].id}, function() {});
+                
                 $.each(data['weesh_lists'], function(i, item) {
                     $('#weeshListsLogged').append('<li id="weeshList'+i+'">'+item.name+'</li>');
                 });
