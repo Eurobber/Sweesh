@@ -24,7 +24,7 @@ function partA() {
     var ubaldi = document.getElementById('main-liste-articles');
     var ubaldiBig = document.getElementsByClassName('ajaxBt btn btn-lg btn-panier btn-icone bi-panier-ajout bi-gauche');
     var darty = document.getElementsByClassName('product_detail next_prev_info');
-    var dartyBig = document.getElementsByClassName('retirer_magasin');
+    var dartyBig = document.getElementsByClassName('ajout_panier_bouton btn-reset');
     
     
     if(a!=null) amazonPutButton(a);

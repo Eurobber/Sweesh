@@ -15,7 +15,6 @@
                 min-height : 400px;
                 font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
                 font-size: 100%; 
-                background-color: #d0d0d0;
             }
           ul, li {
               list-style-type: none;
@@ -51,12 +50,19 @@
               width:40px;
           }
           
+          #imgWeeshSyncInc{
+              height:50px;
+                width:50px;
+              margin-left: 40%;
+          }
+          
           .weeshList span{
               font-weight: bold;
           }
           
           .customTabs{
               min-height:400px !important;
+              
           }
           
           #tab4,#tab2 {
@@ -88,11 +94,17 @@
               display: none;
           }
           
-          #loggedDiv{
+          #loggedDiv, #msgWeeshSync{
               display: none;
           }
+          
+          
 		  .top-buffer { margin-top:10px; }
 		  img.small {width: 49px; height: 47px; display: inline-block;}
+          
+          .syncProgress{
+              display:none;
+          }
           
           .tabsOnglets {
               position:absolute;
@@ -106,7 +118,11 @@
           .contentTabs{
               margin-top: 30px;
               margin-bottom: 50px;
+              background-color: #efefef;
+              min-height: 400px;
           }
+          
+          
 		  
 		  .memeTaille{
 			width:  70px;
@@ -135,7 +151,12 @@
         <div class="contentTabs">
           <div id="tabs-1"> 
               <h4 class="form-signin-heading">Voici votre Weeshlist locale <img class="small" src="iconT.png"></h4>
-                <h3 id='msgWeeshEmpty' class='msgErrorLog'>Votre Weeshlist est vide, commencez à la remplir en navigant sur nos sites compatibles !</h3>
+                <h4 id='msgWeeshEmpty' class='msgErrorLog'>Votre Weeshlist est vide, commencez à la remplir en navigant sur nos sites compatibles !</h4>
+              
+              <h4 id='msgWeeshSync' class="syncProgress">Votre liste a été synchronisé en ligne!</h4>
+              <h4 id='msgWeeshSyncInc' class="syncProgress">Votre liste est en cours de synchronisation.</h4>
+              <img id='imgWeeshSyncInc' class="syncProgress" src="http://linux.m2osw.com/sites/linux.m2osw.com/files/images/waiting-wheel-300x300.gif"/>
+              
               <ul class="weeshList" id="list">
                 </ul>
               <button id="clear" class="btn btn-danger">Vider la liste</button>
