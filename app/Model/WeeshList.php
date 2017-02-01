@@ -18,7 +18,7 @@ class WeeshList extends AppModel
                 //'joinTable' => 'items_weesh_lists',
                 // 'foreignKey' => 'item_id',
                 // 'associationForeignKey' => 'weesh_list_id',
-                // 'unique' => true,
+                'unique' => 'keepExisting'
                 // 'conditions' => '',
                 // 'fields' => '',
                 // 'order' => '',
