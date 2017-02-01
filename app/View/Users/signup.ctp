@@ -2,21 +2,20 @@
 echo $this->Flash->render('auth');
 $this->assign('title', 'Inscrivez-vous sur Weesh !');
 ?>
-<div id="content" class="content full">
-    <div class="home-intro">
-        <div class="container">
-            <div class="row justify-content-md-center">
+    <div id="content" class="content full">
+        <div class="home-intro">
+            <div class="container">
+                <div class="row justify-content-md-center"> </div>
             </div>
         </div>
     </div>
-</div>
-<div class="container">
-    <div class="col-lg-12 well top-buffer-plus isRound">
-        <div class="col-lg-12">
-            <h1>Rejoindre la communauté Weesh</span></h1>
-            <?php echo $this->Form->create('User', array('class' => 'form-horizontal', 'inputDefaults' => array('label' => false))); ?>
-            <div class="form-group">
-                <label for="username" class="col-sm-2 control-label"><span class="pull-left">Identifiant</label>
+    <div class="container">
+        <div class="col-lg-12 well top-buffer-plus isRound">
+            <div class="col-lg-12">
+                <h1>Rejoindre la communauté Weesh</span></h1>
+                <?php echo $this->Form->create('User', array('class' => 'form-horizontal', 'inputDefaults' => array('label' => false))); ?>
+                    <div class="form-group">
+                        <label for="username" class="col-sm-2 control-label"><span class="pull-left">Identifiant</label>
                 <div class="col-sm-3">
                     <?php echo $this->Form->input('username', array('class' => 'form-control')); ?>
                 </div>
@@ -84,3 +83,4 @@ $this->assign('title', 'Inscrivez-vous sur Weesh !');
             <?php echo $this->Session->flash(); ?>
         </div>
     </div>
+        </div>
