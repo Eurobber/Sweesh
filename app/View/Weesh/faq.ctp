@@ -17,7 +17,7 @@
                     </section>
                     <section class="toggle">
                         <label>Comment adapter Weesh à vos besoins ? </label>
-                        <p>Weesh peut être utilié par sans avoir à créer de compte. Pour ce faire, il suffit d'ajouter l'extension à votre navigateur. Une fois l'extension installée, vous pouvez ajouter les produits présents sur les marketplaces de nos partenairesdans une Weeshlist. Ces Weeshlists vous permettent de personnaliser vos paramètres d'obtention de vos produits, que cela soit le prix ou la note écologique qui vous inéresse. </p>
+                        <p>Weesh peut être utilié par sans avoir à créer de compte. Pour ce faire, il suffit d'ajouter l'extension à votre navigateur que vous pouvez retrouvez sur ce <b><a href="https://chrome.google.com/webstore/detail/weesh/cmopobjfdhggggbkefjbeegonlbheilb/reviews?hl=fr">lien</a></b>. Une fois l'extension installée, vous pouvez ajouter les produits présents sur les marketplaces de nos partenairesdans une Weeshlist. Ces Weeshlists vous permettent de personnaliser vos paramètres d'obtention de vos produits, que cela soit le prix ou la note écologique qui vous inéresse. </p>
                     </section>
                     <section class="toggle">
                         <label>Quel est mon intérêt à créer un compte avec Weesh ?</label>

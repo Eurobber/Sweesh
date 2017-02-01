@@ -187,6 +187,9 @@ echo $this->Html->docType();
                                 <li><a><?php echo $this->Html->link('FAQ', array('controller' => 'weesh', 'action' => 'faq')); ?></a></li>
                                 <li><a href="#">Plan du site</a></li>
                                 <li>
+                                    <?php echo $this->Html->link('Qui sommes-nous ?', array('controller' => 'weesh', 'action' => 'about_us')); ?>
+                                </li>
+                                <li>
                                     <?php echo $this->Html->link('Contact', array('controller' => 'contacts', 'action' => 'index')); ?>
                                 </li>
                             </ul>

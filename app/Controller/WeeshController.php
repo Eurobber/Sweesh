@@ -4,15 +4,16 @@ App::uses('Controller', 'Controller');
 
 class WeeshController extends AppController{
 
-    public $uses = array('WeeshList', 'Item', 'User', 'faq');
+    public $uses = array('WeeshList', 'Item', 'User');
 
     public function index() {}
     public function faq() {}
+    public function about_us() {}
 
  
     public function beforeFilter(){
 			parent::beforeFilter();
-			$this->Auth->allow('index','faq');
+			$this->Auth->allow('index','faq', 'about_us');
 	}
 
 	public function isAuthorized($user = null) {
