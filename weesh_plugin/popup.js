@@ -7,14 +7,6 @@ var weeshListId;
 var localUserName;
 
 function isLogged(username){
-    if($('#list li').length == 0) {
-    
-        $('#tab1').hide();
-        $('#tabsOnglets').tabs({ active: 5});
-        
-        console.log($('#tabsOnglets'));
-    } 
-    
         $('#msgErrorLog').hide();
         $('#msgSuccessLog').show();
         $('#formConnect').hide();
@@ -40,9 +32,10 @@ chrome.runtime.sendMessage({method:'getUrls'}, function(listUrls){
                 
                 chrome.storage.sync.get('localWeeshListId', function(data) {
                     console.log(data['localWeeshListId']);
+                    
                     $.ajax({
                         type: "POST",
-                        url: "http://localhost/Weesh/new_sources_rest.json",
+                        url: "http://localhost:8888/Weesh/new_sources_rest.json",
                         data: {
                             'url':urls,
                             'weeshlistid': data['localWeeshListId']
@@ -305,7 +298,7 @@ $(document).ready(function () {
                     
                     $.ajax({
                         type: "POST",
-                        url: "http://localhost/Weesh/users_rest/login.json",
+                        url: "http://localhost:8888/Weesh/users_rest/login.json",
                         data: {
                             "username":$('#inputLogin').val(),
                             "password":$('#inputPassword').val()
@@ -331,17 +324,20 @@ $(document).ready(function () {
 }); 
 
 function setWeeshListes(username){
+   
+    
         $.ajax({
             type: "GET",
-            url: "http:localhost/Weesh/weesh_lists_rest/index/"+username+".json",
+            url: "http:localhost:8888/Weesh/weesh_lists_rest/index/"+username+".json",
             success: function(data){
                 chrome.storage.sync.set({'localWeeshListId':data['weesh_lists'][0].id}, function() {});
-                
+                 $('#weeshListsLogged').empty();
+                $('#listOnline').empty();
                 $.each(data['weesh_lists'], function(i, item) {
                     $('#weeshListsLogged').append('<li id="weeshList'+i+'">'+item.name+'</li>');
                 });
                 $.each(data['weesh_lists'][0]['Item'], function(i, item) {
-                    $('#listOnline').append('<li id="elementInWeeshList'+i+'"><img class="imgItem" src="'+item.image+'" alt="" /><span classe="price">'+item.price+'</span><button type="button" class="btn btn-danger delete">X</button><a href="'+item.url+'">'+item.title+'</a></li>');
+                    $('#listOnline').append('<li id="elementInWeeshList'+i+'"><img class="imgItem" src="'+item.image+'" alt="" /><span classe="price">'+item.price+'</span><button type="button" class="btn btn-danger deleteOnline">X</button><a href="'+item.url+'">'+item.title+'</a></li>');
                     
                     $('#listOnxline li:last-child').on('click', 'a', function(){
                         chrome.tabs.create({url: $(this).attr('href')});
