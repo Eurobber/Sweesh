@@ -4,14 +4,15 @@ App::uses('Controller', 'Controller');
 
 class WeeshController extends AppController{
 
+    public $uses = array('WeeshList', 'Item', 'User', 'faq');
+
     public function index() {}
     public function faq() {}
 
-    public $uses = array('WeeshList', 'Item', 'User');
  
     public function beforeFilter(){
 			parent::beforeFilter();
-			$this->Auth->allow('index');
+			$this->Auth->allow('index','faq');
 	}
 
 	public function isAuthorized($user = null) {
@@ -27,7 +28,8 @@ class WeeshController extends AppController{
 
         $this->set('items', $my['Item']); 
     }
-             
+    
+
     
     public static function array_utf8_encode($dat)
     {
