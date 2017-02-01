@@ -33,11 +33,6 @@
     //API REST
     Router::mapResources('items_rest');
     Router::mapResources('new_sources_rest');
-    Router::connect(
-        '/weesh_lists_rest/addItem/:username/:weesh_list_name/:item_id',
-        array('controller' => 'weesh_lists_rest', 'action' => 'addItem', '[method]' => 'POST'),
-        array('pass' => array('username', 'weesh_list_name', 'item_id'))
-    );
 	Router::parseExtensions();
 
 /**
