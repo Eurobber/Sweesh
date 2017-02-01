@@ -32,7 +32,7 @@ chrome.runtime.sendMessage({method:'getUrls'}, function(listUrls){
                     url: "http://localhost/Weesh/new_sources_rest.json",
                     data: {
                         'url':urls,
-                        'weeshlistid': '0'
+                        'weeshlistid': '1'
                           },
                     success: function(data){
                         console.log("data suuccess get sources");
