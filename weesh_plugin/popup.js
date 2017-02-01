@@ -24,7 +24,7 @@ chrome.runtime.sendMessage({method:'getUrls'}, function(listUrls){
         
         $.ajax({
             type: "POST",
-            url: "http://localhost:8888/Weesh/new_sources_rest.json",
+            url: "http://localhost/Weesh/new_sources_rest.json",
             data: {
                 'url':urls
                   },
@@ -286,13 +286,13 @@ $(document).ready(function () {
                     
                     $.ajax({
                         type: "POST",
-                        url: "http://localhost:8888/Weesh/users_rest/login.json",
+                        url: "http://localhost/Weesh/users_rest/login.json",
                         data: {
                             "username":$('#inputLogin').val(),
                             "password":$('#inputPassword').val()
                         },
                         success: function(data){
-                            if(data['users'] == 'true') {
+                            if(data['logged'] == 'true') {
                                 chrome.storage.sync.set({'localUsername':$('#inputLogin').val()}, function() {
                                     console.log('saved username');
                                 });

@@ -8,7 +8,7 @@
 <div class="container">
     <div class="row center bloc">
         <p class="col-xs-12">
-            <h3>Vos produits</h3> </p>
+            <h3>Votre panier de souhaits</h3> </p>
         <div class="list-group">
             <?php
     $i = 0;
@@ -31,7 +31,7 @@
                                 <form class="btn btn-lg btn-primary btn-orange" data-toggle="modal" data-target="#<?php echo 'modalDetail'.$i?>">Plus d'informations</form>
                             </div>
                             <div class="col-md-4" style="float: right;  margin-top:3%;">
-                                <?php echo $this->Form->submit('Ajouter à une wishlist', array('class' => 'btn btn-lg btn-primary btn-orange', 'controller' => 'weesh', 'action' => 'overview')) ?>
+                                <?php echo $this->Form->submit('Ajouter à une weeshlist', array('class' => 'btn btn-lg btn-primary btn-orange', 'controller' => 'weesh', 'action' => 'overview')) ?>
                             </div>
                             <div class="col-md-4 " style=" display: inline-block; margin-top:3%;">
                                 <form class="btn btn-lg btn-primary btn-orange" data-toggle="modal" data-target="#<?php echo 'modalComparator'.$i?>">Autres fournisseurs (6)</form>

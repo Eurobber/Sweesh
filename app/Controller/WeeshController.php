@@ -7,7 +7,7 @@ class WeeshController extends AppController{
     public function index() {}
     public function faq() {}
 
-    public $uses = array('WeeshList', 'Item');
+    public $uses = array('WeeshList', 'Item', 'User');
  
     public function beforeFilter(){
 			parent::beforeFilter();
@@ -21,12 +21,11 @@ class WeeshController extends AppController{
         }
     }
     
-        public function myProducts()
+    public function myProducts()
     {
-        
-        $my = self::array_utf8_encode($this->Item->find('all'));
+        $my = self::array_utf8_encode($this->User->findById($this->Auth->user('id')));
         $items = [];
-        foreach ($my as $row => $innerArray) {
+        foreach ($my['Item'] as $row => $innerArray) {
             foreach ($innerArray as $innerRow => $value) {
                 if (array_key_exists('Item', $value)) {
                     foreach ($value as $key => $val) {
@@ -37,7 +36,7 @@ class WeeshController extends AppController{
                 }
             }
         }
-        $this->set('items', $items);       
+        $this->set('items', $items);      
         
     }
     

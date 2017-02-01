@@ -12,6 +12,24 @@ class User extends AppModel {
         )
     );
 
+    public $hasAndBelongsToMany = array(
+        'Item' =>
+            array(
+                'className' => 'Item',
+                //'joinTable' => 'items_weesh_lists',
+                // 'foreignKey' => 'item_id',
+                // 'associationForeignKey' => 'weesh_list_id',
+                'unique' => 'keepExisting'
+                // 'conditions' => '',
+                // 'fields' => '',
+                // 'order' => '',
+                // 'limit' => '',
+                // 'offset' => '',
+                // 'finderQuery' => '',
+                // 'with' => ''
+            )
+    );
+
     public function beforeSave($options = array()) {
         if (isset($this->data[$this->alias]['password'])) {
             $passwordHasher = new SimplePasswordHasher();
