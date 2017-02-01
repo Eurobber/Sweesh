@@ -6,6 +6,7 @@
         </div>
     </div>
 </div>
+<?php debug($weeshlist); ?>
 <div class="container">
     <div class="row center bloc">
         <p class="col-xs-12">
