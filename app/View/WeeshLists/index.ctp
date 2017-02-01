@@ -45,7 +45,7 @@
                         foreach ($value as $item) {
                             ?>
                             <div class="item">
-                                <a href="<?php echo '/Weesh/weeshlist/view/' . $item['id'] ?>">
+                                <a href="<?php echo '/Weesh/weesh_lists/view/' . $item['id'] ?>">
                                     <?php echo $this->Html->image('testCarousel/ubaldi_90356.jpg', ['alt' => 'Light', 'class' => 'sameImg']); ?>
                                     <div class="carousel-caption">
                                         <h3><?php echo $item['name'] ?></h3>

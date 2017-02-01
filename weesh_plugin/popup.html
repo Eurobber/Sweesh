@@ -41,7 +41,7 @@
             ::-webkit-scrollbar-thumb {
                 background: #404d96;
             }
-          .delete{
+          .delete, .deleteOnline{
               float:right;
               
           }
@@ -59,8 +59,12 @@
               min-height:400px !important;
           }
           
-          #tab4 {
+          #tab4,#tab2 {
             float:right;
+          }
+          
+          #tab3{
+              display:none;
           }
           #tabs-4 img{
             width: 100px; /* you can use % */
@@ -73,14 +77,14 @@
               bottom: 0;
               width: 100%;
               left: 0;
-          }
-          
-          #deconnect {
               display:none;
           }
           #msgErrorLog{
               color:darkred;
               display: none;
+          }
+          #msgWeeshEmpty{
+              color:darkred;
           }
           #msgSuccessLog{
               color:darkgreen;
@@ -114,16 +118,18 @@
   </head>
   <body>
     <div class="tabs customTabs">
-        <ul class="tabsOnglets">
-            <li id="tab1"><a href="#tabs-1">Weeshlist</a></li>
-            <li id="tab2"><a href="#tabs-2">Mon compte</a></li>
-            <li id="tab3"><a href="#tabs-3"></a></li>
+        <ul id="tabsOnglets" class="tabsOnglets">
+            <li id="tab1"><a href="#tabs-1">Local</a></li>
+            <li id="tab2"><a href="#tabs-2">Account</a></li>
+            <li id="tab3"><a href="#tabs-3">Online</a></li>
             <li id="tab4"><a href="#tabs-4"><span class="ui-icon ui-icon-info"></span></a></li>
         </ul>
+        
         <div class="contentTabs">
           <div id="tabs-1"> 
-              <h3 class="form-signin-heading">Voici votre Weeshlist locale <img class="small" src="iconT.png"></h3>
-                <ul class="weeshList" id="list">
+              <h4 class="form-signin-heading">Voici votre Weeshlist locale <img class="small" src="iconT.png"></h4>
+                <h3 id='msgWeeshEmpty' class='msgErrorLog'>Votre Weeshlist est vide, commencez à la remplir en navigant sur nos sites compatibles !</h3>
+              <ul class="weeshList" id="list">
                 </ul>
               <button id="clear" class="btn btn-danger">Vider la liste</button>
             </div>
@@ -154,6 +160,11 @@
 			</div>
 			
         <div id="tabs-3">
+            <h4 class="form-signin-heading">Voici votre Weeshlist online <img class="small" src="iconT.png"></h4>
+            
+            <ul class="weeshList" id="listOnline">
+                
+            </ul>
         </div>
         
         

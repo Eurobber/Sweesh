@@ -3,7 +3,6 @@
 App::uses('AppController', 'Controller');
 App::uses('CakeEmail', 'Network/Email');
 
-
 class UsersController extends AppController
 {
 
@@ -42,7 +41,14 @@ class UsersController extends AppController
         if ($this->request->is('post')) {
             $this->User->create();
             if ($this->User->save($this->request->data)) {
+                // Ajout du premier weeshlist par défaut de l'utilisateur
+                $this->loadModel('WeeshList');
+                $this->request->data['WeeshList']['name'] = 'MyWeeshlist';
+                $this->request->data['WeeshList']['user_id'] = $this->User->id;
+                $this->WeeshList->create();
+                $this->WeeshList->save($this->request->data);
 
+                // Envoi d'un mail de confirmation
                 $Email = new CakeEmail();
                 $Email->config('default');
                 $Email->from(array('weesh.io.contact@gmail.com' => 'Weesh.io'))
