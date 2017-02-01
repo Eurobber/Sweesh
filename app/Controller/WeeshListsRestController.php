@@ -15,11 +15,21 @@ class WeeshListsRestController extends AppController {
     public function index($username) {
         // On retrouve l'id de l'utilisateur
         $username = urldecode($username);
-        $user = $this->User->find('first', array('conditions' => array('User.username' => $username), 'fields' => array('User.id')));
+        $user = $this->User->find('first', 
+            array(
+                'conditions' => array('User.username' => $username), 
+                'fields' => array('User.id'),
+                'recursive' => 2)); // ++ profondeur du find(), pour récupérer les produits en même temps
 
         // Réponse
+        if ($user) {
+            $weesh_lists = $user['WeeshList'];
+        } else {
+            $weesh_lists = "false";
+        }
+
         $this->set(array(
-            'weesh_lists' => $user['WeeshList'],
+            'weesh_lists' => $weesh_lists,
             '_serialize' => array('weesh_lists')
         ));
     }
@@ -27,7 +37,8 @@ class WeeshListsRestController extends AppController {
     public function add($username) {
         // On retrouve l'id de l'utilisateur
         $username = urldecode($username);
-        $user = $this->User->find('first', array('conditions' => array('User.username' => $username), 'fields' => array('User.id')));
+        $user = $this->User->find('first', 
+            array('conditions' => array('User.username' => $username), 'fields' => array('User.id')));
 
         // On ajoute l'user_id à la requête
         $this->request->data['WeeshList']['user_id'] = $user['User']['id'];
