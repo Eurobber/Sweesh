@@ -11,14 +11,14 @@ App::uses('AppController', 'Controller');
 
 class UsersRestController extends AppController {
 
-    public $uses = array('User');
+    public $uses = array('User', 'Item');
     public $helpers = array('Html', 'Form');
     public $components = array('RequestHandler');
 
     public function beforeFilter()
     {
         parent::beforeFilter();
-        $this->Auth->allow('index', 'view', 'login');
+        $this->Auth->allow('index', 'view', 'login', 'addItem');
     }
 
     public function isAuthorized($user = null)
@@ -50,6 +50,34 @@ class UsersRestController extends AppController {
         }
         $this->set(array(
             'logged' => $logged,
+            '_serialize' => array('logged')
+        ));
+    }
+
+    public function addItem($username, $item_id) {
+        $added = "false";
+
+        // On retrouve l'id de l'utilisateur
+        $username = urldecode($username);
+        $user = $this->User->find('first', 
+            array('conditions' => array('User.username' => $username), 'fields' => array('User.id')));
+
+        if ($user) {
+            // On vérifie que l'item existe
+            if ($this->Item->exists($item_id)) {
+                // Préparation de la requête
+                $this->request->data['User']['id'] = $user['User']['id'];
+                $this->request->data['Item']['id'] = $item_id;
+
+                // Exécution de la requête
+                if ($this->User->save($this->request->data)) {
+                    $added = "true";
+                }
+            }
+        }
+
+        $this->set(array(
+            'logged' => $added,
             '_serialize' => array('logged')
         ));
     }
