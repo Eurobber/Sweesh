@@ -288,7 +288,7 @@ $(document).ready(function () {
                     
                     $.ajax({
                         type: "POST",
-                        url: "http://localhost:8888/Weesh/users_rest/login.json",
+                        url: "http://localhost/Weesh/users_rest/login.json",
                         data: {
                             "username":$('#inputLogin').val(),
                             "password":$('#inputPassword').val()
@@ -316,7 +316,7 @@ $(document).ready(function () {
 function setWeeshListes(username){
         $.ajax({
             type: "GET",
-            url: "http:localhost:8888/Weesh/weesh_lists_rest/index/"+username+".json",
+            url: "http:localhost/Weesh/weesh_lists_rest/index/"+username+".json",
             success: function(data){
                 console.log(data);
                 $.each(data['weesh_lists'], function(i, item) {
