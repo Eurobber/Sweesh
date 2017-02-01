@@ -25,37 +25,7 @@ chrome.runtime.sendMessage({method:'getUrls'}, function(listUrls){
 	{
         urls = listUrls;
         urls.forEach(myFunction);
-        
-		chrome.storage.sync.get("localUsername", function(data) {
-            if(data['localUsername'] != 'undefined_username') {
-                isLogged(data['localUsername']);
-                
-                chrome.storage.sync.get('localWeeshListId', function(data) {
-                    console.log(data['localWeeshListId']);
-                    
-                    $.ajax({
-                        type: "POST",
-                        url: "http://localhost/Weesh/new_sources_rest.json",
-                        data: {
-                            'url':urls,
-                            'weeshlistid': data['localWeeshListId']
-                        },
-                        success: function(data){
-                            console.log("data suuccess get sources");
-                            console.log(data);
-                        },
-                        error: function(data){
-                            console.log("data error get sources");
-                            console.log(data);
-                        }
-                    });
-                });
-		      }
-	       });
-	}
-        
-		
-        
+	}    
              
         chrome.runtime.sendMessage({method:'getImgs'}, function(img){
             if (typeof img != 'undefined' && img != null && img.length != 0) {
@@ -83,6 +53,55 @@ chrome.runtime.sendMessage({method:'getUrls'}, function(listUrls){
         chrome.runtime.sendMessage({method:'getPrices'}, function(price){
             if (typeof price != 'undefined' && price != null && price.length != 0) {
                 setPrices(price);
+                chrome.storage.sync.get("localUsername", function(data) {
+                    if(data['localUsername'] != 'undefined_username') {
+                        isLogged(data['localUsername']);
+
+                        chrome.storage.sync.get('localWeeshListId', function(data) {
+                            console.log(data['localWeeshListId']);
+
+                        $.ajax({
+                            type: "POST",
+                            url: "http://localhost:8888/Weesh/new_sources_rest.json",
+                            data: {
+                                'url':urls,
+                                'weeshlistid': data['localWeeshListId'],
+                                'price':price
+                            },
+                            success: function(data){
+                                console.log("data suuccess get sources");
+                                $('#msgWeeshSyncInc').show();
+                                $('#imgWeeshSyncInc').show();
+                                window.setTimeout(function cleanLocal(){
+                                    $('#clear').hide();
+                                    $('#msgWeeshSync').show();
+                                    $('#msgWeeshSyncInc').hide();
+                                    $('#imgWeeshSyncInc').hide();
+                                    setWeeshListes(data['localUsername']);
+                                    
+                                    
+                                    chrome.storage.sync.set({'localUrlList':[]}, function() {
+                                        $('#list').empty();
+                                    
+                                    });
+                                    chrome.storage.sync.set({'localImgList':[]}, function() {
+                                    });
+                                    chrome.storage.sync.set({'localNameList':[]}, function() {
+                                    });
+                                    chrome.storage.sync.set({'localPriceList':[]}, function() {
+                                    });
+                                    },5000);
+                                
+                                console.log(data);
+                            },
+                            error: function(data){
+                                console.log("data error get sources");
+                                console.log(data);
+                            }
+                        });
+                    });
+                  }
+	       });
                 
                 chrome.storage.sync.get("localPriceList", function(pricesL) {
                     if(typeof pricesL['localPriceList'] != 'undefined')
@@ -298,7 +317,7 @@ $(document).ready(function () {
                     
                     $.ajax({
                         type: "POST",
-                        url: "http://localhost/Weesh/users_rest/login.json",
+                        url: "http://localhost:8888/Weesh/users_rest/login.json",
                         data: {
                             "username":$('#inputLogin').val(),
                             "password":$('#inputPassword').val()
@@ -330,20 +349,25 @@ function setWeeshListes(username){
             type: "GET",
             url: "http:localhost:8888/Weesh/weesh_lists_rest/index/"+ encodeURI(username)+".json",
             success: function(data){
-                chrome.storage.sync.set({'localWeeshListId':data['weesh_lists'][0].id}, function() {});
-                 $('#weeshListsLogged').empty();
-                $('#listOnline').empty();
-                $.each(data['weesh_lists'], function(i, item) {
-                    $('#weeshListsLogged').append('<li id="weeshList'+i+'">'+item.name+'</li>');
-                });
-                $.each(data['weesh_lists'][0]['Item'], function(i, item) {
-                    $('#listOnline').append('<li id="elementInWeeshList'+i+'"><img class="imgItem" src="'+item.image+'" alt="" /><span classe="price">'+item.price+'</span><button type="button" class="btn btn-danger deleteOnline">X</button><a href="'+item.url+'">'+item.title+'</a></li>');
-                    
-                    $('#listOnxline li:last-child').on('click', 'a', function(){
-                        chrome.tabs.create({url: $(this).attr('href')});
-                        return false;
+                if(data['weesh_lists'] != 'false') {
+                    chrome.storage.sync.set({'localWeeshListId':data['weesh_lists'][0].id}, function() {});
+                    $('#weeshListsLogged').empty();
+                    $('#listOnline').empty();
+                    console.log("weesh list :");
+                    console.log(data);
+                    $.each(data['weesh_lists'], function(i, item) {
+                        $('#weeshListsLogged').append('<li id="weeshList'+i+'">'+item.name+'</li>');
                     });
-                });
+                    $.each(data['weesh_lists'][0]['Item'], function(i, item) {
+                        console.log(item);
+                        $('#listOnline').append('<li id="elementInWeeshList'+i+'"><img class="imgItem" src="'+item.image+'" alt="" /><span classe="price">'+item.price+'</span><button type="button" class="btn btn-danger deleteOnline">X</button><a href="'+item.url+'">'+item.title+'</a></li>');
+
+                        $('#listOnxline li:last-child').on('click', 'a', function(){
+                            chrome.tabs.create({url: $(this).attr('href')});
+                            return false;
+                        });
+                    });
+                }
             },
             error: function(data){
                 console.log('error?');
