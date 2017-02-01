@@ -83,6 +83,9 @@
               color:darkred;
               display: none;
           }
+          #msgWeeshEmpty{
+              color:darkred;
+          }
           #msgSuccessLog{
               color:darkgreen;
               display: none;
@@ -115,7 +118,7 @@
   </head>
   <body>
     <div class="tabs customTabs">
-        <ul class="tabsOnglets">
+        <ul id="tabsOnglets" class="tabsOnglets">
             <li id="tab1"><a href="#tabs-1">Local</a></li>
             <li id="tab2"><a href="#tabs-2">Account</a></li>
             <li id="tab3"><a href="#tabs-3">Online</a></li>
@@ -124,7 +127,7 @@
         <div class="contentTabs">
           <div id="tabs-1"> 
               <h4 class="form-signin-heading">Voici votre Weeshlist locale <img class="small" src="iconT.png"></h4>
-                <h3 class='msgErrorLog'>Votre Weeshlist est vide, commencez à la remplir en navigant sur nos sites compatibles !</h3>
+                <h3 id='msgWeeshEmpty' class='msgErrorLog'>Votre Weeshlist est vide, commencez à la remplir en navigant sur nos sites compatibles !</h3>
               <ul class="weeshList" id="list">
                 </ul>
               <button id="clear" class="btn btn-danger">Vider la liste</button>
