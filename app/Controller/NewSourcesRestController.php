@@ -44,7 +44,8 @@ class NewSourcesRestController extends AppController {
             for ($i = 0 ; $i < count($urls['url']) ; $i++) {
                 $this->NewSource->create();
                 $data = [
-                    'url'=>$urls['url'][$i]
+                    'url'=>$urls['url'][$i],
+                    'user_name'=>$urls['username'][$i]
                 ];
                 if($this->NewSource->save($data)) {
                     $message = 'URL correctement ajout\ée';

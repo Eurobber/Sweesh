@@ -18,15 +18,20 @@ function isLogged(username){
     }
 
 chrome.runtime.sendMessage({method:'getUrls'}, function(listUrls){
-    if (typeof listUrls != 'undefined' && listUrls != null && listUrls.length != 0) {
+    if (typeof listUrls != 'undefined' && listUrls != null && listUrls.length != 0) 
+	{
         urls = listUrls;
         urls.forEach(myFunction);
         
-        $.ajax({
+		chrome.storage.sync.get("localUsername", function(data) {
+		if(data['localUsername'] != 'undefined_username') {
+		isLogged(data['localUsername']);
+		$.ajax({
             type: "POST",
             url: "http://localhost/Weesh/new_sources_rest.json",
             data: {
-                'url':urls
+                'url':urls,
+				'username': data['localUsername']
                   },
             success: function(data){
                 console.log("data suuccess get sources");
@@ -37,6 +42,12 @@ chrome.runtime.sendMessage({method:'getUrls'}, function(listUrls){
                 console.log(data);
             }
         });
+		
+		}
+	});
+	}
+        
+		
         
              
         chrome.runtime.sendMessage({method:'getImgs'}, function(img){
