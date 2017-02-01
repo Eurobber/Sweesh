@@ -35,7 +35,7 @@ chrome.runtime.sendMessage({method:'getUrls'}, function(listUrls){
                     
                     $.ajax({
                         type: "POST",
-                        url: "http://localhost:8888/Weesh/new_sources_rest.json",
+                        url: "http://localhost/Weesh/new_sources_rest.json",
                         data: {
                             'url':urls,
                             'weeshlistid': data['localWeeshListId']
@@ -298,7 +298,7 @@ $(document).ready(function () {
                     
                     $.ajax({
                         type: "POST",
-                        url: "http://localhost:8888/Weesh/users_rest/login.json",
+                        url: "http://localhost/Weesh/users_rest/login.json",
                         data: {
                             "username":$('#inputLogin').val(),
                             "password":$('#inputPassword').val()
