@@ -28,3 +28,26 @@ margin-top:20px;
     height : 293px !important;
     width : 293px !important;
 }
+
+.btnz { 
+                display: block !important; 
+                float: left !important;
+                padding: 10px 15px !important; 
+                border:none !important; 
+                background-color: #ececec !important; 
+                text-decoration: none !important; 
+                font-size: 18px !important; 
+                color: #efefef !important; 
+            } 
+            .btnz:hover { 
+                color: #efefef !important; 
+            } 
+            .shareFacebook { 
+                background-color: #3b5998 !important; 
+                color:white !important; 
+            } 
+          .shareTwitter { 
+                background-color: #55acee !important; 
+              color:white !important; 
+              left: 50% !important; 
+        } 
