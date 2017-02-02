@@ -189,73 +189,41 @@ class UsersController extends AppController
     
         function forgot_password() {
             
-        /*    if ($this->request->is('post')) {
+        if ($this->request->is('post')) {
             $user = $this->User->findByUsername($this->data['User']['username']); 
            if (empty($user)) {
                 $this->Session->setflash('Nous ne trouvons pas votre identifiant');
                 $this->redirect(array('controller' => 'users', 'action' => 'forgot_password'));
             } else {
                 $user = $this->__generatePasswordToken($user); 
-                if ($this->User->save($user) && $this->__sendForgotPasswordEmail($user['User']['id'])) {
+                if ($this->User->save($user)) {
                     $this->Session->setflash('Votre demande de changement de mot de passe a été envoyée à votre email.
 						Vous avez 24 heures pour effectuer la modification.');
                     $this->redirect(array('controller' => 'users', 'action' => 'login'));
                 }
             }
-        }*/
-    }
-    
-     /*  function reset_password_token($reset_password_token = null) { debug($this->request->data);     
-        if (empty( $this->request->data)) {       
-            $this->request->data = $this->User->findByPassword($reset_password_token); 
-            if (!empty($this->data['User']['reset_password_token']) && !empty($this->data['User']['token_created_at']) &&
-            $this->__validToken($this->data['User']['token_created_at'])) {
-                $this->data['User']['id'] = null;
-                $_SESSION['token'] = $reset_password_token;
-            } else {
-                $this->Session->setflash('La demande de changement de mot de passe a expireeeé ou est invalide.');
-                    $this->redirect(array('controller' => 'users', 'action' => 'login'));
-            }
-        } else {
-            if ($this->data['User']['reset_password_token'] != $_SESSION['token']) {
-                $this->Session->setflash('La demande de changement de mot de passe a expiré ou est invalide.');
-                    $this->redirect(array('controller' => 'users', 'action' => 'login'));
-            }
-            $user = $this->User->findByResetPasswordToken($this->data['User']['reset_password_token']);
-            $this->User->id = $user['User']['id'];
-            if ($this->User->save($this->data, array('validate' => 'only'))) {
-                $this->data['User']['reset_password_token'] = $this->data['User']['token_created_at'] = null;
-                if ($this->User->save($this->data) && $this->__sendPasswordChangedEmail($user['User']['id'])) {
-                    unset($_SESSION['token']);
-                    $this->Session->setflash('Votre mot de passe a été changé avec succès, veuillez vous identifier pour continuer.');
-                    $this->redirect(array('controller' => 'users', 'action' => 'login'));
-                }
-            }
         }
     }
-    
+        
         function __generatePasswordToken($user) {
         if (empty($user)) {
             return null;
         }
+
         // Generate a random string 100 chars in length.
         $token = "";
         for ($i = 0; $i < 100; $i++) {
             $d = rand(1, 100000) % 2;
             $d ? $token .= chr(rand(33,79)) : $token .= chr(rand(80,126));
-        }
-        (rand(1, 100000) % 2) ? $token = strrev($token) : $token = $token;
-        // Generate hash of random string
-        $hash = Security::hash($token, 'sha256', true);;
-        for ($i = 0; $i < 20; $i++) {
-            $hash = Security::hash($hash, 'sha256', true);
-        }
-        $user['User']['reset_password_token'] = $hash;
-        $user['User']['token_created_at']     = date('Y-m-d H:i:s');
+        }    
+        $this->__sendForgotPasswordEmail($user['User']['id'], $token);
+
+      
+        $user['User']['password'] = $token;
         return $user;
     }
     
-        function __sendForgotPasswordEmail($id = null) {
+        function __sendForgotPasswordEmail($id = null, $token) {
         if (!empty($id)) {
             $this->User->id = $id;
             $User = $this->User->read();
@@ -283,7 +251,7 @@ class UsersController extends AppController
                         )
                     ))
                             ->template('reset_password_request')->viewVars(array('username'=>$User['User']['username'],
-                        'email'=>$User['User']['email']))
+                        'email'=>$User['User']['email'],'password'=>$token))
                             ->send(); 
 
             $this->Flash->success(__('Vos informations ont bien été modifiées !'));
@@ -292,44 +260,8 @@ class UsersController extends AppController
         }
         return false;
     }
-        function __sendPasswordChangedEmail($id = null) {
-        if (!empty($id)) {
-            $this->User->id = $id;
-            $User = $this->User->read();
-                $Email = new CakeEmail();
-                $Email->config('default'); 
-                $Email->from(array('weesh.io.contact@gmail.com' => 'Weesh.io'))
-                    ->to($User['User']['email']) 
-                    ->subject('Succès modification mot de passe')
-                    ->emailFormat('html')
-                    ->attachments(array(
-                        'facebook.png' => array(
-                            'file' => ROOT . '/app/webroot/img/logo/facebook.png',
-                            'mimetype' => 'image/png',
-                            'contentId' => '003'
-                        ),
-                        'twitter.png' => array(
-                            'file' => ROOT . '/app/webroot/img/logo/twitter.png',
-                            'mimetype' => 'image/png',
-                            'contentId' => '002'
-                        ),
-                        'logo.png' => array(
-                            'file' => ROOT . '/app/webroot/img/logo/weesh_logo.png',
-                            'mimetype' => 'image/png',
-                            'contentId' => '001'
-                        )
-                    ))
-                            ->template('password_reset_success')->viewVars(array(
-                        'password'=>$User['User']['password']))
-                            ->send(); 
 
-            $this->Flash->success(__('Vos informations ont bien été modifiées !'));
-            $this->set('User', $User);
-            return true;
-        }
-        return false;
-    }
-*/
+
     public function logout()
     {
         return $this->redirect($this->Auth->logout());
