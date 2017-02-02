@@ -75,7 +75,7 @@ class WeeshListsController extends AppController
         }
         $this->set('comparator', $arrayComparator);
         
-        if($myWeeshList['WeeshList']['user_id'] == AuthComponent::user()['id']){
+        if($myWeeshList['WeeshList']['user_id'] == AuthComponent::user()['id'] || $myWeeshList['WeeshList']['visibility'] == 'public'){
             $items = [];
             foreach ($myWeeshList as $row => $innerArray) {
                 if($row == 'Item'){
