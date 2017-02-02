@@ -271,6 +271,18 @@ chrome.storage.sync.get("localUsername", function(imgsL) {
 });
 
 $(document).ready(function () {
+    
+    $.ajaxSetup({ cache: true });
+     $.getScript('https://connect.facebook.net/en_US/sdk.js', function(){
+         FB.init({
+           appId: '{158985274131305}',
+           version: 'v2.7' // or v2.1, v2.2, v2.3, ...
+         });     
+         $('#loginbutton,#feedbutton').removeAttr('disabled');
+         //FB.getLoginStatus(updateStatusCallback);
+     });
+    
+    
                 $("div.tabs").tabs();
                 $('#registerButton').on('click', function(){
                     chrome.tabs.create({url: "http://www.google.fr"});
@@ -355,8 +367,13 @@ function setWeeshListes(username){
                     chrome.storage.sync.set({'localWeeshListId':data['weesh_lists'][0].id}, function() {});
                     $('#weeshListsLogged').empty();
                     $('#listOnline').empty();
-                    console.log("weesh list :");
-                    console.log(data);
+                    
+                    $('#fbShareButton').attr('href', "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fweesh.fr%2FWeesh%2Fweesh_lists%2Fview%2F"+data['weesh_lists'][0].id+"%2F&src=sdkpreparse");      
+                    $('#twitterShareButton').on('click', function(){
+                         chrome.tabs.create({url: 'https://twitter.com/intent/tweet?text='+encodeURI('Voici ma Weeshlist !') +'&url=https%3A%2F%2Fweesh.fr%2FWeesh%2Fweesh_lists%2Fview%2F'+data['weesh_lists'][0].id+'&via=Weesh_io'});
+                         return false;
+                     });
+                    
                     $.each(data['weesh_lists'], function(i, item) {
                         $('#weeshListsLogged').append('<li id="weeshList'+i+'">'+item.name+'</li>');
                     });
