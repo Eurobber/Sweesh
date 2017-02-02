@@ -22,19 +22,22 @@ class WeeshListsController extends AppController
     public function index()
     {
         $lists = $this->WeeshList->find('all', array('conditions' => array('WeeshList.user_id' => AuthComponent::user()['id'])));
-        $this->set('lists', $lists);
+        $this->set('lists', $this->array_utf8_encode($lists));
+        $nb = $this->WeeshList->find('count', array('conditions' => array('WeeshList.user_id' => AuthComponent::user()['id'])));
+        $this->set('nb', $nb);
     }
 
     public function add()
     {
         if ($this->request->is('post')) {
+            debug($this->request->data);
             $this->WeeshList->create();
             $this->request->data['WeeshList']['user_id'] = AuthComponent::user()['id'];
             if ($this->WeeshList->save($this->request->data)) {
-                $this->Flash->success(__('Votre WeeshList a bien été ajouté'));
+                $this->Flash->success(__('Votre WeeshList a bien été ajoutée'));
                 return $this->redirect(array('action' => 'index'));
             } else {
-                $this->Flash->error(__('Votre WeeshList n\'a pas été ajouté. Merci de réessayer.'));
+                $this->Flash->error(__('Votre WeeshList n\'a pas été ajoutée. Merci de réessayer.'));
                 return $this->redirect(array('action' => 'index'));
             }
         }
