@@ -31,6 +31,9 @@ $this->assign('title', 'Connectez-vous à Weesh !');
                 <div class="col-sm-2" style="margin-top:5%;">
                     <?php echo $this->Form->submit('Accéder à mon espace Weesh', array('class' => 'btn btn-lg btn-primary btn-orange')) ?>
                 </div>
+                <div class="col-sm-6 col-sm-offset-4">
+                    <span style="color:red;"><?php echo $this->Session->flash(); ?></span> 
+                </div>
             </div>
             <div class="form-group">
                 <div class="container">
@@ -43,6 +46,5 @@ $this->assign('title', 'Connectez-vous à Weesh !');
                 </div>
             <?php echo $this->Form->end(); ?>
        
-            <span style="color:red;"><?php echo $this->Session->flash(); ?></span> </div>
             </div>
         </div>

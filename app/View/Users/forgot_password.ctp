@@ -22,9 +22,12 @@
                         <?php echo $this->Form->submit('Récupérer mon mot de passe', array('class' => 'btn btn-lg btn-primary btn-orange', 'controller' => 'users', 'action' => 'forgot_password')); ?>
                           </div>
                      </div>
+                     <div class="row col-sm-6 col-sm-offset-2">
+                        <span style="color:red;"><?php echo $this->Session->flash(); ?></span>
+                     </div>
                 </div>
             <?php echo $this->Form->end(); ?>
-            <span style="color:red;"><?php echo $this->Session->flash(); ?></span> </div>
+             </div>
         </div>
     </div>
 </div>
