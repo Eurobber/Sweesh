@@ -27,96 +27,99 @@
             <p class="col-md-12">
             <div class="container">
                 <h1>Vous avez actuellement <?php echo $nb ?> Weeshlists</h1>
-        <div id="main_area">
-                <!-- Slider -->
-                <div class="row">
-                    <div class="col-lg-12" id="slider">
-                        <!-- Top part of the slider -->
-                        <div class="row">
-                            <div class="col-lg-8" id="carousel-bounding-box">
-                                <div class="carousel slide" id="myCarousel">
-                                
-                                    <!-- Carousel items -->
-                                    <div class="carousel-inner">
-                                        <div class="active item" data-slide-number="0">
+                <div id="main_area">
+                    <!-- Slider -->
+                    <div class="row">
+                        <div class="col-lg-12" id="slider">
+                            <!-- Top part of the slider -->
+                            <div class="row">
+                                <div class="col-lg-8" id="carousel-bounding-box">
+                                    <div class="carousel slide" id="myCarousel">
+
+                                        <!-- Carousel items -->
+                                        <div class="carousel-inner">
+                                            <div class="active item" data-slide-number="0">
+                                                <a href="<?php echo '/Weesh/weesh_lists/view/' . $lists[0]['WeeshList']['id'] ?>">
+                                                    <?php echo $this->Html->image("biglogo.jpg", array("alt" => "Logo", "class" => "centerImg")); ?>
+                                                </a>
+                                            </div>
                                             <?php
-                                            echo $this->Html->image("biglogo.jpg", array("alt" => "Logo", "class"=>"centerImg"));
-                                                ?></div>
-
-                                        
-                                        <?php
-
-                                        $i = 0;
-                                        foreach ($lists as $value) {
-                                            
+                                            $i = 0;
+                                            $listWithoutFirst = array_slice($lists, 1,1);
+                                            foreach ($listWithoutFirst as $value) {
+                                                $id = $value['WeeshList']['id'];
                                             foreach ($value as $item) {
-                                                $i++;
-                                                
-                                                if($i<$nb){
-                                                    echo "<div class=\"item\" data-slide-number=\"".$i."\">\n"; 
-                                                    $lnk = $i+295;
-                                                    echo "<img class=\"centerImg\" src=\"https://unsplash.it/$lnk/$lnk\"></div>\n";
-                                                }                                               
-                                            }
-                                        }  ?>
-                                    </div><!-- Carousel nav -->
-                                    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-                                        <span class="glyphicon glyphicon-chevron-left"></span>                                       
-                                    </a>
-                                    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-                                        <span class="glyphicon glyphicon-chevron-right"></span>                                       
-                                    </a>                                
+                                                    $i++;
+                                                    if ($i < $nb) {
+                                                        echo "<div class=\"item\" data-slide-number=\"" . $i . "\">\n"; ?>
+                                                        <a href="<?php echo '/Weesh/weesh_lists/view/' . $id ?>">
+                                                            <?php
+                                                            $lnk = $i + 295;
+                                                            echo "<img class=\"centerImg\" src=\"https://unsplash.it/$lnk/$lnk\"></div>\n";
+                                                            echo "</a>";
+                                                    }
+                                                }
+                                            } ?>
+                                        </div><!-- Carousel nav -->
+                                        <a class="left carousel-control" href="#myCarousel" role="button"
+                                           data-slide="prev">
+                                            <span class="glyphicon glyphicon-chevron-left"></span>
+                                        </a>
+                                        <a class="right carousel-control" href="#myCarousel" role="button"
+                                           data-slide="next">
+                                            <span class="glyphicon glyphicon-chevron-right"></span>
+                                        </a>
                                     </div>
-                            </div>
+                                </div>
 
-                            <div class="col-sm-3" id="carousel-text"></div>
+                                <div class="col-sm-3" id="carousel-text"></div>
 
-                            <div id="slide-content" style="display: none;">
-                                <?php
+                                <div id="slide-content" style="display: none;">
+                                    <?php
                                     $i = -1;
-                                        foreach ($lists as $value) {
-                                            
-                                            foreach ($value as $item) {
-                                                $i++;
-                                    if($i<$nb){echo "<div id=\"slide-content-$i\">\n"; 
-                                    echo "<h3>".$lists[$i]['WeeshList']['name']."</h3>\n"; 
-                                    echo "<p>".$lists[$i]['WeeshList']['description']."</p>\n";                                     
-                                    echo "</div>\n";
-                                    }
-                                    
-                                    }
-                                }  ?>
-                            </div>
-                        </div>
-                    </div>
-                </div><!--/Slider-->
-
-                <div class="row hidden-xs" id="slider-thumbs">
-                        <!-- Bottom switcher of slider -->
-                        <ul class="hide-bullets">
-                        <?php
-                                $i = -1;
                                     foreach ($lists as $value) {
-                                        
+
                                         foreach ($value as $item) {
                                             $i++;
-                                            if($i==0){
-                                                echo "<li class=\"col-sm-2\">\n"; 
-                                                echo "<a class=\"thumbnail\" id=\"carousel-selector-$i\">".$this->Html->image("biglogo.jpg", array("alt" => "Logo"))."</a>\n"; 
-                                                echo "</li>\n";
+                                            if ($i < $nb) {
+                                                echo "<div id=\"slide-content-$i\">\n";
+                                                echo "<h3>" . $lists[$i]['WeeshList']['name'] . "</h3>\n";
+                                                echo "<p>" . $lists[$i]['WeeshList']['description'] . "</p>\n";
+                                                echo "</div>\n";
                                             }
-                                            else if($i<$nb){
-                                                echo "<li class=\"col-sm-2\">\n"; 
-                                                $lnk = $i+295;
-                                                echo "<a class=\"thumbnail\" id=\"carousel-selector-$i\"><img src=\"https://unsplash.it/$lnk/$lnk\"></a>\n"; 
-                                                echo "</li>\n";
-                                            }
+
                                         }
-                                }  ?>                            
-                        </ul>                 
+                                    } ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--/Slider-->
+
+                    <div class="row hidden-xs" id="slider-thumbs">
+                        <!-- Bottom switcher of slider -->
+                        <ul class="hide-bullets">
+                            <?php
+                            $i = -1;
+                            foreach ($lists as $value) {
+
+                                foreach ($value as $item) {
+                                    $i++;
+                                    if ($i == 0) {
+                                        echo "<li class=\"col-sm-2\">\n";
+                                        echo "<a class=\"thumbnail\" id=\"carousel-selector-$i\">" . $this->Html->image("biglogo.jpg", array("alt" => "Logo")) . "</a>\n";
+                                        echo "</li>\n";
+                                    } else if ($i < $nb) {
+                                        echo "<li class=\"col-sm-2\">\n";
+                                        $lnk = $i + 295;
+                                        echo "<a class=\"thumbnail\" id=\"carousel-selector-$i\"><img src=\"https://unsplash.it/$lnk/$lnk\"></a>\n";
+                                        echo "</li>\n";
+                                    }
+                                }
+                            } ?>
+                        </ul>
+                    </div>
                 </div>
-        </div>
-</div>
+            </div>
         </div>
     </div>
 <?php }; ?>
@@ -127,11 +130,12 @@
                 <h3>Ajouter une Weeshlist</span></h3>
                 <?php echo $this->Form->create('WeeshList', array('controller' => 'weesh_lists', 'action' => 'add', 'class' => 'form-horizontal', 'inputDefaults' => array('label' => false))); ?>
                 <div class="form-group">
-                    <label for="name" class="col-sm-2 col-sm-offset-2 control-label"><span class="pull-left">Titre</label>
+                    <label for="name" class="col-sm-2 col-sm-offset-2 control-label"><span
+                                class="pull-left">Titre</label>
                     <div class="col-sm-4">
                         <?php echo $this->Form->input('name', array('class' => 'form-control')); ?>
                     </div>
-                    </div>
+                </div>
                 <div class="form-group">
                     <label for="visibility" class="col-sm-2 col-sm-offset-2 control-label"><span class="pull-left">Visibilité</label>
                     <div class="col-sm-4">
@@ -151,8 +155,8 @@
                         <?php echo $this->Form->submit('Ajouter la Weeshlist', array('class' => 'btn btn-lg btn-primary btn-orange')) ?>
                     </div>
                 </div>
-                    <?php echo $this->Form->end(); ?>
-                    <?php echo $this->Session->flash(); ?>
+                <?php echo $this->Form->end(); ?>
+                <?php echo $this->Session->flash(); ?>
             </div>
         </div>
     </div>
