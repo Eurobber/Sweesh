@@ -85,6 +85,8 @@
                                                 echo "<div id=\"slide-content-$i\">\n";
                                                 echo "<h3>" . $lists[$i]['WeeshList']['name'] . "</h3>\n";
                                                 echo "<p>" . $lists[$i]['WeeshList']['description'] . "</p>\n";
+                                                echo "<a id='fbShareButton' class='fb-xfbml-parse-ignore btnz share shareFacebook' target='_blank'  href='https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fweesh.fr%2FWeesh%2Fweesh_lists%2Fview%2F".$lists[$i]['WeeshList']['id']."%2F&src=sdkpreparse'><i class='fa fa-facebook'></i> Partager</a>
+                <a id='twitterShareButton' class='btnz share shareTwitter' href='https://twitter.com/intent/tweet?text=Consulte ma Weeshlist !&url=https%3A%2F%2Fweesh.fr%2FWeesh%2Fweesh_lists%2Fview%2F".$lists[$i]['WeeshList']['id']."&via=Weesh_io'><i class='fa fa-twitter'></i> Partager</a>";
                                                 echo "</div>\n";
                                             }
 
