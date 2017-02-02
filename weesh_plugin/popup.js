@@ -285,7 +285,7 @@ $(document).ready(function () {
     
                 $("div.tabs").tabs();
                 $('#registerButton').on('click', function(){
-                    chrome.tabs.create({url: "http://www.google.fr"});
+                    chrome.tabs.create({url: "http://localhost/Weesh/users/signup"});
                     return false;
                 });
                 $('#amazonButton').on('click', function(){

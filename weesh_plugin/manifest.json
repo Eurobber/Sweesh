@@ -1,6 +1,6 @@
 {   
 "name": "Weesh",   
-"version": "1.7",
+"version": "1.8",
 "manifest_version": 2,
 "description": "Ce plug-in vous permet de naviguer et de creer vos listes de souhaits d'achats en toute tranquillite.",
 "web_accessible_resources": ["iconT.png"],
