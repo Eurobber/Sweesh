@@ -8,8 +8,8 @@
 <div class="container">
     <div class="row bloc">
         <div class="col-md-8">
-            <h3 class="heading-primary"><strong>Who</strong> We Are ?...</h3>
-            <p>Nous sommes une jeune équipe issue de l'école ECE Paris et avaons à coeur de fournir à nos utilisateurs un produit simple et ergonomique.</p>
+            <h3 class="heading-primary"><strong>Who</strong> Are We ?...</h3>
+            <p>Nous sommes une jeune équipe issue de l'école ECE Paris et avons à coeur de fournir à nos utilisateurs un produit simple et ergonomique.</p>
         </div>
         <div class="col-md-4">
             <div class="featured-box featured-box-primary">
@@ -57,7 +57,7 @@
             </li>
             <li class="appear-animation" data-appear-animation="fadeInUp">
                 <div class="thumb">
-                    <?php echo $this->Html->image("Alexis.png");?>
+                    <?php echo $this->Html->image("alexis.png");?>
                 </div>
                 <div class="featured-box">
                     <div class="box-content">
@@ -73,7 +73,7 @@
                 <div class="featured-box">
                     <div class="box-content">
                         <h4 class="heading-primary"><strong>Paul</strong></h4>
-                        <p style="margin-left: 90px;">Front-end developer/plugin</p>
+                        <p style="margin-left: 90px;">Plugin developer</p>
                     </div>
                 </div>
             </li>
