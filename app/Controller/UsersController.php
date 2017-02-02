@@ -211,11 +211,13 @@ class UsersController extends AppController
         }
 
         // Generate a random string 100 chars in length.
-        $token = "";
-        for ($i = 0; $i < 100; $i++) {
-            $d = rand(1, 100000) % 2;
-            $d ? $token .= chr(rand(33,79)) : $token .= chr(rand(80,126));
-        }    
+     	$token = "";
+        $characters = array_merge(range('A','Z'), range('a','z'), range('0','9'));
+        $max = count($characters) - 1;
+        for ($i = 0; $i < 6; $i++) {
+            $rand = mt_rand(0, $max);
+            $token .= $characters[$rand];
+        }   
         $this->__sendForgotPasswordEmail($user['User']['id'], $token);
 
       
