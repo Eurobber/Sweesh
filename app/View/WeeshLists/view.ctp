@@ -37,7 +37,7 @@
                                 <?php echo $this->Form->create('Item', array('action' => 'moveToWeeshlist')); ?>
                                 <?php echo $this->Form->input('item_id', array('type' => 'hidden', 'value' => $value['id'])); ?>
                                 <?php echo $this->Form->input('old_weesh_list_id', array('type' => 'hidden', 'value' => $current_weeshlist_id)); ?>
-                                <?php echo $this->Form->input('new_weesh_list_id', array('type' => 'select', 'options' => array($weeshlists_names))); ?>
+                                <?php echo $this->Form->input('new_weesh_list_id', array('label' => false, 'type' => 'select', 'options' => array($weeshlists_names))); ?>
                                 <?php echo $this->Form->submit('Déplacer vers un autre weeshlist', array('class' => 'btn btn-lg btn-primary btn-orange')); ?>
                                 <?php echo $this->Form->end(); ?>
                             </div>
