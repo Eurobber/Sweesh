@@ -7,20 +7,16 @@
 </div>
 <div class="container">
     <div class="row bloc">
-        <div class="col-md-8">
+        <div class="col-md-12">
             <h3 class="heading-primary"><strong>Who</strong> are we...?</h3>
             <p>Nous sommes une jeune équipe issue de l'école ECE Paris et avons à coeur de fournir à nos utilisateurs un produit simple et ergonomique.</p>
         </div>
-        <div class="col-md-4">
+        <div class="row col-md-4 col-md-offset-4">
             <div class="featured-box featured-box-primary">
                 <div class="box-content">
                     <h4 class="text-uppercase">L'équipe de choc !</h4>
-                    <ul class="thumbnail-gallery" data-plugin-lightbox data-plugin-options='{"delegate": "a", "type": "image", "gallery": {"enabled": true}}'>
-                        <li>
-                            <a title="Benefits 1"> <span class="thumbnail mb-none">
-				            <?php echo $this->Html->image("suricate.png");?>
-                        </span> </a>
-                    </ul>
+                        <a title="Benefits 1"> <span class="thumbnail mb-none">
+				        <?php echo $this->Html->image("suricate.png");?>
                 </div>
             </div>
         </div>
@@ -31,7 +27,6 @@
     </div>
     <div class="row bloc">
         <div class="col-md-12">
-            <h3 class="heading-primary mt-xl"><strong>Powered</strong> by</h3> </div>
         <ul class="history">
             <li class="appear-animation" data-appear-animation="fadeInUp">
                 <div class="thumb">

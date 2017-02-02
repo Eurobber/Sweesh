@@ -16,3 +16,15 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.hide-bullets {
+list-style:none;
+margin-left: -40px;
+margin-top:20px;
+}
+
+.centerImg{
+    display:inline !important;
+    height : 293px !important;
+    width : 293px !important;
+}
