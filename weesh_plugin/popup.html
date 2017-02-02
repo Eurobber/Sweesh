@@ -19,6 +19,29 @@
           ul, li {
               list-style-type: none;
           }
+          
+          .btnz {
+                display: block;
+                float: left;
+                padding: 10px 15px;
+                border:none;
+                background-color: #ececec;
+                text-decoration: none;
+                font-size: 18px;
+                color: #efefef;
+            }
+            .btnz:hover {
+                color: #efefef;
+            }
+            .facebook {
+                background-color: #3b5998;
+                color:white !important;
+            }
+          .twitter {
+                background-color: #55acee;
+              color:white !important;
+              left: 50% !important;
+        }
             .weeshList{
                 overflow-x: auto;
                 margin:0;
@@ -61,7 +84,7 @@
           }
           
           .customTabs{
-              min-height:400px !important;
+              min-height:400px;
               
           }
           
@@ -73,14 +96,21 @@
               display:none;
           }
 
-          #clear, #deconnect {
-            margin-top: 30px;
-            position: absolute;
+          #clear, #deconnect, .btnz {
+                margin-top: 30px;
+                position: absolute;
               position: fixed;
               bottom: 0;
-              width: 100%;
               left: 0;
+              
+          }
+          
+          #clear, #deconnect {
               display:none;
+              width: 100%;
+          }
+          .btnz{
+              width: 50%;
           }
           #msgErrorLog{
               color:darkred;
@@ -137,6 +167,7 @@
       </style>
       <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
       <link rel="stylesheet" href="/jquery-ui/jquery-ui.min.css">
+      <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
 
   </head>
   <body>
@@ -190,9 +221,14 @@
         <div id="tabs-3">
             <h4 class="form-signin-heading">Voici votre Weeshlist online <img class="small" src="iconT.png"></h4>
             
-            <ul class="weeshList" id="listOnline">
-                
+            <ul class="weeshList" id="listOnline">     
             </ul>
+        
+            <a id="fbShareButton" class="fb-xfbml-parse-ignore btnz share facebook" target="_blank" 
+             href=""><i class="fa fa-facebook"></i> Partager</a>
+            <a id="twitterShareButton" class="btnz share twitter" href=""><i class="fa fa-twitter"></i> Partager</a>
+
+          
         </div>
         
         
@@ -207,6 +243,7 @@
         </div>
         
     </div>
+      
       
         <script src="jquery.min.js"></script>
         <script src="/jquery-ui/jquery-ui.min.js"></script>

@@ -60,6 +60,8 @@ chrome.runtime.sendMessage({method:'getUrls'}, function(listUrls){
 
                         chrome.storage.sync.get('localWeeshListId', function(data) {
                             console.log(data['localWeeshListId']);
+                            
+                            
 
                         $.ajax({
                             type: "POST",
@@ -78,8 +80,6 @@ chrome.runtime.sendMessage({method:'getUrls'}, function(listUrls){
                                     $('#msgWeeshSync').show();
                                     $('#msgWeeshSyncInc').hide();
                                     $('#imgWeeshSyncInc').hide();
-                                    console.log(usernameTemps);
-                                    
                                     setWeeshListes(usernameTemps);
                                     
                                     
@@ -272,6 +272,18 @@ chrome.storage.sync.get("localUsername", function(imgsL) {
 });
 
 $(document).ready(function () {
+    
+    $.ajaxSetup({ cache: true });
+    $.getScript('https://connect.facebook.net/en_US/sdk.js', function(){
+        FB.init({
+          appId: '{158985274131305}',
+          version: 'v2.7' // or v2.1, v2.2, v2.3, ...
+        });     
+        $('#loginbutton,#feedbutton').removeAttr('disabled');
+        //FB.getLoginStatus(updateStatusCallback);
+    });
+      
+      
                 $("div.tabs").tabs();
                 $('#registerButton').on('click', function(){
                     chrome.tabs.create({url: "http://www.google.fr"});
@@ -346,14 +358,19 @@ $(document).ready(function () {
 }); 
 
 function setWeeshListes(username){
-   
-    
         $.ajax({
             type: "GET",
             url: "http:localhost:8888/Weesh/weesh_lists_rest/index/"+ encodeURI(username)+".json",
             success: function(data){
                 if(data['weesh_lists'] != 'false') {
                     chrome.storage.sync.set({'localWeeshListId':data['weesh_lists'][0].id}, function() {});
+                    console.log("change share button");
+                    $('#fbShareButton').attr('href', "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fweesh.fr%2FWeesh%2Fweesh_lists%2Fview%2F"+data['weesh_lists'][0].id+"%2F&src=sdkpreparse");      
+                    $('#twitterShareButton').on('click', function(){
+                        chrome.tabs.create({url: 'https://twitter.com/intent/tweet?text='+encodeURI('Voici ma Weeshlist !') +'&url=https%3A%2F%2Fweesh.fr%2FWeesh%2Fweesh_lists%2Fview%2F'+data['weesh_lists'][0].id+'&via=Weesh_io'});
+                        return false;
+                    });
+                    
                     $('#weeshListsLogged').empty();
                     $('#listOnline').empty();
                     console.log("weesh list :");
