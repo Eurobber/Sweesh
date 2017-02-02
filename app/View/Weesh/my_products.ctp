@@ -30,8 +30,22 @@
                             <div class="col-md-4" style=" float:left; margin-top:3%;">
                                 <form class="btn btn-lg btn-primary btn-orange" data-toggle="modal" data-target="#<?php echo 'modalDetail'.$i?>">Plus d'informations</form>
                             </div>
-                            <div class="col-md-4" style="float: right;  margin-top:3%;">
-                                <?php echo $this->Form->submit('Ajouter à une weeshlist', array('class' => 'btn btn-lg btn-primary btn-orange', 'controller' => 'weesh', 'action' => 'overview')) ?>
+                            <div class="col-md-4" style="float: right; margin-top:3%;">
+                                <?php echo $this->Form->create('Item', array('action' => 'moveToWeeshlist')); ?>
+                                <?php echo $this->Form->input('item_id', array('type' => 'hidden', 'value' => $value['id'])); ?>
+                                <!-- A modifier par la weeshlist_id quand ce sera intégré à la liste des produits -->
+                                <?php echo $this->Form->input('old_weesh_list_id', array('type' => 'hidden', 'value' => $value['id'])); ?>
+                                <?php echo $this->Form->input('new_weesh_list_id', array('type' => 'select', 'options' => array($weeshlists_names))); ?>
+                                <?php echo $this->Form->submit('Déplacer vers un autre weeshlist', array('class' => 'btn btn-lg btn-primary btn-orange')); ?>
+                                <?php echo $this->Form->end(); ?>
+                            </div>
+                            <div class="col-md-4" style="float: right; margin-top:3%;">
+                                <?php echo $this->Form->create('Item', array('action' => 'removeFromWeeshlist')); ?>
+                                <?php echo $this->Form->input('item_id', array('type' => 'hidden', 'value' => $value['id'])); ?>
+                                <!-- A modifier par la weeshlist_id quand ce sera intégré à la liste des produits -->
+                                <?php echo $this->Form->input('weesh_list_id', array('type' => 'hidden', 'value' => $value['id'])); ?>
+                                <?php echo $this->Form->submit('Supprimer de la weeshlist', array('class' => 'btn btn-lg btn-primary btn-orange')); ?>
+                                <?php echo $this->Form->end(); ?>
                             </div>
                             <div class="col-md-4 " style=" display: inline-block; margin-top:3%;">
                                 <form class="btn btn-lg btn-primary btn-orange" data-toggle="modal" data-target="#<?php echo 'modalComparator'.$i?>">Autres fournisseurs (6)</form>
