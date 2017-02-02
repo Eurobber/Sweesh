@@ -63,7 +63,7 @@ chrome.runtime.sendMessage({method:'getUrls'}, function(listUrls){
 
                         $.ajax({
                             type: "POST",
-                            url: "http://localhost:8888/Weesh/new_sources_rest.json",
+                            url: "http://localhost/Weesh/new_sources_rest.json",
                             data: {
                                 'url':urls,
                                 'weeshlistid': data['localWeeshListId'],
@@ -331,7 +331,7 @@ $(document).ready(function () {
                     
                     $.ajax({
                         type: "POST",
-                        url: "http://localhost:8888/Weesh/users_rest/login.json",
+                        url: "http://localhost/Weesh/users_rest/login.json",
                         data: {
                             "username":$('#inputLogin').val(),
                             "password":$('#inputPassword').val()
@@ -361,7 +361,7 @@ function setWeeshListes(username){
     
         $.ajax({
             type: "GET",
-            url: "http:localhost:8888/Weesh/weesh_lists_rest/index/"+ encodeURI(username)+".json",
+            url: "http:localhost/Weesh/weesh_lists_rest/index/"+ encodeURI(username)+".json",
             success: function(data){
                 if(data['weesh_lists'] != 'false') {
                     chrome.storage.sync.set({'localWeeshListId':data['weesh_lists'][0].id}, function() {});
