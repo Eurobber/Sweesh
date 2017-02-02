@@ -22,7 +22,7 @@
     </div>
 <?php } elseif (!empty($lists)) { ?>
     <div class="container">
-        <div class="col-lg-12 well top-buffer-plus bloc">
+        <div class="row center bloc">
 
             <p class="col-md-12">
             <div class="container">
@@ -122,7 +122,7 @@
 <?php }; ?>
 <?php if (AuthComponent::user()) { ?>
     <div class="container">
-        <div class="col-lg-12 well top-buffer-plus bloc">
+        <div class="row center bloc">
             <div class="col-lg-12">
                 <h3>Ajouter une Weeshlist</span></h3>
                 <?php echo $this->Form->create('WeeshList', array('controller' => 'weesh_lists', 'action' => 'add', 'class' => 'form-horizontal', 'inputDefaults' => array('label' => false))); ?>
