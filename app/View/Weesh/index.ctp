@@ -21,4 +21,11 @@
                     <h3><?php echo 'Bienvenue ' . AuthComponent::user()['firstname'] . ' ' . AuthComponent::user()['lastname'] ?></h3></p>
                 <?php endif; ?>
     </div>
-</div>
+    <div class="row center bloc">
+        <h4>Qu'est ce que Weesh ?</h4>
+        <div class="embed-responsive-borders">
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe frameborder="0" allowfullscreen="" src="http://www.youtube.com/embed/oNBBijn4JuY?showinfo=0&amp;wmode=opaque"></iframe>
+            </div>
+        </div>
+    </div>

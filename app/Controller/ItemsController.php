@@ -60,7 +60,7 @@ class ItemsController extends AppController {
                         array('ItemsWeeshList.item_id' => $this->request->data['Item']['item_id'],
                             'ItemsWeeshList.weesh_list_id' => $this->request->data['Item']['weesh_list_id']), 
                         false)) {
-                        $this->Flash->success(__('Déplacement de la weeshlist effectué avec succès !'));
+                        $this->Flash->success(__('Suppression du produit de la weeshlist effectuée avec succès !'));
                     } else {
                         $this->Flash->error(__('Echec de la suppression de l\'item de la weeshlist courante. Déplacement abandonné.'));
                     }

@@ -15,7 +15,7 @@
             <div class="featured-box featured-box-primary">
                 <div class="box-content">
                     <h4 class="text-uppercase">L'équipe de choc !</h4>
-                        <a title="Benefits 1"> <span class="thumbnail mb-none">
+                    <a title="Benefits 1"> <span class="thumbnail mb-none">
 				        <?php echo $this->Html->image("suricate.png");?>
                 </div>
             </div>
@@ -91,7 +91,7 @@
                     <div class="box-content">
                         <h4 class="heading-primary"><strong>Geoffroy</strong></h4>
                         <p style="margin-left: 90px;">Mentor de l'équipe Weesh
-                            <br>et co-fondateur de <b><a href="http://bmaker.fr/">B-maker</a></b> </p>
+                            <br>et co-fondateur de <b><a target="_blank" href="http://bmaker.fr/">B-maker</a></b> </p>
                     </div>
                 </div>
             </li>

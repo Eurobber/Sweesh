@@ -6,7 +6,7 @@ App::uses('AppController', 'Controller');
 class WeeshListsController extends AppController
 {
 
-    public $uses = array('WeeshList', 'Item');
+    public $uses = array('WeeshList', 'Item', 'ItemInstance');
 
     public function beforeFilter()
     {
@@ -67,7 +67,15 @@ class WeeshListsController extends AppController
             throw new NotFoundException(__('La weeshlist n\'existe pas'));
         }
         $myWeeshList = $this->WeeshList->findById($id);
-        if($myWeeshList['WeeshList']['user_id'] == AuthComponent::user()['id']){
+        $weeshTemp = $myWeeshList;
+        $arrayComparator = array();
+        foreach($weeshTemp['Item'] as $item) {
+            $comparator = $this->ItemInstance->findAllByItemId($item['id']);
+            array_push($arrayComparator,$comparator);
+        }
+        $this->set('comparator', $arrayComparator);
+        
+        if($myWeeshList['WeeshList']['user_id'] == AuthComponent::user()['id'] || $myWeeshList['WeeshList']['visibility'] == 'public'){
             $items = [];
             foreach ($myWeeshList as $row => $innerArray) {
                 if($row == 'Item'){
@@ -82,6 +90,7 @@ class WeeshListsController extends AppController
             throw new NotFoundException(__('La weeshlist n\'existe pas'));
         }
         $this->set('weeshlist', $items);
+        
 
         //On récupère les noms des weeshlists de l'user (sauf la weeshlist courante)
         $weeshlists = $this->WeeshList->find('list', 
@@ -91,6 +100,7 @@ class WeeshListsController extends AppController
 
         // On set l'id de la weeshlist courante
         $this->set('current_weeshlist_id', $id);
+        
     }
 
     public static function array_utf8_encode($dat)

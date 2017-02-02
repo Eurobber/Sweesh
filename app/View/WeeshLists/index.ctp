@@ -45,10 +45,11 @@
                                             </div>
                                             <?php
                                             $i = 0;
-                                            $listWithoutFirst = array_slice($lists, 1,1);
-                                            foreach ($listWithoutFirst as $value) {
+                                            $listsTemp = $lists;
+                                            $listWithoutFirst = array_shift($listsTemp);
+                                            foreach ($listsTemp as $value) {
+                                                
                                                 $id = $value['WeeshList']['id'];
-                                            foreach ($value as $item) {
                                                     $i++;
                                                     if ($i < $nb) {
                                                         echo "<div class=\"item\" data-slide-number=\"" . $i . "\">\n"; ?>
@@ -58,7 +59,7 @@
                                                             echo "<img class=\"centerImg\" src=\"https://unsplash.it/$lnk/$lnk\"></div>\n";
                                                             echo "</a>";
                                                     }
-                                                }
+                                                
                                             } ?>
                                         </div><!-- Carousel nav -->
                                         <a class="left carousel-control" href="#myCarousel" role="button"
