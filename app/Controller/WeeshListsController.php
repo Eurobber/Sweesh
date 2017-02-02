@@ -77,6 +77,15 @@ class WeeshListsController extends AppController
             }
         }
         $this->set('weeshlist', $items);
+
+        //On récupère les noms des weeshlists de l'user (sauf la weeshlist courante)
+        $weeshlists = $this->WeeshList->find('list', 
+                array('conditions' => array('WeeshList.user_id' => $this->Auth->user('id'), 'WeeshList.id !=' => $id),
+                    'fields' => array('WeeshList.id', 'WeeshList.name')));
+        $this->set('weeshlists_names', $weeshlists);
+
+        // On set l'id de la weeshlist courante
+        $this->set('current_weeshlist_id', $id);
     }
 
     public static function array_utf8_encode($dat)
