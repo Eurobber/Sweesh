@@ -82,7 +82,6 @@ chrome.runtime.sendMessage({method:'getUrls'}, function(listUrls){
                                     
                                     setWeeshListes(usernameTemps);
                                     
-                                    
                                     chrome.storage.sync.set({'localUrlList':[]}, function() {
                                         $('#list').empty();
                                     
@@ -363,7 +362,7 @@ function setWeeshListes(username){
                     });
                     $.each(data['weesh_lists'][0]['Item'], function(i, item) {
                         console.log(item);
-                        $('#listOnline').append('<li id="elementInWeeshList'+i+'"><img class="imgItem" src="'+item.image+'" alt="" /><span classe="price">'+item.price+'</span><button type="button" class="btn btn-danger deleteOnline">X</button><a href="'+item.url+'">'+item.title+'</a></li>');
+                        $('#listOnline').append('<li id="elementInWeeshList'+i+'"><img class="imgItem" src="'+item.image+'" alt="" />  <span classe="price">  '+item.price+' €</span><button type="button" class="btn btn-danger deleteOnline">X</button><a href="'+item.url+'">'+item.title+'</a></li>');
 
                         $('#listOnxline li:last-child').on('click', 'a', function(){
                             chrome.tabs.create({url: $(this).attr('href')});
