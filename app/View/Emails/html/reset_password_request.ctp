@@ -1,5 +1,5 @@
 <?php echo "Cher  " . h($username) . "<br><br>"?>
-    <p>Veuillez connecter avec le mot de passe founi.</p>
+    <p>Veuillez vous connecter avec le mot nouveau de passe fourni.</p>
     <p>
-        <?php echo "Votre mot de passe : " . h($password) . "<br><br>"?>
+        <?php echo "Votre nouveau mot de passe est : " . h($password) . "<br><br>"?>
     </p>
