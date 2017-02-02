@@ -8,7 +8,7 @@
 <div class="container">
     <div class="row bloc">
         <div class="col-md-8">
-            <h3 class="heading-primary"><strong>Who</strong> are we ?...</h3>
+            <h3 class="heading-primary"><strong>Who</strong> are we...?</h3>
             <p>Nous sommes une jeune équipe issue de l'école ECE Paris et avons à coeur de fournir à nos utilisateurs un produit simple et ergonomique.</p>
         </div>
         <div class="col-md-4">
@@ -51,7 +51,7 @@
                 <div class="featured-box">
                     <div class="box-content">
                         <h4 class="heading-primary"><strong>Marina</strong></h4>
-                        <p style="margin-left: 90px;">Data scientist</p>
+                        <p style="margin-left: 90px;">Data architect et back-end developer</p>
                     </div>
                 </div>
             </li>
