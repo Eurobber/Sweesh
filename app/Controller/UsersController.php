@@ -50,7 +50,7 @@ class UsersController extends AppController
                 $this->loadModel('WeeshList');
                 $this->request->data['WeeshList']['name'] = 'MyWeeshlist';
                 $this->request->data['WeeshList']['user_id'] = $this->User->id;
-                $this->request->data['WeeshList']['description'] = 'Votre première Weeshlist est déjà là. \nPour y accéder, cliquez sur son image.';
+                $this->request->data['WeeshList']['description'] = 'Votre premiere Weeshlist est deja la. \nPour y acceder, cliquez sur son image.';
                 $this->WeeshList->create();
                 $this->WeeshList->save($this->request->data);
 
@@ -285,4 +285,15 @@ class UsersController extends AppController
     //     unset($user['User']['password']);
     //     return $user;
     // }
+    public static function array_utf8_encode($dat)
+    {
+        if (is_string($dat))
+            return utf8_encode($dat);
+        if (!is_array($dat))
+            return $dat;
+        $ret = array();
+        foreach ($dat as $i => $d)
+            $ret[$i] = self::array_utf8_encode($d);
+        return $ret;
+    }
 }

@@ -7,6 +7,7 @@ echo $this->Html->docType();
         <!-- Basic -->
         <?php echo $this->Html->charset(); ?>
             <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
             <title>
                 <?php echo $this->fetch('title'); ?>
             </title>
