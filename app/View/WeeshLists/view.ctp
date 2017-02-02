@@ -9,12 +9,12 @@
     <div class="row center bloc">
         <p class="col-xs-12">
             <h1>Votre panier de souhaits</h1> </p>
-        <div style=" margin-bottom: 0px" class="list-group">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-2">
-                        <div class="form-group">
-                            <?php $i = 0; foreach ($weeshlist as $value) { $i++; ?>
+        <?php $i = 0; foreach ($weeshlist as $value) { $i++; ?>
+            <div style=" margin-bottom: 0px" class="list-group">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <div class="form-group">
                                 <a href="<?php echo $value['url'] ?>" target="_blank" class="list-group-item list-group-item-action  align-items-start hide_border">
                                     <div class="d-flex w-100 justify-content-between">
                                         <h5 class="mb-1">  
@@ -22,35 +22,36 @@
                                 <img src="<?php echo $value['image'] ?>" class="rounded mx-auto d-block"  width="100" height="100">
                             </div><?php echo $value['title'] ?></h5> <b><?php echo $value['price'] ?></b> </div>
                                 </a>
+                            </div>
                         </div>
+                        <div class="col-md-3 ">
+                            <p style=" word-wrap: break-word; width: 200px;">
+                                <?php echo $value['description'] ?>
+                            </p>
+                        </div>
+                        <div class="col-md-3">
+                            <form class="btn btn-lg btn-primary btn-orange" data-toggle="modal" data-target="#<?php echo 'modalDetail'.$i?>">Plus d'informations</form>
+                            <form style="margin-top:17.5%;" class="btn btn-lg btn-primary btn-orange" data-toggle="modal" data-target="#<?php echo 'modalComparator'.$i?>">Autres fournisseurs</form>
+                        </div>
+                        <div class="col-md-4">
+                            <?php echo $this->Form->create('Item', array('action' => 'moveToWeeshlist')); ?>
+                                <?php echo $this->Form->input('item_id', array('type' => 'hidden', 'value' => $value['id'])); ?>
+                                    <?php echo $this->Form->input('old_weesh_list_id', array('type' => 'hidden', 'value' => $current_weeshlist_id)); ?>
+                                        <?php echo $this->Form->submit('Changer ce  produit de la weeshlist', array('class' => 'btn btn-lg btn-primary btn-orange')); ?>
+                                            <?php echo $this->Form->input('Vos listes', array('type' => 'select', 'options' => array($weeshlists_names))); ?>
+                                                <?php echo $this->Form->end(); ?>
+                                                    <?php echo $this->Form->create('Item', array('action' => 'removeFromWeeshlist')); ?>
+                                                        <?php echo $this->Form->input('item_id', array('type' => 'hidden', 'value' => $value['id'])); ?>
+                                                            <?php echo $this->Form->input('Votre liste', array('type' => 'hidden', 'value' => $current_weeshlist_id)); ?>
+                                                                <?php echo $this->Form->submit('Enlever ce produit de la weeshlist', array('class' => 'btn btn-lg btn-primary btn-orange','style'=>'margin-top:3%')); ?>
+                                                                    <?php echo $this->Form->end(); ?>
+                        </div>
+                        <div class="col-md-5"> </div>
                     </div>
-                    <div class="col-md-3 ">
-                        <p style=" word-wrap: break-word; width: 200px;">
-                            <?php echo $value['description'] ?>
-                        </p>
-                    </div>
-                    <div class="col-md-3">
-                        <form class="btn btn-lg btn-primary btn-orange" data-toggle="modal" data-target="#<?php echo 'modalDetail'.$i?>">Plus d'informations</form>
-                        <form style="margin-top:17.5%;" class="btn btn-lg btn-primary btn-orange" data-toggle="modal" data-target="#<?php echo 'modalComparator'.$i?>">Autres fournisseurs</form>
-                    </div>
-                    <div class="col-md-4">
-                        <?php echo $this->Form->create('Item', array('action' => 'moveToWeeshlist')); ?>
-                            <?php echo $this->Form->input('item_id', array('type' => 'hidden', 'value' => $value['id'])); ?>
-                                <?php echo $this->Form->input('old_weesh_list_id', array('type' => 'hidden', 'value' => $current_weeshlist_id)); ?>
-                                    <?php echo $this->Form->submit('Changer ce  produit de la weeshlist', array('class' => 'btn btn-lg btn-primary btn-orange')); ?>
-                                        <?php echo $this->Form->input('Vos listes', array('type' => 'select', 'options' => array($weeshlists_names))); ?>
-                                            <?php echo $this->Form->end(); ?>
-                                                <?php echo $this->Form->create('Item', array('action' => 'removeFromWeeshlist')); ?>
-                                                    <?php echo $this->Form->input('item_id', array('type' => 'hidden', 'value' => $value['id'])); ?>
-                                                        <?php echo $this->Form->input('Votre liste', array('type' => 'hidden', 'value' => $current_weeshlist_id)); ?>
-                                                            <?php echo $this->Form->submit('Enlever ce produit de la weeshlist', array('class' => 'btn btn-lg btn-primary btn-orange','style'=>'margin-top:3%')); ?>
-                                                                <?php echo $this->Form->end(); ?>
-                    </div>
-                    <div class="col-md-5"> </div>
                 </div>
+                <hr>
+                <?php } ?>
             </div>
-            <?php } ?>
-        </div>
     </div>
     <?php
     $i = 0;
