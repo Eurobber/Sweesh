@@ -84,7 +84,7 @@ echo $this->Html->docType();
                                                     <li>
                                                         <?php if (AuthComponent::user()):
                                                     // Logged in, show the my products link
-                                                    echo $this->Html->link('Mes Listes', array('controller' => 'weesh_lists', 'action' => 'index'), array('class' => 'purple'));
+                                                    echo $this->Html->link('Mes weeshlists', array('controller' => 'weesh_lists', 'action' => 'index'), array('class' => 'purple'));
                                                 endif; ?>
                                                     </li>
                                                     <li>
