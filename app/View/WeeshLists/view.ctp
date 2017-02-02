@@ -19,7 +19,7 @@
                         <h5 class="mb-1">  <?php echo $value['title'] ?>
                             <div class="text-center">
                                 <img src="<?php echo $value['image'] ?>" class="rounded mx-auto d-block"  width="150" height="150">
-                            </div></h5> <b><?php echo $value['price'] ?>€</b> </div>
+                            </div></h5> <b><?php echo $value['price'] ?></b> </div>
                     <p class="mb-1">
                         <?php echo $value['description'] ?>
                     </p>

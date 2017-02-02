@@ -67,16 +67,20 @@ class WeeshListsController extends AppController
             throw new NotFoundException(__('La weeshlist n\'existe pas'));
         }
         $myWeeshList = $this->WeeshList->findById($id);
-
-        $items = [];
-        foreach ($myWeeshList as $row => $innerArray) {
-            if($row == 'Item'){
-                foreach ($innerArray as $innerRow => $value){
-                    array_push($items, $value);
+        if($myWeeshList['WeeshList']['user_id'] == AuthComponent::user()['id']){
+            $items = [];
+            foreach ($myWeeshList as $row => $innerArray) {
+                if($row == 'Item'){
+                    foreach ($innerArray as $innerRow => $value){
+                        array_push($items, $value);
+                    }
                 }
             }
+            $this->set('weeshlist', $items);
+        } else {
+            // Elle ne vous appartient pas
+            throw new NotFoundException(__('La weeshlist n\'existe pas'));
         }
-        $this->set('weeshlist', $items);
     }
 
     public static function array_utf8_encode($dat)
