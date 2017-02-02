@@ -22,8 +22,9 @@ class ItemsController extends AppController {
                         // Préparation de la requête
                         $data['Item']['id'] = $this->request->data['Item']['item_id'];
                         $data['WeeshList']['id'] = $this->request->data['Item']['new_weesh_list_id'];
-                        // Exécution de la requête
+                        // Exécution de la requête d'ajout
                         if ($this->WeeshList->save($data)) {
+                            // Suppression de l'ancienne association
                             if ($this->ItemsWeeshList->deleteAll(
                                 array('ItemsWeeshList.item_id' => $this->request->data['Item']['item_id'],
                                     'ItemsWeeshList.weesh_list_id' => $this->request->data['Item']['old_weesh_list_id']), 
@@ -45,15 +46,32 @@ class ItemsController extends AppController {
                 $this->Flash->error(__('Cet item n\'existe pas. Déplacement abandonné.'));
             }
 
-            // Dans tous les cas, retour vers la vue précédente
+            // Dans tous les cas, retour vers la vue weeshlist précédente
             return $this->redirect(array('controller' => 'weesh_lists', 'action' => 'view', $this->request->data['Item']['old_weesh_list_id']));
         }
     }
 
     public function removeFromWeeshlist() {
         if ($this->request->is('post')) {
-            debug($this->request->data);
+            if ($this->Item->exists($this->request->data['Item']['item_id'])) {
+                if ($this->WeeshList->exists($this->request->data['Item']['weesh_list_id'])) {
+                    // Suppression de l'association
+                    if ($this->ItemsWeeshList->deleteAll(
+                        array('ItemsWeeshList.item_id' => $this->request->data['Item']['item_id'],
+                            'ItemsWeeshList.weesh_list_id' => $this->request->data['Item']['weesh_list_id']), 
+                        false)) {
+                        $this->Flash->success(__('Déplacement de la weeshlist effectué avec succès !'));
+                    } else {
+                        $this->Flash->error(__('Echec de la suppression de l\'item de la weeshlist courante. Déplacement abandonné.'));
+                    }
+                } else {
+                    $this->Flash->error(__('Le weeshlist suivant n\'existe pas. Déplacement abandonné.'));
+                }
+            } else {
+                $this->Flash->error(__('Cet item n\'existe pas. Déplacement abandonné.'));
+            }
 
+            // Dans tous les cas, retour vers la vue weeshlist précédente
             return $this->redirect(array('controller' => 'weesh_lists', 'action' => 'view', $this->request->data['Item']['weesh_list_id']));
         }
     }
